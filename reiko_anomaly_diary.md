@@ -145,4 +145,51 @@ My phone buzzed. A message from an unknown number: "The bacteria remember. Find 
 
 ---
 
+## Day 5 - Subject Zero
+
+April 11th, 2024
+Underground Research Archive - Building 7 Basement
+
+The **administrative** records were hidden behind a **deliberate** maze of red tape, but my newfound abilities made short work of security systems. Time manipulation is **aptly** suited for bypassing locks - you simply rewind them to before they were engaged.
+
+Dr. Yamamoto, my quantum physics professor, was waiting in the **cramped** archive room. His **willingness** to help surprised me until I saw his eyes - the same temporal shimmer I now recognized in mirrors.
+
+"You're one of us," I breathed.
+
+"Not exactly," he said, his voice **strictly** controlled. "I'm what you might call... **defective**. My powers are **premature**ly burned out. Too much experimentation in my youth." He gestured to the dense collection of files. "But I can still help you find what the Council wants to **prohibit** you from discovering."
+
+We worked through **appalling** records of human experiments, **anecdotal** evidence the government tried to **whitewash**. The **mortality** rate among early Chrono-Seers was **disastrous** - most couldn't **hold out** against the temporal pressure and simply... ceased.
+
+Then I found it. File designation: **COSMIC**-001. Subject Zero.
+
+The photographs were from 1952. A **parasite** - that's what they called it - discovered in **Antarctic** ice, perfectly preserved for millions of years. But it wasn't a parasite. It was **intrinsic** to human evolution, a **progressive** mutation that had been dormant until radiation from nuclear tests awakened it.
+
+"The **hierarchy** doesn't want you to know," Yamamoto said, pulling out a **durable** metal case. "Inside is a **replicate** of the original organism. They tried to **put an end to** the research, but one scientist preserved this sample."
+
+I opened it carefully. Inside, suspended in a specialized medium, was something that looked **ugly** at first glance - a writhing mass of bio-matter that seemed to exist in multiple timelines simultaneously. But as I watched, it began to **multiply**, creating fractal patterns that were hauntingly beautiful.
+
+"It's not alien," Yamamoto explained. "It's Earth's natural defense mechanism. When the planet faces **adverse** conditions - meteor impacts, climate change, **eruption**s - this organism awakens in certain humans, giving them the power to manipulate time and potentially save the species."
+
+The implications were **cosmic** in scale. We weren't anomalies or mistakes. We were Earth's **contingency** plan.
+
+"The Council knows this," he continued. "They've built their **exclusive** **fraternity** around controlling who gets activated. They **sue** anyone who tries to expose the truth, cause their **dismissal** from positions, even **stab** them in the back professionally. Some have faced worse - **slaughter**ed to keep the secret."
+
+I touched the container, and immediately felt the organism respond. My **diagnosis** was confirmed - I wasn't just a Chrono-Seer. I was directly connected to Subject Zero, possibly its strongest host in generations. The organism began to glow, pulsing with bioluminescent light.
+
+"They'll **supplant** the current order if they can control you," Yamamoto warned. "Your power could **envelop** the entire planet in a temporal field. That's not **feasible** for them to allow."
+
+Suddenly, alarms blared. The Council had found us.
+
+"Go!" Yamamoto shouted, pressing a **warranty** document into my hand. "This proves everything! The original contract between the government and the first Chrono-Seers. It's legally binding and **profitable** to whoever holds it!"
+
+As security forces surrounded the building, I did something I'd never attempted before. I didn't just stop time - I splintered it, creating multiple versions of myself across different moments. Each one took a different exit, carrying copies of the evidence.
+
+The last thing I heard before temporal displacement was Yamamoto's voice: "Find the others like you! The **despicable** truth is that there are hundreds, maybe thousands, waiting to awaken!"
+
+I emerged on the university roof, all timelines converging back into one. In my hand, the organism's container pulsed with otherworldly light. I wasn't just carrying evidence anymore.
+
+I was carrying humanity's future.
+
+---
+
 *To be continued...*
