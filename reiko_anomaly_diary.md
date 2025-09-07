@@ -100,4 +100,49 @@ I laughed. How trivial that seemed now.
 
 ---
 
+## Day 4 - The Council
+
+April 10th, 2024
+Tokyo Metropolitan University - Quantum Lab
+
+They came at dawn.
+
+Three figures in **crisp** suits materialized in my dorm room, their presence **formidable** enough to **weaken** my newly awakened defenses. The leader, a woman with eyes that seemed to **comprehend** centuries, spoke with **paramount** authority.
+
+"Reiko Tanaka. The Council requires your **adoption** into our ranks. Your **inheritance** cannot remain **unstable**."
+
+I wanted to **plead** ignorance, but they could sense my power like **thermal** radiation. The **magnitude** of what I'd become was still **minimal** compared to them, yet they treated me as a threat.
+
+"Your **violation** of temporal laws has caused **devastation** across multiple timelines," she continued. "The **continuation** of your uncontrolled experiments could **evoke** an **epoch** of **discord**."
+
+**Ironically**, I'd spent years studying quantum physics to understand something I was born with. Now these people wanted to **elevate** me to their level - or eliminate me. There was no middle ground in their **tyranny**.
+
+"**Jump at** our offer," the second figure said, his voice **sincere** yet threatening. "The alternative is... **instructive** for others who refuse."
+
+I felt the **infectious** nature of their power trying to **blend in** with mine, attempting to **portray** me as willing. But my grandmother's **loyalty** to our family's independence flowed through my veins. I wouldn't **surrender** to their **multinational** organization so easily.
+
+"You **dread** what you don't control," I said, my voice **moderately** steady. "My abilities **surpass** your traditional methods. That's why you're really here."
+
+The third figure, who had remained silent, suddenly moved. Time didn't slow - it fractured. I saw a thousand possible futures in that moment, each more **spectacular** than the last. In one, I joined them and became their weapon. In another, I fought and lost, my consciousness scattered across the **wilderness** of space-time.
+
+But in one timeline - just one - I saw myself standing free, having discovered something they feared: the **microbial** origins of our power, the **metabolism** of time itself that could be altered at the genetic level.
+
+"**Stick with** your current path," I told them, feeling **awkward** but determined, "and you'll force me to reveal what I've learned about the **geology** layers where Chrono-Seer remains were found. The **nitrogen** isotopes tell an interesting story about our **scarce** origins."
+
+Their composure cracked. They hadn't expected me to **keep up on** the archaeological research, to know about the **tolerant** bacteria that first carried our mutation millions of years ago.
+
+"**Hold up**," the leader said, her authority wavering. "You couldn't possibly—"
+
+"**Reside** in ignorance if you want," I interrupted. "But I know we're not human evolution. We're something else. Something that doesn't belong here."
+
+The room fell silent. Outside, students walked to morning classes, unaware that beings who could rewrite their entire existence were **stand over** them, deciding their fate.
+
+Finally, the leader spoke: "You have seventy-two hours. Learn control, or we intervene. And Reiko... some knowledge is too dangerous even for us."
+
+They vanished, leaving only the faint smell of ozone and the crushing weight of truth: I wasn't just different. I was part of something ancient, something that predated humanity itself.
+
+My phone buzzed. A message from an unknown number: "The bacteria remember. Find Subject Zero."
+
+---
+
 *To be continued...*

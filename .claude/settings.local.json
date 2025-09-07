@@ -7,7 +7,8 @@
       "Bash(sed:*)",
       "Bash(python:*)",
       "Bash(node:*)",
-      "Bash(git init:*)"
+      "Bash(git init:*)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []
