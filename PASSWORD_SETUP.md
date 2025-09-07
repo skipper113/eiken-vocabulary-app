@@ -1,25 +1,33 @@
-# Password Protection Setup (Hash-Based)
+# Password Protection Setup (Salted Hash-Based)
 
 ## Current Password
-Default password: `eiken2024`
+You have the default password (not shown here for security)
 
 ## How to Change the Password (Secure Method)
 
-1. **Generate a SHA-256 hash** of your new password:
-   - Go to: https://emn178.github.io/online-tools/sha256.html
-   - Enter your new password
+1. **Create a salted hash** of your new password:
+   - Open browser console (F12)
+   - Run this code with YOUR password:
+   ```javascript
+   (async () => {
+     const password = 'YOUR_NEW_PASSWORD_HERE';
+     const salt = 'eikenVocab2024!@#UniqueString';
+     const data = new TextEncoder().encode(password + salt);
+     const hash = await crypto.subtle.digest('SHA-256', data);
+     console.log(Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, '0')).join(''));
+   })();
+   ```
    - Copy the hash output
 
-2. **Update the hash in index.html** (around line 217):
+2. **Update the hash in index.html** (around line 216):
 ```javascript
 const PASSWORD_HASHES = [
-    '0cf2fd0220f9c6eade3336dd33938a0e8c0144e9bc3b5a3d64c1b112c907295a',  // Replace this
+    'your_new_hash_here',  // Replace with your generated hash
     // Add more hashes as needed
 ];
 ```
 
-3. Replace the hash with your new one
-4. Save and push to GitHub
+3. Save and push to GitHub
 
 ## Why Hash-Based?
 
@@ -28,12 +36,11 @@ const PASSWORD_HASHES = [
 ✅ **Even if someone reads your source code, they can't see the password**
 ❌ **Still not 100% secure** (determined users could still bypass client-side checks)
 
-## Example Hashes
+## Security Features
 
-| Password | SHA-256 Hash |
-|----------|--------------|
-| eiken2024 | 0cf2fd0220f9c6eade3336dd33938a0e8c0144e9bc3b5a3d64c1b112c907295a |
-| (your password) | (generate at link above) |
+- **Salted Hashes**: Even common passwords become unique hashes
+- **Cannot be found in rainbow tables**: Salt prevents database lookups
+- **Source code doesn't reveal password**: Only the hash is visible
 
 ## Features
 

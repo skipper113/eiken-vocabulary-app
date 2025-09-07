@@ -209,22 +209,25 @@
     </div>
 
     <script>
-        // Configuration - Password Hashes (SHA-256)
-        // These are one-way hashes - the actual passwords cannot be recovered from them
-        // Default password 'eiken2024' = the hash below
-        // To generate a new hash, use: https://emn178.github.io/online-tools/sha256.html
+        // Configuration - Password Hashes (SHA-256 with salt)
+        // These are one-way salted hashes - cannot be reversed or found in databases
+        // To set your own password, you'll need to generate a salted hash
         const PASSWORD_HASHES = [
-            '0cf2fd0220f9c6eade3336dd33938a0e8c0144e9bc3b5a3d64c1b112c907295a',  // eiken2024 (default)
+            'b6bc4d32f941f08c1ddbd6ba140abb9902dbef0edf989ee0af483a4b06714989',  // default password (salted)
             // Add more hashes as needed
-            // Generate new hashes at: https://emn178.github.io/online-tools/sha256.html
         ];
         
         // Session duration in days
         const SESSION_DAYS = 30;
         
-        // Simple hash function for client-side (not cryptographically secure but better than plaintext)
+        // Salted hash function - makes rainbow table attacks much harder
+        // The salt makes even common passwords have unique hashes
+        const SALT = 'eikenVocab2024!@#UniqueString';  // Unique to your app
+        
         async function hashPassword(password) {
-            const msgUint8 = new TextEncoder().encode(password);
+            // Combine password with salt
+            const saltedPassword = password + SALT;
+            const msgUint8 = new TextEncoder().encode(saltedPassword);
             const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
             const hashArray = Array.from(new Uint8Array(hashBuffer));
             const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
