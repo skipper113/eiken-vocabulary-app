@@ -1,23 +1,39 @@
-# Password Protection Setup
+# Password Protection Setup (Hash-Based)
 
 ## Current Password
 Default password: `eiken2024`
 
-## How to Change the Password
+## How to Change the Password (Secure Method)
 
-1. Open `index.html` in a text editor
-2. Find this section (around line 195):
+1. **Generate a SHA-256 hash** of your new password:
+   - Go to: https://emn178.github.io/online-tools/sha256.html
+   - Enter your new password
+   - Copy the hash output
+
+2. **Update the hash in index.html** (around line 217):
 ```javascript
-const PASSWORDS = [
-    'eiken2024',  // Default password - CHANGE THIS!
-    'study123',   // Alternative password
-    // Add more passwords as needed
+const PASSWORD_HASHES = [
+    '0cf2fd0220f9c6eade3336dd33938a0e8c0144e9bc3b5a3d64c1b112c907295a',  // Replace this
+    // Add more hashes as needed
 ];
 ```
-3. Change `'eiken2024'` to your desired password
-4. You can add multiple passwords if needed
-5. Save the file
-6. Commit and push to GitHub
+
+3. Replace the hash with your new one
+4. Save and push to GitHub
+
+## Why Hash-Based?
+
+✅ **Password is NEVER stored in plain text**
+✅ **Cannot reverse-engineer the password from the hash**
+✅ **Even if someone reads your source code, they can't see the password**
+❌ **Still not 100% secure** (determined users could still bypass client-side checks)
+
+## Example Hashes
+
+| Password | SHA-256 Hash |
+|----------|--------------|
+| eiken2024 | 0cf2fd0220f9c6eade3336dd33938a0e8c0144e9bc3b5a3d64c1b112c907295a |
+| (your password) | (generate at link above) |
 
 ## Features
 

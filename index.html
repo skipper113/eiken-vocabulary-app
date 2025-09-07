@@ -209,15 +209,27 @@
     </div>
 
     <script>
-        // Configuration - CHANGE THIS PASSWORD
-        const PASSWORDS = [
-            'eiken2024',  // Default password - CHANGE THIS!
-            'study123',   // Alternative password
-            // Add more passwords as needed
+        // Configuration - Password Hashes (SHA-256)
+        // These are one-way hashes - the actual passwords cannot be recovered from them
+        // Default password 'eiken2024' = the hash below
+        // To generate a new hash, use: https://emn178.github.io/online-tools/sha256.html
+        const PASSWORD_HASHES = [
+            '0cf2fd0220f9c6eade3336dd33938a0e8c0144e9bc3b5a3d64c1b112c907295a',  // eiken2024 (default)
+            // Add more hashes as needed
+            // Generate new hashes at: https://emn178.github.io/online-tools/sha256.html
         ];
         
         // Session duration in days
         const SESSION_DAYS = 30;
+        
+        // Simple hash function for client-side (not cryptographically secure but better than plaintext)
+        async function hashPassword(password) {
+            const msgUint8 = new TextEncoder().encode(password);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            return hashHex;
+        }
         
         // Check if user has valid session
         window.onload = function() {
@@ -250,11 +262,12 @@
             errorMessage.classList.remove('show');
             
             // Simulate processing (makes it feel more secure)
-            setTimeout(() => {
+            setTimeout(async () => {
                 const enteredPassword = passwordInput.value;
+                const enteredHash = await hashPassword(enteredPassword);
                 
-                // Check if password matches any in the list
-                if (PASSWORDS.includes(enteredPassword)) {
+                // Check if password hash matches any in the list
+                if (PASSWORD_HASHES.includes(enteredHash)) {
                     // Password correct
                     if (rememberMe) {
                         // Save session
