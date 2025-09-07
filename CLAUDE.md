@@ -25,3 +25,12 @@ When manipulating the CSV:
 - Preserve the UTF-8 encoding for Japanese characters
 - The format is: English term, Japanese translation (with part of speech)
 - Some entries include multiple meanings separated by commas in the Japanese column
+
+## Auto-commit and Push Instructions
+
+IMPORTANT: After creating new diary entries or making bug fixes, automatically:
+1. Stage all changes: `git add -A`
+2. Commit with descriptive message including what was changed
+3. Push to GitHub: `git push origin main`
+
+This ensures all changes are immediately backed up to GitHub and deployed via Netlify.
