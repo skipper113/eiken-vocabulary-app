@@ -148,7 +148,8 @@ async function loadDiary() {
         } else {
             diaryFile = 'mina_kpop_diary.md';
         }
-        const response = await fetch(diaryFile);
+        // Add cache busting to ensure fresh content
+        const response = await fetch(diaryFile + '?t=' + Date.now());
         const text = await response.text();
         
         // Parse the diary entries - only English content
