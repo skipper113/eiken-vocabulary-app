@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea
+.vscode
+*.swp
+*.swo
+*~
+
+# Local env files
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Word lists for processing
+pre1_words.txt
+story_words.txt
+valid_words.txt
+reiko_words.txt
+eiken1_words.txt

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英検3級 Vocabulary Game - Multiple Choice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .game-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .score-board {
+            display: flex;
+            justify-content: space-around;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+
+        .score-item {
+            text-align: center;
+        }
+
+        .score-label {
+            color: #6c757d;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .score-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .question-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            color: white;
+            text-align: center;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .japanese-word {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .word-info {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .choices-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .choice-btn {
+            background: #f8f9fa;
+            border: 3px solid #dee2e6;
+            border-radius: 10px;
+            padding: 20px;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .choice-btn:hover:not(:disabled) {
+            background: #e9ecef;
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .choice-btn:disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .choice-btn.correct {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+            border-color: #28a745;
+            animation: correctPulse 0.6s ease;
+        }
+
+        .choice-btn.incorrect {
+            background: #f8d7da;
+            border-color: #dc3545;
+            animation: shake 0.5s ease;
+        }
+
+        .choice-btn.show-answer {
+            background: #fff3cd;
+            border-color: #ffc107;
+        }
+
+        @keyframes correctPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        .choice-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .typing-section {
+            display: none;
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .typing-section.active {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .typing-instruction {
+            text-align: center;
+            color: #495057;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .correct-answer-display {
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            color: #28a745;
+            margin-bottom: 20px;
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
+            border: 2px solid #28a745;
+        }
+
+        .typing-input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.5em;
+            text-align: center;
+            border: 3px solid #dee2e6;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .typing-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .typing-input.correct {
+            border-color: #28a745;
+            background: #d4edda;
+        }
+
+        .typing-input.incorrect {
+            border-color: #dc3545;
+            background: #f8d7da;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .control-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .control-btn:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .skip-btn {
+            background: #6c757d;
+        }
+
+        .skip-btn:hover {
+            background: #5a6268;
+        }
+
+        .next-btn {
+            background: #28a745;
+        }
+
+        .next-btn:hover {
+            background: #218838;
+        }
+
+        .progress-bar {
+            background: #e9ecef;
+            border-radius: 10px;
+            height: 10px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            height: 100%;
+            transition: width 0.5s ease;
+        }
+
+        .feedback-message {
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 20px 0;
+            min-height: 40px;
+        }
+
+        .feedback-message.correct {
+            color: #28a745;
+        }
+
+        .feedback-message.incorrect {
+            color: #dc3545;
+        }
+
+        @media (max-width: 768px) {
+            .game-container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .japanese-word {
+                font-size: 2em;
+            }
+
+            .choices-section {
+                grid-template-columns: 1fr;
+            }
+
+            .choice-btn {
+                font-size: 1.1em;
+                padding: 15px;
+            }
+
+            .typing-input {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>英検3級 Vocabulary Game</h1>
+        </div>
+
+        <div class="score-board">
+            <div class="score-item">
+                <div class="score-label">正解</div>
+                <div class="score-value" id="correct-score">0</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">問題</div>
+                <div class="score-value" id="question-number">1</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">正解率</div>
+                <div class="score-value" id="accuracy">0%</div>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+        </div>
+
+        <div class="question-section">
+            <div class="japanese-word" id="japanese-word">Loading...</div>
+            <div class="word-info" id="word-info"></div>
+        </div>
+
+        <div class="choices-section" id="choices-section">
+            <button class="choice-btn" id="choice-1" onclick="selectChoice(1)">
+                <span class="choice-number">1</span>
+                <span id="choice-text-1"></span>
+            </button>
+            <button class="choice-btn" id="choice-2" onclick="selectChoice(2)">
+                <span class="choice-number">2</span>
+                <span id="choice-text-2"></span>
+            </button>
+            <button class="choice-btn" id="choice-3" onclick="selectChoice(3)">
+                <span class="choice-number">3</span>
+                <span id="choice-text-3"></span>
+            </button>
+            <button class="choice-btn" id="choice-4" onclick="selectChoice(4)">
+                <span class="choice-number">4</span>
+                <span id="choice-text-4"></span>
+            </button>
+        </div>
+
+        <div class="feedback-message" id="feedback-message"></div>
+
+        <div class="typing-section" id="typing-section">
+            <div class="typing-instruction">素晴らしい！正解の単語をタイプして覚えましょう</div>
+            <div class="correct-answer-display" id="correct-answer-display"></div>
+            <input type="text" class="typing-input" id="typing-input" 
+                   placeholder="Type the word here..." 
+                   onkeyup="checkTyping(event)">
+        </div>
+
+        <div class="controls">
+            <button class="control-btn skip-btn" id="skip-btn" onclick="skipTyping()" style="display: none;">
+                スキップ
+            </button>
+            <button class="control-btn next-btn" id="next-btn" onclick="nextQuestion()" style="display: none;">
+                次の問題 →
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let vocabulary = [];
+        let currentQuestion = null;
+        let questionCount = 0;
+        let correctCount = 0;
+        let isAnswered = false;
+        let currentPhase = 'choice'; // 'choice' or 'typing'
+
+        // Load vocabulary from CSV
+        async function loadVocabulary() {
+            try {
+                const response = await fetch('eiken3.csv');
+                const text = await response.text();
+                const lines = text.trim().split('\n');
+                
+                // Skip header and parse data
+                for (let i = 1; i < lines.length; i++) {
+                    const parts = lines[i].split(',');
+                    if (parts.length >= 3) {
+                        vocabulary.push({
+                            en: parts[0].trim(),
+                            jp: parts[1].trim(),
+                            id: parts[2].trim()
+                        });
+                    }
+                }
+                
+                if (vocabulary.length > 0) {
+                    generateQuestion();
+                } else {
+                    document.getElementById('japanese-word').textContent = 'No vocabulary data found';
+                }
+            } catch (error) {
+                console.error('Error loading vocabulary:', error);
+                document.getElementById('japanese-word').textContent = 'Error loading vocabulary';
+            }
+        }
+
+        function generateQuestion() {
+            if (vocabulary.length < 4) return;
+
+            currentPhase = 'choice';
+            isAnswered = false;
+            
+            // Reset UI - hide typing section completely
+            const typingSection = document.getElementById('typing-section');
+            typingSection.style.display = 'none';
+            typingSection.classList.remove('active');
+            
+            document.getElementById('skip-btn').style.display = 'none';
+            document.getElementById('next-btn').style.display = 'none';
+            document.getElementById('feedback-message').textContent = '';
+            document.getElementById('typing-input').value = '';
+            document.getElementById('typing-input').className = 'typing-input';
+            
+            // Enable choice buttons
+            for (let i = 1; i <= 4; i++) {
+                const btn = document.getElementById(`choice-${i}`);
+                btn.disabled = false;
+                btn.className = 'choice-btn';
+            }
+
+            // Select random word as correct answer
+            const correctIndex = Math.floor(Math.random() * vocabulary.length);
+            currentQuestion = vocabulary[correctIndex];
+            
+            // Display Japanese word
+            const jpParts = currentQuestion.jp.match(/^([^(]+)(\([^)]+\))?$/);
+            const mainWord = jpParts[1].trim();
+            const partOfSpeech = jpParts[2] || '';
+            
+            document.getElementById('japanese-word').textContent = mainWord;
+            document.getElementById('word-info').textContent = partOfSpeech;
+            
+            // Generate choices
+            const choices = [currentQuestion];
+            const usedIndices = [correctIndex];
+            
+            while (choices.length < 4) {
+                const randomIndex = Math.floor(Math.random() * vocabulary.length);
+                if (!usedIndices.includes(randomIndex)) {
+                    choices.push(vocabulary[randomIndex]);
+                    usedIndices.push(randomIndex);
+                }
+            }
+            
+            // Shuffle choices
+            for (let i = choices.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [choices[i], choices[j]] = [choices[j], choices[i]];
+            }
+            
+            // Display choices
+            for (let i = 0; i < 4; i++) {
+                document.getElementById(`choice-text-${i + 1}`).textContent = choices[i].en;
+                document.getElementById(`choice-${i + 1}`).dataset.word = choices[i].en;
+            }
+            
+            // Update question number
+            questionCount++;
+            document.getElementById('question-number').textContent = questionCount;
+            updateProgress();
+        }
+
+        function selectChoice(choiceNum) {
+            if (isAnswered) return;
+            
+            isAnswered = true;
+            const selectedBtn = document.getElementById(`choice-${choiceNum}`);
+            const selectedWord = selectedBtn.dataset.word;
+            
+            // Disable all buttons
+            for (let i = 1; i <= 4; i++) {
+                document.getElementById(`choice-${i}`).disabled = true;
+            }
+            
+            if (selectedWord === currentQuestion.en) {
+                // Correct answer
+                correctCount++;
+                selectedBtn.classList.add('correct');
+                document.getElementById('feedback-message').textContent = '正解！Great job!';
+                document.getElementById('feedback-message').className = 'feedback-message correct';
+                
+                // Update scores
+                document.getElementById('correct-score').textContent = correctCount;
+                updateAccuracy();
+                
+                // Move to typing phase
+                setTimeout(() => {
+                    startTypingPhase();
+                }, 1000);
+            } else {
+                // Incorrect answer
+                selectedBtn.classList.add('incorrect');
+                document.getElementById('feedback-message').textContent = '残念...Try again!';
+                document.getElementById('feedback-message').className = 'feedback-message incorrect';
+                
+                // Show correct answer
+                for (let i = 1; i <= 4; i++) {
+                    const btn = document.getElementById(`choice-${i}`);
+                    if (btn.dataset.word === currentQuestion.en) {
+                        btn.classList.add('show-answer');
+                        break;
+                    }
+                }
+                
+                updateAccuracy();
+                
+                // Move to typing phase after delay
+                setTimeout(() => {
+                    startTypingPhase();
+                }, 2000);
+            }
+        }
+
+        function startTypingPhase() {
+            currentPhase = 'typing';
+            
+            // Show typing section
+            const typingSection = document.getElementById('typing-section');
+            typingSection.style.display = 'block';
+            typingSection.classList.add('active');
+            
+            // Display the correct answer
+            document.getElementById('correct-answer-display').textContent = currentQuestion.en;
+            
+            // Show skip button
+            document.getElementById('skip-btn').style.display = 'inline-block';
+            
+            // Clear and focus the input
+            const input = document.getElementById('typing-input');
+            input.value = '';
+            input.className = 'typing-input';
+            
+            // Small delay to ensure DOM is updated before focusing
+            setTimeout(() => {
+                input.focus();
+            }, 100);
+        }
+
+        function checkTyping(event) {
+            const input = document.getElementById('typing-input');
+            const typedWord = input.value.trim().toLowerCase();
+            const correctWord = currentQuestion.en.toLowerCase();
+            
+            if (typedWord === correctWord) {
+                input.classList.add('correct');
+                input.classList.remove('incorrect');
+                document.getElementById('skip-btn').style.display = 'none';
+                document.getElementById('next-btn').style.display = 'inline-block';
+                
+                // Auto proceed after 1 second
+                setTimeout(() => {
+                    nextQuestion();
+                }, 1000);
+            } else if (typedWord.length > 0 && !correctWord.startsWith(typedWord)) {
+                input.classList.add('incorrect');
+                input.classList.remove('correct');
+            } else {
+                input.classList.remove('incorrect', 'correct');
+            }
+            
+            // Allow Enter key to proceed if correct
+            if (event.key === 'Enter' && typedWord === correctWord) {
+                nextQuestion();
+            }
+        }
+
+        function skipTyping() {
+            nextQuestion();
+        }
+
+        function nextQuestion() {
+            generateQuestion();
+        }
+
+        function updateAccuracy() {
+            const accuracy = questionCount > 0 ? Math.round((correctCount / questionCount) * 100) : 0;
+            document.getElementById('accuracy').textContent = accuracy + '%';
+        }
+
+        function updateProgress() {
+            const progress = Math.min((questionCount / 50) * 100, 100);
+            document.getElementById('progress-fill').style.width = progress + '%';
+        }
+
+        // Keyboard shortcuts for choices
+        document.addEventListener('keydown', (event) => {
+            if (currentPhase === 'choice' && !isAnswered) {
+                if (event.key >= '1' && event.key <= '4') {
+                    selectChoice(parseInt(event.key));
+                }
+            }
+        });
+
+        // Initialize game
+        loadVocabulary();
+    </script>
+</body>
+</html>

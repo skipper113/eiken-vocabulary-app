@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>英検 Vocabulary Learning App</title>
+    <style>
+        :root {
+            /* Solarized Light Colors */
+            --sol-base03: #002b36;
+            --sol-base02: #073642;
+            --sol-base01: #586e75;
+            --sol-base00: #657b83;
+            --sol-base0: #839496;
+            --sol-base1: #93a1a1;
+            --sol-base2: #eee8d5;
+            --sol-base3: #fdf6e3;
+            --sol-yellow: #b58900;
+            --sol-orange: #cb4b16;
+            --sol-red: #dc322f;
+            --sol-magenta: #d33682;
+            --sol-violet: #6c71c4;
+            --sol-blue: #268bd2;
+            --sol-cyan: #2aa198;
+            --sol-green: #859900;
+        }
+        
+        /* Light theme (default) */
+        body {
+            --bg-primary: #fdf6e3;
+            --bg-secondary: #eee8d5;
+            --bg-tertiary: #fdf6e3;
+            --text-primary: #002b36;  /* Much darker for better readability */
+            --text-secondary: #073642;  /* Darker secondary text */
+            --text-emphasis: #002b36;  /* Darkest for emphasis */
+            --border-color: #93a1a1;
+            --accent-primary: #073642;  /* Darker blue for target words */
+            --accent-secondary: #2aa198;
+            --success: #859900;
+            --warning: #b58900;
+            --danger: #dc322f;
+            --highlight-bg: rgba(255, 235, 59, 0.08);  /* Very subtle yellow for word highlights */
+            --card-bg: #fdf6e3;
+            --gradient-start: #93a1a1;
+            --gradient-end: #839496;
+        }
+        
+        /* Dark theme */
+        body.dark-theme {
+            --bg-primary: #002b36;
+            --bg-secondary: #073642;
+            --bg-tertiary: #073642;
+            --text-primary: #fdf6e3;  /* Brighter for dark mode */
+            --text-secondary: #eee8d5;  /* Brighter secondary */
+            --text-emphasis: #ffffff;  /* White for maximum contrast */
+            --border-color: #586e75;
+            --accent-primary: #ffffff;  /* White for target words in dark mode */
+            --accent-secondary: #268bd2;
+            --success: #859900;
+            --warning: #b58900;
+            --danger: #dc322f;
+            --highlight-bg: rgba(38, 139, 210, 0.15);  /* Subtle blue highlight for dark mode */
+            --card-bg: #073642;
+            --gradient-start: #073642;
+            --gradient-end: #002b36;
+            --reading-guide: rgba(255, 235, 59, 0.25);  /* More subtle yellow for dark mode */
+        }
+        
+        body {
+            --reading-guide: rgba(255, 235, 59, 0.3);  /* More subtle yellow for light mode */
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 10px;
+            margin: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            min-height: 90vh;
+            transition: background-color 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+            
+            .container {
+                border-radius: 0;
+                min-height: 100vh;
+                box-shadow: none;
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            color: var(--bg-primary);
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            background: rgba(255,255,255,0.2);
+            border: 2px solid var(--bg-primary);
+            border-radius: 25px;
+            padding: 8px 15px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            z-index: 1001;
+            backdrop-filter: blur(5px);
+        }
+        
+        .theme-toggle:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.05);
+        }
+
+        .mode-toggle-inline {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .mode-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--bg-primary);
+            border: 2px solid var(--bg-primary);
+            padding: 10px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .mode-btn.active {
+            background: var(--bg-primary);
+            color: var(--accent-primary);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .mode-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        .main-content {
+            display: flex;
+            height: calc(100vh - 100px);
+            position: relative;
+        }
+
+        .vocabulary-panel {
+            width: 280px;
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: margin-left 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .vocabulary-panel.hidden {
+            margin-left: -280px;
+        }
+
+        .panel-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 15px 10px 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .vocabulary-panel h2 {
+            color: var(--text-emphasis);
+            margin: 0;
+        }
+        
+        .panel-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            color: #6c757d;
+            padding: 5px 10px;
+            transition: color 0.2s ease, background 0.2s ease;
+            border-radius: 4px;
+        }
+        
+        .panel-toggle:hover {
+            color: #dc3545;
+            background: rgba(220, 53, 69, 0.1);
+        }
+        
+        .panel-show-btn {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 0 8px 8px 0;
+            padding: 20px 8px;
+            cursor: pointer;
+            font-size: 0.9em;
+            z-index: 100;
+            transition: all 0.3s ease;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .panel-show-btn:hover {
+            background: #5a6fd8;
+            padding-left: 12px;
+            box-shadow: 3px 3px 15px rgba(0,0,0,0.3);
+        }
+        
+        .panel-header {
+            background: var(--bg-secondary);
+            padding: 0 15px 15px 15px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.3s ease;
+        }
+        
+        .vocab-stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            color: #495057;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .vocab-stats span {
+            font-weight: 600;
+        }
+        
+        #all-words-count { color: #28a745; }
+        #missed-words-count { color: #dc3545; }
+        #today-words-count { color: #007bff; }
+        
+        .panel-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px;
+        }
+
+        .tab-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 8px;
+            background: var(--card-bg);
+            border: 1px solid var(--accent-secondary);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--text-primary);
+            font-weight: bold;
+        }
+
+        .tab-btn.active {
+            background: var(--accent-primary);
+            color: var(--bg-primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .stats-panel {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 5px 0;
+        }
+
+        .stat-label {
+            color: #6c757d;
+        }
+
+        .stat-value {
+            font-weight: bold;
+            color: #212529;
+        }
+
+        .word-id {
+            position: absolute;
+            top: 2px;
+            right: 5px;
+            font-size: 0.7em;
+            color: #adb5bd;
+            font-weight: 500;
+        }
+        
+        .missed-word-item {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+
+        .miss-count {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #dc3545;
+            color: white;
+            border-radius: 15px;
+            padding: 2px 8px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+
+        .word-item {
+            background: var(--card-bg);
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-secondary);
+            transition: all 0.3s ease;
+        }
+
+        .word-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            background: var(--highlight-bg);
+        }
+
+        .word-en {
+            font-weight: bold;
+            color: var(--text-emphasis);
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .word-jp {
+            color: var(--text-secondary);
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+
+        .diary-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            transition: width 0.3s ease;
+        }
+        
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .day-title {
+            color: var(--accent-primary);
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent-secondary);
+        }
+
+        .diary-text {
+            line-height: 1.8;
+            color: var(--text-primary);
+            font-size: 1.05em;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 0;  /* Base layer */
+        }
+        
+        /* Ensure all text content appears above reading guide */
+        .diary-text p,
+        .diary-text span,
+        .diary-text > * {
+            position: relative;
+            z-index: 2;  /* Text above guide */
+        }
+        
+        /* Reading guide */
+        .reading-guide {
+            position: absolute;
+            left: -20px;
+            right: -20px;
+            height: 1.8em;
+            background: var(--reading-guide);
+            pointer-events: none;
+            transition: top 0.2s ease;
+            border-radius: 3px;
+            display: none;
+            z-index: 0;  /* Above background, below text */
+            mix-blend-mode: multiply;  /* Blend with background */
+        }
+        
+        /* Remove cursor change when reading guide is active */
+        .diary-text.guide-active {
+            /* No special cursor needed for hover */
+        }
+        
+        body.dark-theme .reading-guide {
+            mix-blend-mode: screen;  /* Better blending for dark mode */
+        }
+        
+        .reading-guide.active {
+            display: block;
+        }
+        
+        .reading-guide-toggle {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--accent-primary);
+            color: var(--bg-primary);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        .reading-guide-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        
+        .reading-guide-toggle.active {
+            background: var(--warning);
+        }
+
+        .diary-text strong {
+            color: var(--accent-primary);
+            background: linear-gradient(180deg, transparent 60%, var(--highlight-bg) 60%);
+            padding: 0 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 700;  /* Bold text */
+            position: relative;  /* Ensure text appears above reading guide */
+            z-index: 3;  /* Above reading guide */
+        }
+
+        .diary-text strong:hover {
+            background: var(--highlight-bg);
+            transform: scale(1.05);
+        }
+
+        /* Quiz mode styles */
+        .blank-word {
+            display: inline-block;
+            min-width: 100px;
+            border-bottom: 2px solid var(--accent-primary);
+            padding: 0 5px;
+            margin: 0 2px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            color: transparent;
+            user-select: none;
+        }
+
+        .blank-word:hover {
+            background: var(--highlight-bg);
+            transform: scale(1.05);
+        }
+
+        .blank-word.correct {
+            background: var(--success);
+            border-bottom-color: var(--success);
+            animation: correctPulse 0.5s ease;
+            color: var(--bg-primary);
+        }
+
+        .blank-word.incorrect {
+            background: var(--danger);
+            border-bottom-color: var(--danger);
+            animation: shake 0.5s ease;
+            color: var(--bg-primary);
+        }
+
+        .blank-word.revealed {
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        @keyframes correctPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+        @keyframes highlightPulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(255, 235, 59, 0.8);
+            }
+            50% { 
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(255, 235, 59, 1);
+            }
+        }
+
+        .quiz-popup {
+            position: absolute;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+            min-width: 250px;
+            display: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .quiz-popup.active {
+            display: block;
+        }
+
+        .quiz-question {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #495057;
+            text-align: center;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .quiz-option {
+            padding: 10px;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .quiz-option:hover {
+            background: var(--highlight-bg);
+            border-color: var(--accent-primary);
+            transform: translateX(5px);
+        }
+
+        .quiz-option.correct {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        .quiz-option.incorrect {
+            background: #f8d7da;
+            border-color: #dc3545;
+        }
+
+        .quiz-option.selected {
+            border-color: #667eea;
+            background: #e7f3ff;
+        }
+
+
+        .nav-button {
+            background: var(--accent-primary);
+            color: var(--bg-primary);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            background: var(--accent-secondary);
+        }
+
+        .nav-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.5em;
+            color: #6c757d;
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-primary);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-secondary);
+        }
+
+        /* Responsive design */
+        @media (max-width: 1200px) {
+            .diary-content {
+                padding: 20px;
+            }
+        }
+        
+        /* Type Game Styles */
+        .type-mode-container {
+            padding: 20px;
+        }
+        
+        .type-status {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .type-stats {
+            display: flex;
+            gap: 30px;
+            font-size: 1.1em;
+            color: var(--text-primary);
+        }
+        
+        .type-stats strong {
+            color: var(--text-emphasis);
+        }
+        
+        .type-controls {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .type-controls .mode-btn {
+            background: #667eea;
+            color: white;
+            border: 2px solid #667eea;
+        }
+        
+        .type-controls .mode-btn:hover {
+            background: #5a67d8;
+            border-color: #5a67d8;
+        }
+        
+        .type-game {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .type-countdown {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+        }
+        
+        .countdown-number {
+            font-size: 5em;
+            font-weight: bold;
+            color: var(--accent-primary);
+            animation: pulse 0.8s ease-in-out;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(0.5); opacity: 0; }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .type-japanese {
+            font-size: 1.8em;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            min-height: 50px;
+            font-weight: 600;
+        }
+        
+        .type-sentence {
+            background: #f8f9fa;
+            border-left: 3px solid #667eea;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            min-height: 60px;
+        }
+        
+        .sentence-context {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #495057;
+        }
+        
+        .sentence-context strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .type-blank {
+            background: #ffc107;
+            padding: 2px 8px;
+            border-radius: 3px;
+            color: #000;
+            font-weight: bold;
+        }
+        
+        .type-hint {
+            font-size: 2.5em;
+            font-family: 'Courier New', monospace;
+            color: #667eea;
+            margin-bottom: 25px;
+            letter-spacing: 8px;
+            font-weight: bold;
+        }
+        
+        .type-input {
+            width: 100%;
+            max-width: 400px;
+            padding: 15px;
+            font-size: 1.5em;
+            text-align: center;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .type-input:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px var(--highlight-bg);
+        }
+        
+        .give-up-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        
+        .give-up-btn:hover {
+            background: #c82333;
+            transform: scale(1.05);
+        }
+        
+        .type-feedback {
+            font-size: 1.2em;
+            font-weight: bold;
+            min-height: 30px;
+        }
+        
+        .type-complete {
+            background: linear-gradient(135deg, var(--accent-secondary) 0%, var(--warning) 100%);
+            color: var(--bg-primary);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        /* Fix for dark mode - use different gradient */
+        body.dark-theme .type-complete {
+            background: linear-gradient(135deg, var(--accent-secondary) 0%, var(--success) 100%);
+        }
+        
+        .type-complete h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        .type-complete p {
+            font-size: 1.3em;
+            margin: 10px 0;
+        }
+        
+        .type-rankings {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .type-rankings h3 {
+            color: #495057;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .ranking-item {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 8px;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            transition: transform 0.2s ease;
+        }
+        
+        .ranking-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .ranking-position {
+            font-size: 1.3em;
+            margin-right: 15px;
+            min-width: 35px;
+        }
+        
+        .ranking-time {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #667eea;
+            margin-right: auto;
+        }
+        
+        .ranking-info {
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+        
+        /* Hide study panel toggles on mobile */
+        @media (max-width: 768px) {
+            .panel-toggle, .panel-show-btn {
+                display: none !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 10px;
+            }
+            
+            .mode-toggle-inline {
+                gap: 5px;
+            }
+            
+            .mode-btn {
+                font-size: 0.85em;
+                padding: 6px 10px;
+                flex: 1;
+                min-width: auto;
+            }
+
+            .main-content {
+                flex-direction: column;
+                height: auto;
+                margin-top: 10px;
+            }
+
+            .vocabulary-panel {
+                width: 100%;
+                height: 250px;
+                max-height: 40vh;
+                border-right: none;
+                border-bottom: 2px solid #e9ecef;
+                order: 2;
+            }
+            
+            .diary-section {
+                width: 100%;
+                order: 1;
+            }
+            
+            .diary-content {
+                padding: 15px;
+                max-height: 50vh;
+                overflow-y: auto;
+            }
+
+            .day-title {
+                font-size: 1.3em;
+                margin-bottom: 15px;
+            }
+            
+            .navigation {
+                padding: 10px;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            
+            .nav-button {
+                padding: 8px 12px;
+                font-size: 0.9em;
+            }
+            
+            #day-selector {
+                width: 100%;
+                max-width: 280px;
+                font-size: 1em !important;
+                padding: 8px !important;
+            }
+            
+            .study-panel-header {
+                padding: 10px;
+            }
+            
+            .study-panel-header h3 {
+                font-size: 1.1em;
+            }
+            
+            .toggle-study-panel {
+                width: 24px;
+                height: 24px;
+                font-size: 14px;
+            }
+            
+            .show-study-panel {
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+            
+            .tab-buttons {
+                padding: 5px 10px;
+            }
+            
+            .tab-btn {
+                padding: 6px 10px;
+                font-size: 0.85em;
+            }
+            
+            .word-item {
+                padding: 10px;
+                margin-bottom: 8px;
+            }
+            
+            .word-english {
+                font-size: 1em;
+            }
+            
+            .word-japanese {
+                font-size: 0.9em;
+            }
+            
+            .quiz-popup-content {
+                width: 90%;
+                max-width: 400px;
+                padding: 20px;
+            }
+            
+            .quiz-options {
+                gap: 10px;
+            }
+            
+            .quiz-option {
+                padding: 12px;
+                font-size: 0.95em;
+            }
+            
+            .type-mode-container {
+                padding: 15px;
+            }
+            
+            #type-input {
+                font-size: 1.2em;
+                padding: 10px;
+            }
+            
+            .type-word-display {
+                font-size: 1.8em;
+            }
+        }
+        
+        /* Extra small devices (phones in portrait) */
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.2em;
+            }
+            
+            .mode-toggle-inline {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .mode-btn {
+                width: 100%;
+            }
+            
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-button {
+                width: 100%;
+                max-width: 200px;
+            }
+            
+            #day-selector {
+                width: 100%;
+                max-width: none;
+            }
+            
+            #level-selector {
+                width: 100%;
+                font-size: 0.9em !important;
+                padding: 6px 10px !important;
+            }
+        }
+        
+        /* iPhone specific adjustments */
+        @supports (-webkit-touch-callout: none) {
+            /* iOS specific styles */
+            .diary-content, .panel-content {
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            input, select, button {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
+            
+            select {
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+                background-repeat: no-repeat;
+                background-position: right 10px center;
+                background-size: 20px;
+                padding-right: 40px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+        <span id="theme-icon">🌙</span>
+    </button>
+    
+    <button class="reading-guide-toggle" onclick="toggleReadingGuide()" title="Toggle Reading Guide (Use ↑↓ keys)">
+        <span id="guide-icon">📖</span>
+    </button>
+    
+    <div class="container">
+        <div class="header" style="padding: 15px 30px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+                <select id="level-selector" onchange="switchLevel(this.value)" style="padding: 6px 12px; font-size: 0.95em; border-radius: 8px; border: 2px solid white; background: rgba(255,255,255,0.2); color: white; font-weight: bold; cursor: pointer;">
+                    <option value="eiken2">英検2級</option>
+                    <option value="eiken3">英検3級</option>
+                    <option value="eikenpre1">英検準1級</option>
+                    <option value="eiken1">英検1級</option>
+                </select>
+                
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <button class="nav-button" id="prev-btn" onclick="previousDay()" style="padding: 6px 12px; font-size: 0.9em; min-width: auto;">←</button>
+                    <select id="day-selector" onchange="goToDay(this.value)" style="padding: 6px 15px; font-size: 1em; border-radius: 8px; border: 2px solid white; background: rgba(255,255,255,0.2); color: white; font-weight: bold; cursor: pointer;">
+                    </select>
+                    <button class="nav-button" id="next-btn" onclick="nextDay()" style="padding: 6px 12px; font-size: 0.9em; min-width: auto;">→</button>
+                </div>
+                
+                <div class="mode-toggle-inline" style="margin: 0;">
+                    <button class="mode-btn active" id="reading-mode-btn" onclick="setMode('reading')">📖 Reading</button>
+                    <button class="mode-btn" id="quiz-mode-btn" onclick="setMode('quiz')">✏️ Quiz</button>
+                    <button class="mode-btn" id="type-mode-btn" onclick="setMode('type')">⌨️ Type</button>
+                    <button class="mode-btn" id="missed-quiz-btn" onclick="startMissedWordsQuiz()" style="background: linear-gradient(135deg, #ff6b6b, #ff8e53); border-color: #ff6b6b;" title="Quiz on missed words">🎯 Missed</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <button class="panel-show-btn" onclick="toggleStudyPanel()" title="Show Study Panel" style="display: none;">
+                <span style="writing-mode: vertical-rl; text-orientation: mixed;">Show Study Panel</span>
+            </button>
+            <div class="vocabulary-panel">
+                <div class="panel-title">
+                    <h2>📚 Study Panel</h2>
+                    <button class="panel-toggle" onclick="toggleStudyPanel()" title="Hide panel">✖</button>
+                </div>
+                
+                <div class="panel-header">
+                    <div class="vocab-stats">
+                        <span id="all-words-count">All: 0</span>
+                        <span id="missed-words-count">Missed: 0</span>
+                        <span id="today-words-count">Today: 0</span>
+                    </div>
+                    <div class="tab-buttons" id="panel-tabs">
+                        <button class="tab-btn active" onclick="switchTab('words')">Today</button>
+                        <button class="tab-btn" onclick="switchTab('all')">All Words</button>
+                        <button class="tab-btn" onclick="switchTab('stats')">Stats</button>
+                        <button class="tab-btn" onclick="switchTab('missed')">Missed</button>
+                    </div>
+                    
+                    <div class="search-container" id="search-container" style="display: none; margin-top: 15px;">
+                        <input type="text" id="word-search" placeholder="Search words..." 
+                               style="width: 100%; padding: 8px; border: 2px solid #f093fb; border-radius: 8px; font-size: 14px;"
+                               oninput="filterAllWords()">
+                    </div>
+                </div>
+
+                <div class="panel-content">
+                    <div class="tab-content active" id="words-tab">
+                        <div id="vocabulary-list">
+                            <div class="loading">Loading vocabulary...</div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="all-tab">
+                        <div id="all-words-list">
+                            <div class="loading">Loading all words...</div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="stats-tab">
+                        <div class="stats-panel">
+                            <div class="stat-item">
+                                <span class="stat-label">Total Questions:</span>
+                                <span class="stat-value" id="total-questions">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Correct:</span>
+                                <span class="stat-value" id="correct-answers" style="color: #28a745;">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Incorrect:</span>
+                                <span class="stat-value" id="incorrect-answers" style="color: #dc3545;">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Accuracy:</span>
+                                <span class="stat-value" id="accuracy">0%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Current Streak:</span>
+                                <span class="stat-value" id="current-streak">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Best Streak:</span>
+                                <span class="stat-value" id="best-streak">0</span>
+                            </div>
+                        </div>
+                        <button class="nav-button" onclick="resetStats()" style="width: 100%;">Reset Stats</button>
+                    </div>
+
+                    <div class="tab-content" id="missed-tab">
+                        <div id="missed-words-list">
+                            <div class="loading">No missed words yet!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="diary-content" id="diary-entry">
+                <div class="loading">Loading diary...</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Quiz popup -->
+    <div id="quiz-popup" class="quiz-popup">
+        <div class="quiz-question">Choose the correct word:</div>
+        <div class="quiz-options" id="quiz-options"></div>
+    </div>
+
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            
+            if (body.classList.contains('dark-theme')) {
+                body.classList.remove('dark-theme');
+                themeIcon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.add('dark-theme');
+                themeIcon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        
+        // Reading guide functionality
+        let readingGuideActive = false;
+        let currentLineIndex = 0;
+        let textLines = [];
+        
+        function toggleReadingGuide() {
+            readingGuideActive = !readingGuideActive;
+            const toggleBtn = document.querySelector('.reading-guide-toggle');
+            const guideIcon = document.getElementById('guide-icon');
+            
+            if (readingGuideActive) {
+                toggleBtn.classList.add('active');
+                guideIcon.textContent = '📚';
+                initializeReadingGuide();
+            } else {
+                toggleBtn.classList.remove('active');
+                guideIcon.textContent = '📖';
+                removeReadingGuide();
+            }
+            
+            localStorage.setItem('readingGuide', readingGuideActive);
+        }
+        
+        function initializeReadingGuide() {
+            const diaryText = document.querySelector('.diary-text');
+            if (!diaryText) return;
+            
+            // Add guide-active class for cursor change
+            diaryText.classList.add('guide-active');
+            
+            // Create reading guide element if it doesn't exist
+            let guide = diaryText.querySelector('.reading-guide');
+            if (!guide) {
+                guide = document.createElement('div');
+                guide.className = 'reading-guide';
+                diaryText.appendChild(guide);
+            }
+            
+            guide.classList.add('active');
+            
+            // Calculate line positions
+            const lineHeight = parseFloat(window.getComputedStyle(diaryText).lineHeight);
+            const textHeight = diaryText.scrollHeight;
+            const numberOfLines = Math.ceil(textHeight / lineHeight);
+            
+            // Preserve current line if re-initializing
+            const previousLineIndex = currentLineIndex;
+            
+            textLines = [];
+            for (let i = 0; i < numberOfLines; i++) {
+                textLines.push(i * lineHeight);
+            }
+            
+            // Restore previous position or start at 0
+            currentLineIndex = previousLineIndex < numberOfLines ? previousLineIndex : 0;
+            updateReadingGuidePosition();
+            
+            // Remove existing handlers first to avoid duplicates
+            diaryText.removeEventListener('mousemove', handleDiaryTextHover);
+            diaryText.removeEventListener('mouseenter', handleDiaryTextHover);
+            
+            // Add mousemove handler to follow the cursor
+            diaryText.addEventListener('mousemove', handleDiaryTextHover);
+            diaryText.addEventListener('mouseenter', handleDiaryTextHover);
+        }
+        
+        function handleDiaryTextHover(e) {
+            if (!readingGuideActive) return;
+            
+            // Ignore hover events if the target is a vocabulary word (strong element)
+            // This prevents the guide from jumping when clicking on words
+            if (e.target.tagName === 'STRONG') {
+                return;
+            }
+            
+            const diaryText = e.currentTarget;
+            const rect = diaryText.getBoundingClientRect();
+            const hoverY = e.clientY - rect.top;
+            const lineHeight = parseFloat(window.getComputedStyle(diaryText).lineHeight);
+            
+            // Calculate which line is being hovered
+            const hoveredLine = Math.floor(hoverY / lineHeight);
+            
+            // Update the current line index
+            const newIndex = Math.max(0, Math.min(hoveredLine, textLines.length - 1));
+            
+            // Only update if the line has changed
+            if (newIndex !== currentLineIndex) {
+                currentLineIndex = newIndex;
+                updateReadingGuidePosition();
+            }
+        }
+        
+        function removeReadingGuide() {
+            const guide = document.querySelector('.reading-guide');
+            if (guide) {
+                guide.classList.remove('active');
+            }
+            
+            const diaryText = document.querySelector('.diary-text');
+            if (diaryText) {
+                diaryText.classList.remove('guide-active');
+                diaryText.removeEventListener('mousemove', handleDiaryTextHover);
+                diaryText.removeEventListener('mouseenter', handleDiaryTextHover);
+            }
+        }
+        
+        function updateReadingGuidePosition() {
+            if (!readingGuideActive) return;
+            
+            const guide = document.querySelector('.reading-guide');
+            if (guide && textLines.length > 0) {
+                guide.style.top = textLines[currentLineIndex] + 'px';
+            }
+        }
+        
+        function moveReadingGuide(direction) {
+            if (!readingGuideActive) return;
+            
+            if (direction === 'up' && currentLineIndex > 0) {
+                currentLineIndex--;
+            } else if (direction === 'down' && currentLineIndex < textLines.length - 1) {
+                currentLineIndex++;
+            }
+            
+            updateReadingGuidePosition();
+            
+            // Scroll the guide into view if needed
+            const guide = document.querySelector('.reading-guide');
+            if (guide) {
+                const diaryContent = document.getElementById('diary-entry');
+                const guideRect = guide.getBoundingClientRect();
+                const containerRect = diaryContent.getBoundingClientRect();
+                
+                if (guideRect.top < containerRect.top) {
+                    diaryContent.scrollTop -= containerRect.top - guideRect.top + 50;
+                } else if (guideRect.bottom > containerRect.bottom) {
+                    diaryContent.scrollTop += guideRect.bottom - containerRect.bottom + 50;
+                }
+            }
+        }
+        
+        // Keyboard navigation for reading guide
+        document.addEventListener('keydown', function(e) {
+            if (!readingGuideActive) return;
+            
+            if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                moveReadingGuide('up');
+            } else if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                moveReadingGuide('down');
+            }
+        });
+        
+        // Load saved preferences on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeIcon = document.getElementById('theme-icon');
+            
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+                themeIcon.textContent = '☀️';
+            } else {
+                themeIcon.textContent = '🌙';
+            }
+            
+            // Load reading guide preference
+            const savedGuide = localStorage.getItem('readingGuide');
+            if (savedGuide === 'true') {
+                setTimeout(() => {
+                    toggleReadingGuide();
+                }, 500);
+            }
+        });
+        
+        // Re-initialize reading guide when content changes
+        const observer = new MutationObserver(function(mutations) {
+            if (readingGuideActive) {
+                setTimeout(initializeReadingGuide, 100);
+            }
+        });
+        
+        // Observe changes to diary content
+        document.addEventListener('DOMContentLoaded', function() {
+            const diaryEntry = document.getElementById('diary-entry');
+            if (diaryEntry) {
+                observer.observe(diaryEntry, { childList: true, subtree: true });
+            }
+        });
+    </script>
+    <script src="diary-app.js"></script>
+</body>
+</html>
