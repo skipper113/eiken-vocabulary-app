@@ -75,18 +75,18 @@ P.S. - Eren and Jean had a food fight! Potatoes everywhere! Levi's squad was vis
 
 Dear Diary,
 
-Tonight something amazing happened! I couldn't **sleep** so I went **outside** to **think**. The **sky** was full of stars. **Behind** the supply shed, I saw a small light. It was Armin with a **candle**, drawing something on **paper**!
+Tonight something **amazing** happened! I couldn't sleep so I went **outside** to think. The sky was full of stars. **Behind** the supply shed, I saw a small light. It was Armin with a candle, drawing something on paper!
 
-When he saw me, he looked worried. "Please don't **tell** anyone," he said. I promised to **keep** his secret. Then he showed me - he's making a **special** map! He's been going **around** the camp at **night**, checking **every** weak spot in our walls. "We **need** to be ready," he said. "The Titans could **come** **any** time."
+When he saw me, he looked nervous. "Please don't **tell** anyone," he said. I made a **promise** to **keep** his secret. Then he showed me - he's making a special map! He's been going **around** the camp at night, checking **all** weak spots in our walls. "We **need to** be ready," he said. "The Titans could come **soon**."
 
-I wanted to **help** him so badly! Armin is so **smart** - not **strong** like Mikasa or **brave** like Eren, but his **mind** is our best weapon. "Can I **bring** you **something**?" I asked. He needed someone to **watch** while he worked. So now I'm his lookout!
+I wanted to **help with** his mission so badly! Armin is so **clever** - not **strong** like Mikasa or **brave** like Eren, but his **mind** is our best weapon. "Can I **bring** you something?" I asked. He needed someone to **watch** while he worked. So now I'm his lookout!
 
-We worked **through** the night. Armin would **stop** and **listen** for guards, then continue drawing. He found **three** dangerous spots where Titans could **easily** break in. "We must **use** this information to **save** everyone," he said. His **blue** eyes were so serious!
+We worked **through** the night. Armin would stop and listen for guards, then **continue** drawing. He **found** three **dangerous** spots where Titans could easily **break** in. "We must use this **information** to **save** everyone," he said. His eyes were so serious!
 
-**After** two hours, we heard footsteps. "Quick, **hide**!" Armin whispered. We ran **into** the forest. It was Reiner! But he just smiled and walked away. **Does** he know what we're doing? I **wonder**...
+**After** two hours, we **heard** footsteps. "**Quick**, hide!" Armin whispered. We ran into the forest. It was Reiner! But he just smiled and walked **away**. Does he **know** what we're doing? I **wonder**...
 
-Armin said tomorrow he'll **give** the map to Commander Erwin (who's visiting). This could **change** everything! But we must be **careful** - if the wrong person finds out, it could be **bad** for everyone. I'm so proud to help Armin. He's going to **become** a great strategist!
+Armin said tomorrow he'll give the map to Commander Erwin (who's **visit**ing us). This could change everything! But we must act **carefully** - if the **wrong** person finds out, it could be bad for **everyone**. I **be proud of** Armin! He's going to **become** a great strategist!
 
-I must **go** now - morning training starts in **four** hours!
+I must go now - morning training starts **soon**!
 
-P.S. - Before we left, Armin said something strange: "The walls have eyes and ears. Not everyone here is who they seem." What does that **mean**? Is someone a spy? I'm scared but also excited to be part of Armin's team!
+P.S. - Before we left, Armin said something **strange**: "The walls have eyes and ears. Not everyone here is who they **seem**." What does that mean? Is **someone** a spy? I'm scared but also **excited** to be part of Armin's team!
