@@ -90,3 +90,25 @@ Armin said tomorrow he'll give the map to Commander Erwin (who's **visit**ing us
 I must go now - morning training starts **soon**!
 
 P.S. - Before we left, Armin said something **strange**: "The walls have eyes and ears. Not everyone here is who they **seem**." What does that mean? Is **someone** a spy? I'm scared but also **excited** to be part of Armin's team!
+
+---
+
+## Day 6 - Becoming Armin's Partner  
+
+Dear Diary,
+
+This was the most **important** day of my life! This morning, Armin came to **find** me **during** breakfast. "I **need to** talk to you," he whispered. My heart was beating so **fast**!
+
+We went **behind** the **library** where no one could **hear** us. "Kai," he said, looking serious, "I **trust** you. Will you **become** my partner? I need someone **brave** and **clever** to **help with** my **plan**." I said yes **right away**! 
+
+He showed me three more **dangerous** spots he **found** **yesterday**. "We must **check out** each **place** **carefully**," he explained. "The Titans are getting **strong**er. We **have to** be ready." He gave me a **sign** to use if I see anything **wrong** - I **put** my hand on my heart, then point to the sky.
+
+**After** lunch, we **practice**d our signals. Armin would **show** me different hand movements, and I had to **remember** them all. "If you see **someone** acting **strange**, use this one," he said. It was **difficult** but I **try** **hard**! We worked **together** **until** it got dark.
+
+**Then** something **terrible** happened! While we were **practice**ing **near** the **garden**, we **heard** voices. It was Reiner and Bertholdt, talking in **quiet** tones. "**Soon**," Reiner said. "Everything will change." They looked **around** **carefully**, but we **stay**ed silent **behind** a wall.
+
+Armin's **face** went pale. **After** they left, he **tell** me: "I **think** they **know** something. We must **watch** them closely. Can you follow Reiner without him **notice**ing?" This is a **heavy** responsibility, but I **promise**d to do my best.
+
+Later, Armin gave me a small **dictionary** with secret words. "Study these," he said. "From now on, we communicate in **secret**." I'm so **excited** but also **nervous**! **In the future**, I'll be Armin's real sidekick!
+
+P.S. - Armin **believe**s the **answer** to **save** humanity is **information**. He says if we can **understand** our **enemy**, we can **win**. I **wonder** what **dangerous** secrets we'll **discover** **together**!
