@@ -105,7 +105,7 @@ He showed me three more **dangerous** spots he **found** **yesterday**. "We must
 
 **after** lunch, we **practice**d our signals. Armin would **show** me different hand movements, and I had to **remember** them all. "If you see **someone** acting **strange**, use this one," he said. It was **difficult** but I **try** **hard**! We worked **together** **until** it got dark.
 
-**then** something **terrible** happened! While we were **practice**ing **near** the **garden**, we **heard** voices. It was Reiner and Bertholdt, talking in **quiet** tones. "**soon**," Reiner said. "Everything will change." They looked **around** **carefully**, but we **stay**ed silent **behind** a wall.
+**then** something **terrible** happened! While we were **practice**ing near the **garden**, we **heard** voices. It was Reiner and Bertholdt, talking in **quiet** tones. "**soon**," Reiner said. "Everything will change." They looked **around** **carefully**, but we **stay**ed silent **behind** a wall.
 
 Armin's **face** went pale. **after** they left, he **tell** me: "I **think** they **know** something. We must **watch** them closely. Can you follow Reiner without him **notice**ing?" This is a **heavy** responsibility, but I **promise**d to do my best.
 

@@ -19,7 +19,9 @@
       "Bash(do grep -q \"^$word,\" /Users/yohei/eiken2/eikenpre1.csv)",
       "Bash(echo:*)",
       "Bash(done)",
-      "Bash(shuf:*)"
+      "Bash(shuf:*)",
+      "Bash(for word in \"all\" \"decided\" \"got\" \"had\" \"interested\" \"met\" \"near\" \"practice\" \"showed\" \"signed\")",
+      "Bash(do grep -q \"^$word,\" /Users/yohei/eiken2/eiken3.csv)"
     ],
     "deny": [],
     "ask": []
