@@ -12,31 +12,31 @@ The campus was **brightly** lit by the morning sun, making everything seem less 
 
 In the common room, I saw students **quarrel** playfully about which IB subjects were hardest. Some were discussing their **holistic** approach to learning, while others **map out** their study schedules **in order to** manage the workload. I noticed they could all **afford to** speak English so naturally - something I couldn't do yet.
 
-**Lately**, I'd been practicing English daily, but hearing them made me realize I needed to **look up to** these fluent speakers and learn from them. The **spontaneous** conversations, the **applause** after someone's presentation - everything felt foreign yet exciting.
+**lately**, I'd been practicing English daily, but hearing them made me realize I needed to **look up to** these fluent speakers and learn from them. The **spontaneous** conversations, the **applause** after someone's presentation - everything felt foreign yet exciting.
 
 My roommate seemed nice but kept to herself. I wanted to **hang on** to my dream of making friends, but my shyness felt **cruel** to my own ambitions. Tomorrow, I promised myself, I would try harder to **invade** my comfort zone and actually talk to someone.
 
-**In contrast** to my old school, this place felt like the beginning of something **replaceable** - my old self transforming into someone new.
+**in contrast** to my old school, this place felt like the beginning of something **replaceable** - my old self transforming into someone new.
 
 ---
 
 ## Day 2 - The Roommate's Secret
 
-My alarm didn't work. I woke to my roommate whispering, "**Rise and shine**!" with an **incredible** British accent. She was already dressed **neat**ly in her uniform, looking **striking** against the morning light streaming through our window.
+My alarm didn't work. I woke to my roommate whispering, "Rise and shine!" with an **incredible** British accent. She was already dressed **neat**ly in her uniform, looking **striking** against the morning light streaming through our window.
 
-"I'm Emma," she said with a **frank** smile. "**Afterward** the **reception** yesterday, I wanted to **confess** something - I was **eager to** talk to you, but you looked overwhelmed."
+"I'm Emma," she said with a **frank** smile. "**afterward** the **reception** yesterday, I wanted to **confess** something - I was **eager to** talk to you, but you looked overwhelmed."
 
 I felt my face turn red. "I **intend to** make friends," I stammered, "but my English is **horrible**."
 
-Emma laughed, not in a **nasty** way, but with genuine **warmth**. "**What is more**, half the students here are struggling with something. See that girl?" She pointed to a **prestigious**-looking student in the **backyard**. "She's **jealous** of anyone who understands **geography** because she can't remember countries. And that **bold** boy who was **boast**ing yesterday? He **broke into tears** during his first Theory of Knowledge class."
+Emma laughed, not in a **nasty** way, but with genuine **warmth**. "What is more, half the students here are struggling with something. See that girl?" She pointed to a **prestigious**-looking student in the **backyard**. "She's **jealous** of anyone who understands **geography** because she can't remember countries. And that **bold** boy who was **boast**ing yesterday? He broke into tears during his first Theory of Knowledge class."
 
 During **interval** between classes, Emma **instruct**ed me on navigating the **vast** campus. The **fountain** in the central courtyard became our meeting spot. She explained how the IB program could **shed light on** different perspectives, how it would **ultimately** **unite** students from different backgrounds.
 
 "This **prestigious** school might seem **harsh**," she said, pulling an **envelope** from her bag. "But look - an **invitation** to the manga club! I saw your **luggage** had anime stickers."
 
-My heart **leap**ed. Someone had noticed something about me beyond my **silence**. In that moment, the **vague** **grief** of leaving home began to **stabilize**. Emma wasn't just a roommate; she was becoming my first real friend.
+My heart leaped. Someone had noticed something about me beyond my **silence**. In that moment, the **vague** **grief** of leaving home began to **stabilize**. Emma wasn't just a roommate; she was becoming my first real friend.
 
-"Tomorrow," she said, "I'll be your **tutor** for the English presentation. **In substance**, we're all here to help each other."
+"Tomorrow," she said, "I'll be your **tutor** for the English presentation. In substance, we're all here to help each other."
 
 ---
 
@@ -104,19 +104,19 @@ The journey continues tomorrow, but tonight, I celebrate this moment of **transf
 
 Dear Diary,
 
-Saturday morning brought an **unexpected** message from Emma. "The library has **exclusive** access to the Oxford archives this weekend. Want to **investigate** together?" My heart raced - this was a rare **opportunity** to **strengthen** our Theory of Knowledge presentation!
+Saturday morning brought an **abrupt** message from Emma. "The library has **exclusive** access to the Oxford archives this weekend. Want to **collaborate**?" My heart raced - this was a rare **privilege** to **reinforce** our Theory of Knowledge presentation!
 
-The **prestigious** university library **intimidated** me at first. The **atmosphere** was so **solemn**, filled with **scholars** conducting **profound** research. Emma, however, moved with **confidence**, having **utilized** these resources before.
+The **prestigious** university library **intimidate**d me at first. The **solemn** atmosphere, filled with **scholarship** and **profound** research, was **overwhelm**ing. Emma, however, moved with **assurance**, having **utilize**d these resources **formerly**.
 
-We discovered **controversial** documents about **indigenous** knowledge systems that would **enhance** our **thesis**. "This **evidence** could **revolutionize** our argument," Emma whispered, her eyes bright with **enthusiasm**. The **implications** were **tremendous** - we could **demonstrate** how **conventional** academic **frameworks** often **suppress** **alternative** ways of knowing.
+We discovered **controversial** documents about **indigenous** knowledge systems that would **amplify** our **thesis**. "This **testimony** could **alter** our entire argument," Emma whispered, her eyes bright with **enthusiasm**. The **implications** were **substantial** - we could **illustrate** how **conventional** academic **framework**s often **neglect** **legitimate** ways of knowing.
 
-Hours passed unnoticed as we **analyzed** each source. The **complexity** was **overwhelming**, but Emma's **collaborative** approach made it **manageable**. "Your **perspective** on Eastern philosophy **complements** my Western **methodology** perfectly," she noted. This **mutual** respect had become the **foundation** of our **partnership**.
+Hours passed unnoticed as we **scrutinize**d each source. The **complexity** was **staggering**, but Emma's **collaborative** approach made it **feasible**. "Your **perspective** on Eastern philosophy **complement**s my Western **methodology** perfectly," she noted. This **mutual** **appreciation** had become the **pillar** of our **alliance**.
 
-A **distinguished** professor approached us, **intrigued** by our research. "Your **hypothesis** shows remarkable **sophistication**," he said, offering to **facilitate** a meeting with the head of **anthropology**. This **endorsement** felt **surreal** - were we really making an **authentic** **contribution** to academic **discourse**?
+A **distinguished** professor approached us, **intrigue**d by our research. "Your **hypothesis** shows remarkable **sophistication**," he said, offering to **facilitate** a meeting with the **dean**. This **endorse**ment felt **surreal** - were we really making an **authentic** **contribution** to academic **discourse**?
 
-By evening, we had **accumulated** enough material to **transform** our presentation completely. The **exhaustion** was worth it - we had **transcended** the basic **requirements** and created something **innovative**.
+By evening, we had **accumulate**d enough material to **revise** our presentation completely. The **fatigue** was **worthwhile** - we had **surpass**ed the basic **criteria** and created something **innovative**.
 
-Tomorrow, we **implement** our findings. The **anticipation** is almost **unbearable**!
+Tomorrow, we **execute** our findings. The **anticipation** is almost **unbearable**!
 
 ---
 

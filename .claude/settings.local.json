@@ -14,7 +14,12 @@
       "Bash(git ls-tree:*)",
       "Bash(git fetch:*)",
       "Bash(gh repo view:*)",
-      "Bash(./update_version.sh)"
+      "Bash(./update_version.sh)",
+      "Bash(for word in \"accumulate\" \"afterward\" \"alternative\" \"analyze\" \"anthropology\" \"atmosphere\" \"collaborate\" \"complement\" \"confidence\" \"contribution\" \"controversial\" \"demonstrate\" \"distinguish\" \"endorse\" \"enhance\" \"enthusiasm\" \"evidence\" \"framework\" \"implement\" \"implication\" \"intimidate\" \"intrigue\" \"investigate\" \"lately\" \"leap\" \"manageable\" \"methodology\" \"opportunity\" \"overwhelming\" \"partnership\" \"requirement\" \"revolutionize\" \"scholar\" \"solemn\" \"sophistication\" \"strengthen\" \"surreal\" \"transcend\" \"transform\" \"tremendous\" \"unbearable\" \"unexpected\" \"utilize\")",
+      "Bash(do grep -q \"^$word,\" /Users/yohei/eiken2/eikenpre1.csv)",
+      "Bash(echo:*)",
+      "Bash(done)",
+      "Bash(shuf:*)"
     ],
     "deny": [],
     "ask": []

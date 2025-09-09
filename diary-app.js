@@ -601,6 +601,12 @@ function formatQuizText(text) {
 function handleBlankClick(event) {
     const blank = event.target;
     
+    // Close any existing popup first
+    const existingPopup = document.getElementById('quiz-popup');
+    if (existingPopup && existingPopup.classList.contains('active')) {
+        closeQuizPopup();
+    }
+    
     // Don't show quiz if already answered
     if (blank.dataset.answered === 'true') return;
     
@@ -1089,6 +1095,7 @@ function handleQuizAnswer(answer) {
 // Close quiz popup
 function closeQuizPopup(event) {
     if (event && event.target.classList.contains('quiz-option')) return;
+    if (event && event.target.classList.contains('blank-word')) return;
     
     const popup = document.getElementById('quiz-popup');
     popup.classList.remove('active');
