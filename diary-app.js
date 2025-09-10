@@ -340,17 +340,32 @@ function findTranslation(word) {
     
     // Remove common suffixes and try to find base form
     const suffixPatterns = [
+        // Plurals
         { suffix: 'ies', replacement: 'y' },      // companies -> company
+        { suffix: 'ves', replacement: 'f' },      // leaves -> leaf
+        { suffix: 'ves', replacement: 'fe' },     // knives -> knife
         { suffix: 'es', replacement: '' },        // produces -> produce
         { suffix: 's', replacement: '' },         // millions -> million
+        
+        // Past tense and past participle
+        { suffix: 'ied', replacement: 'y' },      // tried -> try, studied -> study
         { suffix: 'ed', replacement: '' },        // discovered -> discover
         { suffix: 'ed', replacement: 'e' },       // reduced -> reduce
+        { suffix: 'd', replacement: '' },         // told -> tell
+        { suffix: 'd', replacement: 'e' },        // made -> make
+        
+        // Present participle/gerund
+        { suffix: 'ying', replacement: 'ie' },    // dying -> die
         { suffix: 'ing', replacement: '' },       // discovering -> discover
-        { suffix: 'ing', replacement: 'e' },      // reducing -> reduce
-        { suffix: 'ly', replacement: '' },        // recently -> recent
+        { suffix: 'ing', replacement: 'e' },      // reducing -> reduce, noticing -> notice
+        
+        // Adverbs
+        { suffix: 'ly', replacement: '' },        // recently -> recent, carefully -> careful
         { suffix: 'ily', replacement: 'y' },      // happily -> happy
         { suffix: 'ically', replacement: 'ic' },  // automatically -> automatic
         { suffix: 'ally', replacement: 'al' },    // accidentally -> accidental
+        
+        // Other suffixes
         { suffix: 'ful', replacement: '' },       // harmful -> harm
         { suffix: 'less', replacement: '' },      // harmless -> harm
         { suffix: 'ness', replacement: '' },      // happiness -> happy
@@ -358,14 +373,17 @@ function findTranslation(word) {
         { suffix: 'tion', replacement: '' },      // production -> produce
         { suffix: 'tion', replacement: 'te' },    // celebration -> celebrate
         { suffix: 'sion', replacement: '' },      // confusion -> confuse
-        { suffix: 'er', replacement: '' },        // producer -> produce
+        { suffix: 'er', replacement: '' },        // producer -> produce, stronger -> strong
+        { suffix: 'est', replacement: '' },       // strongest -> strong
         { suffix: 'or', replacement: '' },        // creator -> create
         { suffix: 'ist', replacement: '' },       // scientist -> science
         { suffix: 'ize', replacement: '' },       // organize -> organ
         { suffix: 'ise', replacement: '' },       // organise -> organ
     ];
     
-    // Try removing suffixes
+    // Try removing suffixes (try longer suffixes first)
+    suffixPatterns.sort((a, b) => b.suffix.length - a.suffix.length);
+    
     for (let pattern of suffixPatterns) {
         if (wordLower.endsWith(pattern.suffix)) {
             const base = wordLower.slice(0, -pattern.suffix.length) + pattern.replacement;
@@ -373,6 +391,41 @@ function findTranslation(word) {
                 return vocabularyData[base].japanese;
             }
         }
+    }
+    
+    // Handle consonant doubling (e.g., stopped -> stop, running -> run)
+    if (wordLower.match(/([bcdfghjklmnpqrstvwxyz])\1(ed|ing)$/)) {
+        const base = wordLower.replace(/([bcdfghjklmnpqrstvwxyz])\1(ed|ing)$/, '$1');
+        if (vocabularyData[base]) {
+            return vocabularyData[base].japanese;
+        }
+    }
+    
+    // Check for phrases (like "interested in", "proud of")
+    // Try checking if this word is part of a known phrase
+    const phrasesToCheck = [
+        'be interested in',
+        'be proud of',
+        'have to',
+        'need to',
+        'look for',
+        'take care of',
+        'come down with',
+        'help with',
+        'all day long',
+        'at first',
+        'from now on',
+        'right away',
+        'one day',
+        'every year'
+    ];
+    
+    // For words like "interested" or "proud", check if they're part of a phrase
+    if (wordLower === 'interested' && vocabularyData['be interested in']) {
+        return vocabularyData['be interested in'].japanese;
+    }
+    if (wordLower === 'proud' && vocabularyData['be proud of']) {
+        return vocabularyData['be proud of'].japanese;
     }
     
     // Handle irregular forms
@@ -440,6 +493,20 @@ function findTranslation(word) {
         'shot': 'shoot',
         'showed': 'show',
         'shown': 'show',
+        'signed': 'sign',
+        'decided': 'decide',
+        'told': 'tell',
+        'noticed': 'notice',
+        'noticing': 'notice',
+        'promised': 'promise',
+        'practiced': 'practice',
+        'practicing': 'practice',
+        'stayed': 'stay',
+        'finished': 'finish',
+        'tried': 'try',
+        'believed': 'believe',
+        'believes': 'believe',
+        'finds': 'find',
         'sang': 'sing',
         'sung': 'sing',
         'sat': 'sit',
