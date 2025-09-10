@@ -112,3 +112,25 @@ Armin's **face** went pale. **after** they left, he **tell** me: "I **think** th
 Later, Armin gave me a small **dictionary** with secret words. "Study these," he said. "From now on, we communicate in **secret**." I'm so **excited** but also **nervous**! **in the future**, I'll be Armin's real sidekick!
 
 P.S. - Armin **believe**s the **answer** to **save** humanity is **information**. He says if we can **understand** our **enemy**, we can **win**. I **wonder** what **dangerous** secrets we'll **discover** **together**!
+
+---
+
+## Day 7 - The First Mission
+
+Dear Diary,
+
+Today was **terrible** and **exciting** at the same time! I had to follow Reiner **all day long**, just like Armin asked. **at first**, everything seemed normal - he went to **breakfast**, then to training. But **after** **noon**, things got **strange**.
+
+Reiner **suddenly** stopped **in front of** the old **library** and looked **around**. **Then** he went **inside**. I waited **outside** for a **few** minutes, then followed him **quietly**. He was **behind** a shelf, talking to someone on the other side. I couldn't **see** who it was, but the voice sounded familiar.
+
+"The **plan** must **happen** **soon**," Reiner said. "**Maybe** in **July** or August. We **need to** be ready." The other person said something I couldn't **hear**. Then Reiner said, "**Remember** - no one can **know**. Especially not Eren." My **heart** was beating so **fast**! This was **important** **information**!
+
+I **stay**ed **until** they **finish**ed talking. **when** Reiner left, I **try** to **see** who the other person was, but they went out the back door. I ran to **find** Armin **right away**. He was **by** the **lake**, studying his **map**.
+
+"Armin!" I whispered. "I **hear**d something bad!" I **tell** him everything. His **face** got serious. "This is worse than I **thought**," he said. "We must be **careful**. **From now on**, we **watch** them **every year**."
+
+He gave me a new task: "Tomorrow, **during** training, **try to** **get** close to Bertholdt. **See** if he acts **nervous**. But don't let him **notice** you're watching." I **promise**d to do my best.
+
+Before bed, I **practice**d the **secret** **sign**s Armin taught me. If I see danger, I **put** my hand on my **shoulder**. If I need help, I touch my ear. These small things could **save** our lives **one day**.
+
+P.S. - **Sometimes** I **feel** scared. What if Reiner **find**s out I'm watching him? But I **believe** in Armin. **Together**, we'll **protect** **everyone**!
