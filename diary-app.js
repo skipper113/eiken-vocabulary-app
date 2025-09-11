@@ -1128,6 +1128,12 @@ function handleQuizAnswer(answer) {
         }
         blank.classList.add('correct');
         blank.textContent = correctAnswer;
+        
+        // Play audio for correct answer
+        const translation = findTranslation(correctAnswer.toLowerCase());
+        if (translation) {
+            speakWordWithTranslation(correctAnswer, translation, blank);
+        }
     } else {
         quizStats.incorrect++;
         quizStats.currentStreak = 0;
@@ -1138,10 +1144,16 @@ function handleQuizAnswer(answer) {
         const key = correctAnswer.toLowerCase();
         quizStats.missedWords[key] = (quizStats.missedWords[key] || 0) + 1;
         
-        // Show correct answer after delay
+        // Show correct answer after delay and play audio
         setTimeout(() => {
             blank.textContent = correctAnswer;
             blank.classList.add('revealed');
+            
+            // Play audio for correct answer
+            const translation = findTranslation(correctAnswer.toLowerCase());
+            if (translation) {
+                speakWordWithTranslation(correctAnswer, translation, blank);
+            }
         }, 1500);
     }
     
@@ -2042,6 +2054,12 @@ function handleTypeInput(e) {
                     // Show message
                     document.getElementById('type-feedback').innerHTML = `<span style="color: #ff6b00;">💡 Auto-revealed: <strong>${targetWord}</strong></span>`;
                     
+                    // Play audio for auto-revealed word
+                    const translation = findTranslation(targetWord.toLowerCase());
+                    if (translation) {
+                        speakWordWithTranslation(targetWord, translation, null);
+                    }
+                    
                     // Mark as missed word
                     const key = targetWord.toLowerCase();
                     quizStats.missedWords[key] = (quizStats.missedWords[key] || 0) + 1;
@@ -2088,6 +2106,12 @@ function handleTypeInput(e) {
         typeMode.currentIndex++;
         document.getElementById('type-feedback').textContent = '✅ Correct!';
         document.getElementById('type-feedback').style.color = '#28a745';
+        
+        // Play audio for correct word
+        const translation = findTranslation(targetWord.toLowerCase());
+        if (translation) {
+            speakWordWithTranslation(targetWord, translation, null);
+        }
         
         // Disable input to prevent further typing
         const inputElement = document.getElementById('type-input');
@@ -2722,6 +2746,12 @@ function checkMissedQuizAnswer() {
         feedback.innerHTML = '<span style="color: var(--success);">✅ Correct!</span>';
         missedWordsQuizMode.correctCount++;
         
+        // Play audio for correct word
+        const translation = findTranslation(correctWord);
+        if (translation) {
+            speakWordWithTranslation(correctWord, translation, null);
+        }
+        
         // Reduce miss count or remove from missed words
         if (quizStats.missedWords[correctWord] > 1) {
             quizStats.missedWords[correctWord]--;
@@ -2743,6 +2773,12 @@ function checkMissedQuizAnswer() {
     } else {
         // Incorrect answer
         feedback.innerHTML = `<span style="color: var(--danger);">❌ Try again! The correct answer is: ${correctWord}</span>`;
+        
+        // Play audio for correct word
+        const translation = findTranslation(correctWord);
+        if (translation) {
+            speakWordWithTranslation(correctWord, translation, null);
+        }
         
         // Add to miss count
         quizStats.missedWords[correctWord] = (quizStats.missedWords[correctWord] || 0) + 0.5;
