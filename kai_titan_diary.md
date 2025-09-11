@@ -133,4 +133,34 @@ He gave me a new task: "Tomorrow, **during** training, **try to** **get** close 
 
 Before bed, I **practice**d the **secret** **sign**s Armin taught me. If I see danger, I **put** my hand on my **shoulder**. If I need help, I touch my ear. These small things could **save** our lives **one day**.
 
-P.S. - **Sometimes** I **feel** scared. What if Reiner **find**s out I'm watching him? But I **believe** in Armin. **Together**, we'll **protect** **everyone**!
+P.S. - **Sometimes** I **feel** scared. What if Reiner **finds** out I'm watching him? But I **believe** in Armin. **Together**, we'll **protect** **everyone**!
+
+---
+
+## Day 8 - A Close Call
+
+Dear Diary,
+
+**Tonight** was terrifying! I almost got caught spying on Bertholdt. It's **Friday**, and **as usual**, he went to the old building after dinner. I decided to **attend** his secret meeting, hiding **below** the window.
+
+**Suddenly**, I heard my **grandmother**'s voice! No, wait - it was Annie! She can **steal** voices perfectly. "The **date** is set," she said. "**February** 5th. That's when we make our move." My blood ran **cold**. That's only three weeks away!
+
+Bertholdt asked about the **cost** of failure. "We could all **die**," Annie replied. "But it's **too** late to stop now. The **customer** is waiting." Customer? Who are they **working for**?
+
+I needed to get closer to hear more. But when I moved, I knocked over a **piece** of wood. The sound was **loud**! "Someone's there!" Bertholdt shouted. I had to **run away** fast!
+
+I ran toward the **zoo** area where they keep horses. My **grandmother** used to say, "When in trouble, find animals - they'll **protect** you." I hid behind wall and **brush**ed my uniform clean. My heart was beating so hard!
+
+Then I saw Bertholdt with torch, searching. "I **wish** I had my gear," I heard him say. He looked **angry** and **hungry** for answers. I stayed perfectly still, not even breathing.
+
+After what felt like hours, he gave up. "Must have been cat," he said. As he left, he dropped something - a **picture**! I grabbed it after he was gone. It showed **city hall** I didn't recognize, with strange **art** on the buildings.
+
+I ran to find Armin at the **library**. He was there with his **wife** - I mean, not wife! Just Mikasa! (Why did I write that?) They were studying a **local** **map**. When I showed them the **picture**, Armin's face went white.
+
+"This is **international** **attention** we don't want," he said. "This **example** proves they're **working for** someone outside the walls!" Mikasa wanted to tell the **captain** immediately, but Armin said we need more **evidence**.
+
+He gave me a new **task**: "Tomorrow, **ride** to the **station** and send this **letter** to uncle in the capital. He's a **doctor** who understands these things." The **trip** will be dangerous, but I'll do it!
+
+Before bed, I drew the **picture** again in case I lose it. The **umbrella** symbol in the corner seems **important**. **Why** would they use that sign?
+
+P.S. - My **daughter** - I mean, future daughter (I hope!) - would be **be proud of** of me being so brave. Wait, why am I thinking about having a family? Focus, Kai!
