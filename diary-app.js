@@ -2304,13 +2304,23 @@ function saveRankingWithNickname() {
 
 // Save ranking
 function saveTypeRanking(time, wordCount, nickname = 'Anonymous') {
-    // Load all rankings from localStorage
-    const allRankings = JSON.parse(localStorage.getItem('typeRankingsPerDay') || '{}');
+    // Save rankings per level
+    const level = currentLevel || 'eiken2';
+    const rankingsKey = `typeRankings_${level}`;
+    
+    // Load all rankings from localStorage for this level
+    const allRankings = JSON.parse(localStorage.getItem(rankingsKey) || '{}');
+    
+    // Also maintain legacy format for backward compatibility
+    const legacyRankings = JSON.parse(localStorage.getItem('typeRankingsPerDay') || '{}');
     
     // Get rankings for current day
     const dayKey = `day${currentDay}`;
     if (!allRankings[dayKey]) {
         allRankings[dayKey] = [];
+    }
+    if (!legacyRankings[dayKey]) {
+        legacyRankings[dayKey] = [];
     }
     
     const newRanking = {
@@ -2319,11 +2329,13 @@ function saveTypeRanking(time, wordCount, nickname = 'Anonymous') {
         wordCount: wordCount,
         day: currentDay,
         nickname: nickname,
+        level: level,
         mode: typeMode.gameMode || 'typing' // Add game mode to ranking
     };
     
     allRankings[dayKey].push(newRanking);
-    console.log(`Added new ranking for Day ${currentDay}:`, newRanking);
+    legacyRankings[dayKey].push(newRanking);
+    console.log(`Added new ranking for Day ${currentDay} (${level}):`, newRanking);
     
     // Sort by average time per word (time/wordCount) and keep top 10 for this day
     allRankings[dayKey].sort((a, b) => {
@@ -2333,9 +2345,18 @@ function saveTypeRanking(time, wordCount, nickname = 'Anonymous') {
     });
     allRankings[dayKey] = allRankings[dayKey].slice(0, 10);
     
+    // Also sort and limit legacy rankings
+    legacyRankings[dayKey].sort((a, b) => {
+        const avgTimeA = a.time / a.wordCount;
+        const avgTimeB = b.time / b.wordCount;
+        return avgTimeA - avgTimeB;
+    });
+    legacyRankings[dayKey] = legacyRankings[dayKey].slice(0, 10);
+    
     // Save to localStorage
-    localStorage.setItem('typeRankingsPerDay', JSON.stringify(allRankings));
-    console.log(`Saved rankings for Day ${currentDay}:`, allRankings[dayKey]);
+    localStorage.setItem(rankingsKey, JSON.stringify(allRankings));
+    localStorage.setItem('typeRankingsPerDay', JSON.stringify(legacyRankings));
+    console.log(`Saved rankings for Day ${currentDay} (${level}):`, allRankings[dayKey]);
     
     // Update current day's rankings in memory
     typeMode.rankings = allRankings[dayKey];
@@ -2345,8 +2366,10 @@ function saveTypeRanking(time, wordCount, nickname = 'Anonymous') {
 
 // Load rankings
 function loadTypeRankings() {
-    // Load all rankings from localStorage
-    const allRankings = JSON.parse(localStorage.getItem('typeRankingsPerDay') || '{}');
+    // Load rankings for current level
+    const level = currentLevel || 'eiken2';
+    const rankingsKey = `typeRankings_${level}`;
+    const allRankings = JSON.parse(localStorage.getItem(rankingsKey) || '{}');
     
     // Get rankings for current day
     const dayKey = `day${currentDay}`;

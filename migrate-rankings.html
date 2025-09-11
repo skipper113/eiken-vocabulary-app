@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migrate Rankings Data</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fdf6e3;
+            color: #002b36;
+        }
+        h1 {
+            color: #268bd2;
+        }
+        .status {
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .success {
+            color: #859900;
+            font-weight: bold;
+        }
+        .info {
+            color: #b58900;
+        }
+        button {
+            padding: 10px 20px;
+            background: #268bd2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #2aa198;
+        }
+        pre {
+            background: #eee8d5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Migrate Rankings to Level-Specific Storage</h1>
+    
+    <div class="status">
+        <p>This tool will analyze your existing rankings and attempt to separate them by level based on context.</p>
+        <button onclick="migrateRankings()">Start Migration</button>
+    </div>
+    
+    <div id="results"></div>
+    
+    <script>
+        function migrateRankings() {
+            const results = document.getElementById('results');
+            results.innerHTML = '<div class="status"><p class="info">Starting migration...</p></div>';
+            
+            // Get legacy rankings
+            const legacyData = localStorage.getItem('typeRankingsPerDay');
+            if (!legacyData) {
+                results.innerHTML += '<div class="status"><p>No legacy rankings found to migrate.</p></div>';
+                return;
+            }
+            
+            const rankings = JSON.parse(legacyData);
+            const levelRankings = {
+                eiken1: {},
+                eiken2: {},
+                eiken3: {},
+                eikenpre1: {}
+            };
+            
+            let migratedCount = 0;
+            let totalCount = 0;
+            
+            // Process each day
+            Object.keys(rankings).forEach(dayKey => {
+                const dayRankings = rankings[dayKey];
+                if (!Array.isArray(dayRankings)) return;
+                
+                dayRankings.forEach(ranking => {
+                    totalCount++;
+                    
+                    // Check if ranking already has level info
+                    if (ranking.level) {
+                        if (!levelRankings[ranking.level]) {
+                            levelRankings[ranking.level] = {};
+                        }
+                        if (!levelRankings[ranking.level][dayKey]) {
+                            levelRankings[ranking.level][dayKey] = [];
+                        }
+                        levelRankings[ranking.level][dayKey].push(ranking);
+                        migratedCount++;
+                    } else {
+                        // Try to infer level from context
+                        // For now, put unlabeled rankings in the current level or eiken2 as default
+                        const currentLevel = localStorage.getItem('currentLevel') || 'eiken2';
+                        if (!levelRankings[currentLevel][dayKey]) {
+                            levelRankings[currentLevel][dayKey] = [];
+                        }
+                        ranking.level = currentLevel; // Add level info
+                        levelRankings[currentLevel][dayKey].push(ranking);
+                        migratedCount++;
+                    }
+                });
+            });
+            
+            // Save level-specific rankings
+            let savedCount = 0;
+            Object.keys(levelRankings).forEach(level => {
+                const levelData = levelRankings[level];
+                if (Object.keys(levelData).length > 0) {
+                    // Sort each day's rankings
+                    Object.keys(levelData).forEach(dayKey => {
+                        levelData[dayKey].sort((a, b) => {
+                            const avgTimeA = a.time / a.wordCount;
+                            const avgTimeB = b.time / b.wordCount;
+                            return avgTimeA - avgTimeB;
+                        });
+                        levelData[dayKey] = levelData[dayKey].slice(0, 10);
+                    });
+                    
+                    localStorage.setItem(`typeRankings_${level}`, JSON.stringify(levelData));
+                    savedCount++;
+                    
+                    results.innerHTML += `<div class="status">
+                        <p class="success">✓ Saved ${Object.keys(levelData).length} days of rankings for ${level}</p>
+                        <pre>${JSON.stringify(Object.keys(levelData), null, 2)}</pre>
+                    </div>`;
+                }
+            });
+            
+            results.innerHTML += `<div class="status">
+                <h3>Migration Complete!</h3>
+                <p>Total rankings processed: ${totalCount}</p>
+                <p>Rankings migrated: ${migratedCount}</p>
+                <p>Levels with data: ${savedCount}</p>
+                <p class="info">Note: Rankings without level information were assigned to your current level or eiken2 as default.</p>
+            </div>`;
+            
+            // Also update the legacy format to include level info
+            Object.keys(rankings).forEach(dayKey => {
+                rankings[dayKey].forEach(ranking => {
+                    if (!ranking.level) {
+                        ranking.level = localStorage.getItem('currentLevel') || 'eiken2';
+                    }
+                });
+            });
+            localStorage.setItem('typeRankingsPerDay', JSON.stringify(rankings));
+        }
+    </script>
+</body>
+</html>
