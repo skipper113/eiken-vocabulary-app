@@ -29,6 +29,7 @@
             color: var(--text-primary);
             min-height: 100vh;
             padding: 20px;
+            overflow-x: hidden;
         }
 
         .container {
@@ -325,7 +326,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        let currentLevel = 'eiken3';
+        let currentLevel = localStorage.getItem('currentLevel') || 'eiken2';
         let performanceChart = null;
 
         function switchLevel(level) {
@@ -355,7 +356,9 @@
 
         function loadStreakData() {
             // Load all practice data from localStorage
-            const dailyStats = JSON.parse(localStorage.getItem(`dailyStats_${currentLevel}`) || '{}');
+            const storageKey = `dailyStats_${currentLevel}`;
+            const storedData = localStorage.getItem(storageKey);
+            const dailyStats = storedData ? JSON.parse(storedData) : {};
             
             // Calculate streaks
             const today = new Date().toDateString();
@@ -580,6 +583,13 @@
 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
+            // Set active button based on current level
+            document.querySelectorAll('.level-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.includes(getLevelDisplay(currentLevel))) {
+                    btn.classList.add('active');
+                }
+            });
             loadStreakData();
         });
 
