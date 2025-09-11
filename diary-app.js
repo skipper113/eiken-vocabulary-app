@@ -1903,8 +1903,10 @@ function showNextTypeWord() {
         return;
     }
     
-    // Reset attempt flag for new word
+    // Reset attempt flag and wrong attempts counter for new word
     typeMode.currentWordAttempted = false;
+    typeMode.wrongAttempts = 0;
+    typeMode.lastWrongIndex = -1;
     
     const word = typeMode.currentWords[typeMode.currentIndex];
     const translation = findTranslation(word) || vocabularyData[word]?.japanese || '';
@@ -2005,6 +2007,12 @@ function handleTypeInput(e) {
     const input = e.target.value.toLowerCase();
     const targetWord = typeMode.currentWords[typeMode.currentIndex];
     
+    // Initialize wrong attempts counter if not exists
+    if (!typeMode.wrongAttempts) {
+        typeMode.wrongAttempts = 0;
+        typeMode.lastWrongIndex = -1;
+    }
+    
     // Update hint based on correct letters typed - with color
     let hintHtml = '';
     let isFirstChar = true;
@@ -2023,6 +2031,37 @@ function handleTypeInput(e) {
             hasError = true;
             hintHtml += `<span style="color: #dc3545;">_</span>`;
             isFirstChar = false;
+            
+            // Track wrong attempt for auto-reveal (only count new wrong positions)
+            if (i > typeMode.lastWrongIndex) {
+                typeMode.wrongAttempts++;
+                typeMode.lastWrongIndex = i;
+                
+                // Auto-reveal after 5 wrong attempts
+                if (typeMode.wrongAttempts >= 5) {
+                    // Show message
+                    document.getElementById('type-feedback').innerHTML = `<span style="color: #ff6b00;">💡 Auto-revealed: <strong>${targetWord}</strong></span>`;
+                    
+                    // Mark as missed word
+                    const key = targetWord.toLowerCase();
+                    quizStats.missedWords[key] = (quizStats.missedWords[key] || 0) + 1;
+                    saveStats();
+                    updateMissedWordsDisplay();
+                    typeMode.currentWordAttempted = true;
+                    
+                    // Auto-fill the input
+                    document.getElementById('type-input').value = targetWord;
+                    
+                    // Move to next word after delay
+                    setTimeout(() => {
+                        typeMode.wrongAttempts = 0;
+                        typeMode.lastWrongIndex = -1;
+                        showNextTypeWord();
+                        document.getElementById('type-input').focus();
+                    }, 2000);
+                    return;
+                }
+            }
         } else if (isFirstChar) {
             // First letter of word (or after space) - always shown
             hintHtml += `<span style="color: #667eea;">${targetWord[i]}</span>`;
@@ -2036,7 +2075,8 @@ function handleTypeInput(e) {
     
     // Show error feedback if there's a mistake
     if (hasError) {
-        document.getElementById('type-feedback').textContent = '❌ Check your spelling';
+        const attemptsLeft = 5 - typeMode.wrongAttempts;
+        document.getElementById('type-feedback').innerHTML = `❌ Check your spelling <span style="font-size: 0.9em; color: #666;">(${attemptsLeft} attempts left)</span>`;
         document.getElementById('type-feedback').style.color = '#dc3545';
     } else {
         document.getElementById('type-feedback').textContent = '';
@@ -2101,6 +2141,43 @@ function updateTypeTimer() {
     requestAnimationFrame(() => updateTypeTimer());
 }
 
+// Save daily stats for tracking
+function saveDailyStats(mode, wordsCompleted, correctAnswers, totalTime) {
+    const level = currentLevel || 'eiken2';
+    const today = new Date().toISOString().split('T')[0];
+    const storageKey = `dailyStats_${level}`;
+    
+    // Get existing stats
+    let stats = JSON.parse(localStorage.getItem(storageKey) || '{}');
+    
+    // Initialize today's stats if not exists
+    if (!stats[today]) {
+        stats[today] = {
+            wordsCompleted: 0,
+            correctAnswers: 0,
+            incorrectAnswers: 0,
+            totalTime: 0,
+            sessions: []
+        };
+    }
+    
+    // Update stats
+    stats[today].wordsCompleted += wordsCompleted;
+    stats[today].correctAnswers += correctAnswers;
+    stats[today].incorrectAnswers += (wordsCompleted - correctAnswers);
+    stats[today].totalTime += totalTime;
+    stats[today].sessions.push({
+        mode: mode,
+        timestamp: new Date().toISOString(),
+        wordsCompleted: wordsCompleted,
+        correctAnswers: correctAnswers,
+        time: totalTime
+    });
+    
+    // Save back to localStorage
+    localStorage.setItem(storageKey, JSON.stringify(stats));
+}
+
 // Complete type game
 function completeTypeMode() {
     typeMode.isActive = false;
@@ -2117,6 +2194,9 @@ function completeTypeMode() {
     // Store the time for later use
     typeMode.lastCompletionTime = totalTime;
     typeMode.lastWordCount = totalWords;
+    
+    // Save daily stats
+    saveDailyStats(typeMode.gameMode || 'typing', totalWords, typeMode.correctCount, totalTime);
     
     document.getElementById('type-game').style.display = 'none';
     document.getElementById('type-complete').style.display = 'block';
@@ -2672,6 +2752,9 @@ function completeMissedWordsQuiz() {
     const total = missedWordsQuizMode.words.length;
     const correct = missedWordsQuizMode.correctCount;
     const percentage = Math.round((correct / total) * 100);
+    
+    // Save daily stats (estimate 5 seconds per word for quiz)
+    saveDailyStats('missed-words-quiz', total, correct, total * 5);
     
     const html = `
         <div class="content-wrapper">

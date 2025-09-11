@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="version" content="v20250911.155241">
+    <meta name="version" content="v20250911.160307">
     <title>英検 Vocabulary Learning App</title>
     <style>
         :root {
@@ -148,6 +148,26 @@
         }
         
         .theme-toggle:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.05);
+        }
+        
+        .stats-button {
+            position: fixed;
+            top: 15px;
+            left: 70px;
+            background: rgba(255,255,255,0.2);
+            border: 2px solid var(--bg-primary);
+            border-radius: 25px;
+            padding: 8px 15px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            z-index: 1001;
+            backdrop-filter: blur(5px);
+        }
+        
+        .stats-button:hover {
             background: rgba(255,255,255,0.3);
             transform: scale(1.05);
         }
@@ -1156,6 +1176,10 @@
         <span id="theme-icon">🌙</span>
     </button>
     
+    <button class="stats-button" onclick="window.location.href='stats.html'" title="View Study Progress & Streaks">
+        <span id="stats-icon">📊</span>
+    </button>
+    
     <button class="reading-guide-toggle" onclick="toggleReadingGuide()" title="Toggle Reading Guide (Use ↑↓ keys)">
         <span id="guide-icon">📖</span>
     </button>
@@ -1178,7 +1202,7 @@
     
     <div class="container">
         <div class="header" style="padding: 15px 30px;">
-            <div style="position: absolute; top: 5px; right: 10px; font-size: 10px; color: rgba(255,255,255,0.5); font-family: monospace;">v20250911.155241</div>
+            <div style="position: absolute; top: 5px; right: 10px; font-size: 10px; color: rgba(255,255,255,0.5); font-family: monospace;">v20250911.160307</div>
             <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
                 <select id="level-selector" onchange="switchLevel(this.value)" style="padding: 6px 12px; font-size: 0.95em; border-radius: 8px; border: 2px solid white; background: rgba(255,255,255,0.2); color: white; font-weight: bold; cursor: pointer;">
                     <option value="eiken2">英検2級</option>
