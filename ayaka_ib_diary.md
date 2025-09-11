@@ -120,4 +120,28 @@ I'm still sick, but I feel better emotionally. Tomorrow I'll be strong enough to
 
 ---
 
+## Day 7 - The Presentation
+
+Dear Diary,
+
+Today was the day! Our Theory of Knowledge presentation would be **fatal** if we failed. The **magnitude** of this moment wasn't lost on me - this could be a **genuine** turning point.
+
+The morning started badly. James, our team's third member, showed **hostile** behavior toward Emma. "Your ideas are too **optimistic**," he said, ready to **condemn** our work. He wanted to **revise** everything at the last minute. Emma remained **rational**, but I could see her **suppress** her anger.
+
+"We cannot **tolerate** this **obstacle**," I said, trying to **remedy** the situation. "Our **mutual** respect matters more than individual opinions." James had a **prejudice** against Eastern philosophy, calling it "not **feasible** for academic discourse." His **rigid** thinking made me want to **discharge** him from our team!
+
+But Emma showed **noble** character. "Let's **speculate** on what the judges want," she suggested. "They value **subtle** arguments and **conclusive** evidence." Her **humble** approach helped us **comprise** a solution. We would **sacrifice** some details but keep our core **hypothesis**.
+
+The presentation room felt **oppressive**. The panel included **prominent** professors known for their **scrutiny**. My hands were shaking as I began. The **preliminary** questions were **durable** - lasting forty minutes! One professor tried to **persist** in finding errors, but we managed to **suspend** his doubts.
+
+Then came the **essential** moment. Professor Chen asked about **inherent** flaws in Western epistemology. This was **relevant** to my research! I explained how **neglect** of indigenous knowledge creates problems. The **gravity** of my statement made everyone pause. Had I been too bold?
+
+Suddenly, the head judge smiled. "Your **perspective** is **exempt** from the usual criticism," she said. Our argument would **prevail**! The **outcome** exceeded our wildest dreams - they called our work a potential **breakthrough** with **vital** implications.
+
+Walking out, James finally **apologize**d. "I **deem** your work **essential**," he admitted. The **triumph** felt unreal. Emma hugged me tightly. "We're going to the **summit** conference!" she exclaimed. Our **prosperity** in this program was assured.
+
+Tonight, I **persist** in feeling proud of this **venture**. The **epidemic** of narrow thinking in academia needs voices like ours!
+
+---
+
 *End of Ayaka's First Week at Sakura International Academy*
