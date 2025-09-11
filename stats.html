@@ -119,17 +119,19 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             margin-bottom: 30px;
+            position: relative;
+        }
+
+        .chart-wrapper {
+            position: relative;
+            height: 400px;
+            width: 100%;
         }
 
         .chart-title {
             font-size: 1.5em;
             margin-bottom: 20px;
             color: var(--text-primary);
-        }
-
-        #performanceChart {
-            width: 100%;
-            height: 400px;
         }
 
         .streak-calendar {
@@ -139,11 +141,22 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
 
-        .calendar-grid {
+        .calendar-header {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             gap: 5px;
             margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin-top: 10px;
         }
 
         .calendar-day {
@@ -151,13 +164,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 5px;
+            border-radius: 3px;
             font-size: 0.8em;
-            position: relative;
-        }
-
-        .calendar-day.empty {
-            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s;
         }
 
         .calendar-day.no-activity {
@@ -167,28 +177,25 @@
         .calendar-day.has-activity {
             background: var(--success);
             color: white;
-            font-weight: bold;
         }
 
         .calendar-day.today {
             border: 2px solid var(--accent-primary);
         }
 
-        .calendar-header {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 5px;
-            margin-bottom: 10px;
-            font-weight: bold;
-            color: var(--text-secondary);
-            text-align: center;
+        .calendar-day.empty {
+            visibility: hidden;
+        }
+
+        .calendar-day:hover:not(.empty) {
+            transform: scale(1.1);
         }
 
         .legend {
             display: flex;
             gap: 20px;
             margin-top: 20px;
-            font-size: 0.9em;
+            justify-content: center;
         }
 
         .legend-item {
@@ -223,18 +230,6 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
-        .tooltip {
-            position: absolute;
-            background: rgba(0,0,0,0.9);
-            color: white;
-            padding: 8px 12px;
-            border-radius: 5px;
-            font-size: 0.85em;
-            pointer-events: none;
-            z-index: 1000;
-            white-space: nowrap;
-        }
-
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 1.8em;
@@ -244,7 +239,7 @@
                 grid-template-columns: 1fr;
             }
             
-            #performanceChart {
+            .chart-wrapper {
                 height: 300px;
             }
         }
@@ -258,8 +253,8 @@
             <h1>📊 Study Progress & Streaks</h1>
             <p>Track your daily practice and improvement over time</p>
             
-            <div class="level-selector">
-                <button class="level-btn active" onclick="switchLevel('eiken3')">英検3級</button>
+            <div class="level-selector" id="level-selector">
+                <button class="level-btn" onclick="switchLevel('eiken3')">英検3級</button>
                 <button class="level-btn" onclick="switchLevel('eiken2')">英検2級</button>
                 <button class="level-btn" onclick="switchLevel('eikenpre1')">英検準1級</button>
                 <button class="level-btn" onclick="switchLevel('eiken1')">英検1級</button>
@@ -294,7 +289,9 @@
 
         <div class="chart-container">
             <h2 class="chart-title">Performance Over Time</h2>
-            <canvas id="performanceChart"></canvas>
+            <div class="chart-wrapper">
+                <canvas id="performanceChart"></canvas>
+            </div>
         </div>
 
         <div class="streak-calendar">
@@ -331,6 +328,7 @@
 
         function switchLevel(level) {
             currentLevel = level;
+            localStorage.setItem('currentLevel', level);
             
             // Update active button
             document.querySelectorAll('.level-btn').forEach(btn => {
@@ -361,7 +359,8 @@
             const dailyStats = storedData ? JSON.parse(storedData) : {};
             
             // Calculate streaks
-            const today = new Date().toDateString();
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
             const dates = Object.keys(dailyStats).sort();
             
             let currentStreak = 0;
@@ -372,9 +371,11 @@
             // Calculate streaks
             dates.forEach(dateStr => {
                 const date = new Date(dateStr);
+                date.setHours(0, 0, 0, 0);
+                
                 if (lastDate) {
-                    const dayDiff = Math.floor((date - lastDate) / (1000 * 60 * 60 * 24));
-                    if (dayDiff === 1) {
+                    const diffDays = Math.floor((date - lastDate) / (1000 * 60 * 60 * 24));
+                    if (diffDays === 1) {
                         tempStreak++;
                     } else {
                         tempStreak = 1;
@@ -383,19 +384,22 @@
                     tempStreak = 1;
                 }
                 
-                longestStreak = Math.max(longestStreak, tempStreak);
+                if (tempStreak > longestStreak) {
+                    longestStreak = tempStreak;
+                }
+                
+                // Check if streak is current
+                const daysSinceToday = Math.floor((today - date) / (1000 * 60 * 60 * 24));
+                if (daysSinceToday === 0) {
+                    currentStreak = tempStreak;
+                } else if (daysSinceToday === 1 && currentStreak === 0) {
+                    currentStreak = tempStreak;
+                }
+                
                 lastDate = date;
             });
             
-            // Check if current streak includes today or yesterday
-            if (lastDate) {
-                const daysSinceLastPractice = Math.floor((new Date() - lastDate) / (1000 * 60 * 60 * 24));
-                if (daysSinceLastPractice <= 1) {
-                    currentStreak = tempStreak;
-                }
-            }
-            
-            // Update stats display
+            // Update display
             document.getElementById('current-streak').textContent = currentStreak;
             document.getElementById('longest-streak').textContent = longestStreak;
             document.getElementById('total-days').textContent = dates.length;
@@ -403,10 +407,11 @@
             // Calculate average speed
             let totalTime = 0;
             let totalWords = 0;
-            dates.forEach(date => {
-                if (dailyStats[date].avgTimePerWord) {
-                    totalTime += dailyStats[date].avgTimePerWord * dailyStats[date].wordsCompleted;
-                    totalWords += dailyStats[date].wordsCompleted;
+            dates.forEach(dateStr => {
+                const stats = dailyStats[dateStr];
+                if (stats && stats.totalTime && stats.wordsCompleted) {
+                    totalTime += stats.totalTime;
+                    totalWords += stats.wordsCompleted;
                 }
             });
             
@@ -432,16 +437,21 @@
             for (let i = days - 1; i >= 0; i--) {
                 const date = new Date();
                 date.setDate(date.getDate() - i);
-                const dateStr = date.toDateString();
+                const dateStr = date.toISOString().split('T')[0];
                 const shortDate = (date.getMonth() + 1) + '/' + date.getDate();
                 
                 labels.push(shortDate);
                 
                 if (dailyStats[dateStr]) {
-                    speedData.push(dailyStats[dateStr].avgTimePerWord || null);
-                    const accuracy = dailyStats[dateStr].correctAnswers / 
-                                   (dailyStats[dateStr].correctAnswers + dailyStats[dateStr].incorrectAnswers) * 100;
-                    accuracyData.push(accuracy || null);
+                    const stats = dailyStats[dateStr];
+                    const avgTime = stats.totalTime && stats.wordsCompleted ? 
+                                  stats.totalTime / stats.wordsCompleted : null;
+                    speedData.push(avgTime);
+                    
+                    const totalAnswers = stats.correctAnswers + stats.incorrectAnswers;
+                    const accuracy = totalAnswers > 0 ? 
+                                   (stats.correctAnswers / totalAnswers) * 100 : null;
+                    accuracyData.push(accuracy);
                 } else {
                     speedData.push(null);
                     accuracyData.push(null);
@@ -563,7 +573,7 @@
                 if (date > today) {
                     dayDiv.className += ' empty';
                 } else {
-                    const dateStr = date.toDateString();
+                    const dateStr = date.toISOString().split('T')[0];
                     if (dailyStats[dateStr]) {
                         dayDiv.className += ' has-activity';
                         dayDiv.textContent = date.getDate();
@@ -572,7 +582,7 @@
                         dayDiv.className += ' no-activity';
                     }
                     
-                    if (dateStr === today.toDateString()) {
+                    if (date.toDateString() === today.toDateString()) {
                         dayDiv.className += ' today';
                     }
                 }
@@ -592,35 +602,6 @@
             });
             loadStreakData();
         });
-
-        // Function to save daily stats (called from main app)
-        function saveDailyStats(level, stats) {
-            const today = new Date().toDateString();
-            const dailyStats = JSON.parse(localStorage.getItem(`dailyStats_${level}`) || '{}');
-            
-            if (!dailyStats[today]) {
-                dailyStats[today] = {
-                    wordsCompleted: 0,
-                    correctAnswers: 0,
-                    incorrectAnswers: 0,
-                    totalTime: 0,
-                    sessions: 0
-                };
-            }
-            
-            dailyStats[today].wordsCompleted += stats.wordsCompleted || 0;
-            dailyStats[today].correctAnswers += stats.correct || 0;
-            dailyStats[today].incorrectAnswers += stats.incorrect || 0;
-            dailyStats[today].totalTime += stats.totalTime || 0;
-            dailyStats[today].sessions += 1;
-            
-            // Calculate average time per word
-            if (dailyStats[today].wordsCompleted > 0) {
-                dailyStats[today].avgTimePerWord = dailyStats[today].totalTime / dailyStats[today].wordsCompleted;
-            }
-            
-            localStorage.setItem(`dailyStats_${level}`, JSON.stringify(dailyStats));
-        }
     </script>
 </body>
 </html>
