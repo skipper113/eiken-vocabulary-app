@@ -565,62 +565,121 @@
         function updatePerformanceChart(dailyStats) {
             const ctx = document.getElementById('performanceChart').getContext('2d');
             
-            // Prepare data for last 30 days
-            const days = 30;
+            // Collect all individual session data points from last 30 days
             const labels = [];
             const speedData = [];
             const accuracyData = [];
+            const sessionInfo = [];
             
-            for (let i = days - 1; i >= 0; i--) {
-                const date = new Date();
-                date.setDate(date.getDate() - i);
-                const dateStr = date.toISOString().split('T')[0];
-                const shortDate = (date.getMonth() + 1) + '/' + date.getDate();
-                
-                labels.push(shortDate);
-                
-                if (dailyStats[dateStr]) {
+            // Get date range for last 30 days
+            const endDate = new Date();
+            const startDate = new Date();
+            startDate.setDate(endDate.getDate() - 30);
+            
+            // Collect all individual sessions
+            Object.keys(dailyStats).forEach(dateStr => {
+                const date = new Date(dateStr);
+                if (date >= startDate && date <= endDate) {
                     const stats = dailyStats[dateStr];
-                    const avgTime = stats.totalTime && stats.wordsCompleted ? 
-                                  stats.totalTime / stats.wordsCompleted : null;
-                    speedData.push(avgTime);
-                    
-                    const totalAnswers = stats.correctAnswers + stats.incorrectAnswers;
-                    const accuracy = totalAnswers > 0 ? 
-                                   (stats.correctAnswers / totalAnswers) * 100 : null;
-                    accuracyData.push(accuracy);
-                } else {
-                    speedData.push(null);
-                    accuracyData.push(null);
+                    if (stats.sessions && stats.sessions.length > 0) {
+                        // Add each individual session as a separate data point
+                        stats.sessions.forEach(session => {
+                            const sessionDate = new Date(session.timestamp || dateStr);
+                            const dateLabel = (sessionDate.getMonth() + 1) + '/' + sessionDate.getDate() + 
+                                            ' ' + sessionDate.getHours() + ':' + 
+                                            String(sessionDate.getMinutes()).padStart(2, '0');
+                            
+                            labels.push(dateLabel);
+                            
+                            // Calculate speed per word for this session
+                            const avgTime = session.time && session.wordsCompleted ? 
+                                          session.time / session.wordsCompleted : null;
+                            speedData.push(avgTime);
+                            
+                            // Calculate accuracy for this session (if available)
+                            if (session.correctAnswers !== undefined) {
+                                const accuracy = session.wordsCompleted > 0 ? 
+                                               (session.correctAnswers / session.wordsCompleted) * 100 : null;
+                                accuracyData.push(accuracy);
+                            } else {
+                                // Estimate accuracy if not available
+                                accuracyData.push(90); // Default estimate
+                            }
+                            
+                            // Store session info for tooltips
+                            sessionInfo.push({
+                                nickname: session.nickname || 'Anonymous',
+                                level: session.level || currentLevel,
+                                day: session.day || '',
+                                mode: session.mode || 'typing'
+                            });
+                        });
+                    } else if (stats.wordsCompleted) {
+                        // Fallback for stats without session details
+                        const dateLabel = (new Date(dateStr).getMonth() + 1) + '/' + new Date(dateStr).getDate();
+                        labels.push(dateLabel);
+                        
+                        const avgTime = stats.totalTime && stats.wordsCompleted ? 
+                                      stats.totalTime / stats.wordsCompleted : null;
+                        speedData.push(avgTime);
+                        
+                        const totalAnswers = stats.correctAnswers + stats.incorrectAnswers;
+                        const accuracy = totalAnswers > 0 ? 
+                                       (stats.correctAnswers / totalAnswers) * 100 : null;
+                        accuracyData.push(accuracy);
+                        
+                        sessionInfo.push({
+                            nickname: 'Combined',
+                            level: stats.level || currentLevel,
+                            day: '',
+                            mode: 'mixed'
+                        });
+                    }
                 }
-            }
+            });
+            
+            // Sort by timestamp (labels are already in chronological order from the data structure)
+            // But we should sort them properly
+            const dataPoints = labels.map((label, i) => ({
+                label: label,
+                speed: speedData[i],
+                accuracy: accuracyData[i],
+                info: sessionInfo[i]
+            }));
+            
+            dataPoints.sort((a, b) => {
+                // Parse dates from labels for proper sorting
+                const dateA = new Date(a.label.replace(/(\d+)\/(\d+)/, '2024/$1/$2'));
+                const dateB = new Date(b.label.replace(/(\d+)\/(\d+)/, '2024/$1/$2'));
+                return dateA - dateB;
+            });
+            
+            // Separate back into arrays
+            const sortedLabels = dataPoints.map(d => d.label);
+            const sortedSpeedData = dataPoints.map(d => d.speed);
+            const sortedAccuracyData = dataPoints.map(d => d.accuracy);
+            const sortedSessionInfo = dataPoints.map(d => d.info);
             
             // Destroy existing chart if it exists
             if (performanceChart) {
                 performanceChart.destroy();
             }
             
-            // Create new chart
+            // Create new chart with scatter plot for individual points
             performanceChart = new Chart(ctx, {
-                type: 'line',
+                type: 'scatter',
                 data: {
-                    labels: labels,
+                    labels: sortedLabels,
                     datasets: [{
                         label: 'Speed (seconds/word)',
-                        data: speedData,
+                        data: sortedSpeedData.map((y, i) => ({ x: i, y: y })),
                         borderColor: '#268bd2',
-                        backgroundColor: 'rgba(38, 139, 210, 0.1)',
+                        backgroundColor: 'rgba(38, 139, 210, 0.6)',
                         yAxisID: 'y',
-                        spanGaps: true,
-                        tension: 0.3
-                    }, {
-                        label: 'Accuracy (%)',
-                        data: accuracyData,
-                        borderColor: '#859900',
-                        backgroundColor: 'rgba(133, 153, 0, 0.1)',
-                        yAxisID: 'y1',
-                        spanGaps: true,
-                        tension: 0.3
+                        pointRadius: 5,
+                        pointHoverRadius: 7,
+                        showLine: true,
+                        tension: 0.1
                     }]
                 },
                 options: {
@@ -631,6 +690,23 @@
                         intersect: false,
                     },
                     scales: {
+                        x: {
+                            type: 'linear',
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'Sessions (chronological)'
+                            },
+                            ticks: {
+                                callback: function(value, index) {
+                                    if (sortedLabels[value]) {
+                                        // Show only date part for cleaner display
+                                        return sortedLabels[value].split(' ')[0];
+                                    }
+                                    return '';
+                                }
+                            }
+                        },
                         y: {
                             type: 'linear',
                             display: true,
@@ -640,21 +716,7 @@
                                 text: 'Speed (seconds/word)'
                             },
                             beginAtZero: true
-                        },
-                        y1: {
-                            type: 'linear',
-                            display: true,
-                            position: 'right',
-                            title: {
-                                display: true,
-                                text: 'Accuracy (%)'
-                            },
-                            beginAtZero: true,
-                            max: 100,
-                            grid: {
-                                drawOnChartArea: false,
-                            },
-                        },
+                        }
                     },
                     plugins: {
                         legend: {
@@ -663,19 +725,26 @@
                         },
                         tooltip: {
                             callbacks: {
+                                title: function(context) {
+                                    const index = context[0].parsed.x;
+                                    return sortedLabels[index] || '';
+                                },
                                 label: function(context) {
-                                    let label = context.dataset.label || '';
-                                    if (label) {
-                                        label += ': ';
-                                    }
-                                    if (context.parsed.y !== null) {
-                                        if (context.datasetIndex === 0) {
-                                            label += context.parsed.y.toFixed(2) + 's';
-                                        } else {
-                                            label += context.parsed.y.toFixed(1) + '%';
+                                    const index = context.parsed.x;
+                                    const info = sortedSessionInfo[index];
+                                    const lines = [];
+                                    
+                                    lines.push('Speed: ' + context.parsed.y.toFixed(2) + 's/word');
+                                    
+                                    if (info) {
+                                        lines.push('Player: ' + info.nickname);
+                                        if (info.day) {
+                                            lines.push('Day: ' + info.day);
                                         }
+                                        lines.push('Mode: ' + info.mode);
                                     }
-                                    return label;
+                                    
+                                    return lines;
                                 }
                             }
                         }
