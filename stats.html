@@ -230,6 +230,16 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
+        .info-message {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            color: #856404;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 1.8em;
@@ -258,7 +268,12 @@
                 <button class="level-btn" onclick="switchLevel('eiken2')">英検2級</button>
                 <button class="level-btn" onclick="switchLevel('eikenpre1')">英検準1級</button>
                 <button class="level-btn" onclick="switchLevel('eiken1')">英検1級</button>
+                <button class="level-btn" onclick="switchLevel('all')">All Levels</button>
             </div>
+        </div>
+
+        <div id="info-message" class="info-message" style="display:none;">
+            <p>No practice data found yet. Complete some typing or quiz exercises to see your stats!</p>
         </div>
 
         <div class="stats-grid">
@@ -323,7 +338,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        let currentLevel = localStorage.getItem('currentLevel') || 'eiken2';
+        let currentLevel = localStorage.getItem('currentLevel') || 'all';
         let performanceChart = null;
 
         function switchLevel(level) {
@@ -333,7 +348,8 @@
             // Update active button
             document.querySelectorAll('.level-btn').forEach(btn => {
                 btn.classList.remove('active');
-                if (btn.textContent.includes(getLevelDisplay(level))) {
+                if (btn.textContent.includes(getLevelDisplay(level)) || 
+                    (level === 'all' && btn.textContent === 'All Levels')) {
                     btn.classList.add('active');
                 }
             });
@@ -347,16 +363,85 @@
                 'eiken3': '英検3級',
                 'eiken2': '英検2級',
                 'eikenpre1': '英検準1級',
-                'eiken1': '英検1級'
+                'eiken1': '英検1級',
+                'all': 'All Levels'
             };
             return displays[level] || level;
         }
 
         function loadStreakData() {
-            // Load all practice data from localStorage
-            const storageKey = `dailyStats_${currentLevel}`;
-            const storedData = localStorage.getItem(storageKey);
-            const dailyStats = storedData ? JSON.parse(storedData) : {};
+            let dailyStats = {};
+            
+            // Load data based on selected level
+            if (currentLevel === 'all') {
+                // Load all levels
+                ['eiken1', 'eiken2', 'eiken3', 'eikenpre1'].forEach(level => {
+                    // Load dailyStats format
+                    const storageKey = `dailyStats_${level}`;
+                    const storedData = localStorage.getItem(storageKey);
+                    if (storedData) {
+                        const levelStats = JSON.parse(storedData);
+                        // Merge into dailyStats
+                        Object.keys(levelStats).forEach(date => {
+                            if (!dailyStats[date]) {
+                                dailyStats[date] = levelStats[date];
+                            } else {
+                                // Merge stats for same date
+                                dailyStats[date].wordsCompleted += levelStats[date].wordsCompleted || 0;
+                                dailyStats[date].correctAnswers += levelStats[date].correctAnswers || 0;
+                                dailyStats[date].incorrectAnswers += levelStats[date].incorrectAnswers || 0;
+                                dailyStats[date].totalTime += levelStats[date].totalTime || 0;
+                                if (levelStats[date].sessions) {
+                                    dailyStats[date].sessions = dailyStats[date].sessions.concat(levelStats[date].sessions);
+                                }
+                            }
+                        });
+                    }
+                    
+                    // Load from level-specific rankings
+                    const rankingsKey = `typeRankings_${level}`;
+                    const rankingsData = localStorage.getItem(rankingsKey);
+                    if (rankingsData) {
+                        mergeRankingsIntoStats(JSON.parse(rankingsData), dailyStats, level);
+                    }
+                });
+                
+                // Also load legacy typeRankingsPerDay (not level-specific)
+                const legacyRankings = localStorage.getItem('typeRankingsPerDay');
+                if (legacyRankings) {
+                    mergeRankingsIntoStats(JSON.parse(legacyRankings), dailyStats, 'legacy');
+                }
+            } else {
+                // Load specific level
+                const storageKey = `dailyStats_${currentLevel}`;
+                const storedData = localStorage.getItem(storageKey);
+                if (storedData) {
+                    dailyStats = JSON.parse(storedData);
+                }
+                
+                // Load level-specific rankings
+                const rankingsKey = `typeRankings_${currentLevel}`;
+                const rankingsData = localStorage.getItem(rankingsKey);
+                if (rankingsData) {
+                    mergeRankingsIntoStats(JSON.parse(rankingsData), dailyStats, currentLevel);
+                }
+                
+                // For backward compatibility, also check legacy rankings
+                if (Object.keys(dailyStats).length === 0) {
+                    const legacyRankings = localStorage.getItem('typeRankingsPerDay');
+                    if (legacyRankings) {
+                        mergeRankingsIntoStats(JSON.parse(legacyRankings), dailyStats, currentLevel);
+                    }
+                }
+            }
+            
+            // Show info message if no data
+            const infoMessage = document.getElementById('info-message');
+            if (Object.keys(dailyStats).length === 0) {
+                infoMessage.style.display = 'block';
+            } else {
+                infoMessage.style.display = 'none';
+            }
             
             // Calculate streaks
             const today = new Date();
@@ -423,6 +508,58 @@
             
             // Update calendar
             updateCalendar(dailyStats);
+        }
+
+        function mergeRankingsIntoStats(rankings, dailyStats, level) {
+            Object.keys(rankings).forEach(dayKey => {
+                const dayRankings = rankings[dayKey];
+                if (dayRankings && dayRankings.length > 0) {
+                    // Get the date from the first ranking
+                    const firstRanking = dayRankings[0];
+                    const date = new Date(firstRanking.date);
+                    const dateStr = date.toISOString().split('T')[0];
+                    
+                    // Calculate stats from all rankings for this day
+                    let totalTime = 0;
+                    let totalWords = 0;
+                    
+                    dayRankings.forEach(ranking => {
+                        totalTime += ranking.time || 0;
+                        totalWords += ranking.wordCount || 0;
+                    });
+                    
+                    // Merge with existing stats or create new
+                    if (!dailyStats[dateStr]) {
+                        dailyStats[dateStr] = {
+                            wordsCompleted: totalWords,
+                            correctAnswers: Math.floor(totalWords * 0.9), // Estimate 90% accuracy
+                            incorrectAnswers: Math.floor(totalWords * 0.1),
+                            totalTime: totalTime,
+                            sessions: [],
+                            level: level
+                        };
+                    } else {
+                        // Add to existing stats
+                        dailyStats[dateStr].wordsCompleted += totalWords;
+                        dailyStats[dateStr].correctAnswers += Math.floor(totalWords * 0.9);
+                        dailyStats[dateStr].incorrectAnswers += Math.floor(totalWords * 0.1);
+                        dailyStats[dateStr].totalTime += totalTime;
+                    }
+                    
+                    // Add session info
+                    dayRankings.forEach(ranking => {
+                        dailyStats[dateStr].sessions.push({
+                            mode: ranking.mode || 'typing',
+                            timestamp: new Date(ranking.date).toISOString(),
+                            wordsCompleted: ranking.wordCount,
+                            time: ranking.time,
+                            nickname: ranking.nickname,
+                            level: level,
+                            day: dayKey
+                        });
+                    });
+                }
+            });
         }
 
         function updatePerformanceChart(dailyStats) {
@@ -577,7 +714,10 @@
                     if (dailyStats[dateStr]) {
                         dayDiv.className += ' has-activity';
                         dayDiv.textContent = date.getDate();
-                        dayDiv.title = `${dateStr}: ${dailyStats[dateStr].wordsCompleted} words practiced`;
+                        const sessions = dailyStats[dateStr].sessions || [];
+                        const nicknames = [...new Set(sessions.map(s => s.nickname).filter(n => n))];
+                        const nicknameStr = nicknames.length > 0 ? ` (${nicknames.join(', ')})` : '';
+                        dayDiv.title = `${dateStr}: ${dailyStats[dateStr].wordsCompleted} words${nicknameStr}`;
                     } else {
                         dayDiv.className += ' no-activity';
                     }
@@ -596,7 +736,8 @@
             // Set active button based on current level
             document.querySelectorAll('.level-btn').forEach(btn => {
                 btn.classList.remove('active');
-                if (btn.textContent.includes(getLevelDisplay(currentLevel))) {
+                if (btn.textContent.includes(getLevelDisplay(currentLevel)) || 
+                    (currentLevel === 'all' && btn.textContent === 'All Levels')) {
                     btn.classList.add('active');
                 }
             });
