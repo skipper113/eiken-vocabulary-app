@@ -1821,9 +1821,13 @@ function displayTypeMode(entry, index) {
     typeMode.correctCount = 0;
     typeMode.skippedCount = 0;
     
+    // Ensure day number is valid
+    const dayNum = entry.day || index;
+    const title = entry.title || `Entry ${index}`;
+    
     const html = `
         <div class="content-wrapper">
-            <h2 class="day-title">${entry.title ? `Day ${entry.day} - ${entry.title}` : `Day ${entry.day}`} - Type Game</h2>
+            <h2 class="day-title">${title.includes('Day') ? title : `Day ${dayNum} - ${title}`} - Type Game</h2>
             <div class="type-mode-container">
                 <div id="type-status" class="type-status">
                     <div class="type-stats">
@@ -1868,7 +1872,7 @@ function displayTypeMode(entry, index) {
                 </div>
                 
                 <div class="type-rankings">
-                    <h3>🏆 Best Times - Day ${day}</h3>
+                    <h3>🏆 Best Times - Day ${dayNum}</h3>
                     <div id="rankings-list"></div>
                 </div>
             </div>
