@@ -1475,9 +1475,8 @@ function formatDiaryText(text, addClickHandlers = true) {
         formatted = formatted.replace(/\*\*([^*]+)\*\*/g, (match, word) => {
             const translation = findTranslation(word) || '';
             return `<strong 
-                onclick="speakWord('${word.replace(/'/g, "\\'")}')" 
-                onmouseover="showTooltip(event, '${word.replace(/'/g, "\\'")}')"
-                onmouseout="hideTooltip()"
+                class="vocab-word"
+                data-word="${word.replace(/"/g, '&quot;')}"
                 style="cursor: pointer; position: relative;"
                 data-translation="${translation.replace(/"/g, '&quot;')}"
             >${word}</strong>`;
@@ -2738,6 +2737,39 @@ async function init() {
     await loadDiary();
     updateStatsDisplay();
     updateMissedWordsDisplay();
+    
+    // Set up event delegation for vocabulary words
+    setupVocabEventHandlers();
+}
+
+// Set up event delegation for vocabulary word interactions
+function setupVocabEventHandlers() {
+    // Use event delegation on the diary entry container
+    const diaryEntry = document.getElementById('diary-entry');
+    if (!diaryEntry) return;
+    
+    // Handle mouseover for tooltips
+    diaryEntry.addEventListener('mouseover', function(e) {
+        if (e.target.classList.contains('vocab-word')) {
+            const word = e.target.dataset.word;
+            showTooltip(e, word);
+        }
+    });
+    
+    // Handle mouseout to hide tooltips
+    diaryEntry.addEventListener('mouseout', function(e) {
+        if (e.target.classList.contains('vocab-word')) {
+            hideTooltip();
+        }
+    });
+    
+    // Handle clicks for speaking
+    diaryEntry.addEventListener('click', function(e) {
+        if (e.target.classList.contains('vocab-word')) {
+            const word = e.target.dataset.word;
+            speakWord(word);
+        }
+    });
 }
 
 // Missed words quiz mode variables
