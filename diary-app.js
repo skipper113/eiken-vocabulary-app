@@ -3562,10 +3562,6 @@ window.showStatsModal = showStatsModal;
 window.closeStatsModal = closeStatsModal;
 window.clearStats = clearStats;
 window.toggleReadingGuide = toggleReadingGuide;
-window.navigateDay = navigateDay;
-window.selectDay = selectDay;
-window.changeLevel = changeLevel;
-window.exportStats = exportStats;
 window.highlightWordInPassage = highlightWordInPassage;
 
 // Start the app when page loads
