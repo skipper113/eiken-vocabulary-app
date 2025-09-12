@@ -3551,7 +3551,6 @@ window.saveRankingWithNickname = saveRankingWithNickname;
 window.setMode = setMode;
 window.switchTab = switchTab;
 window.toggleStudyPanel = toggleStudyPanel;
-window.searchVocabulary = searchVocabulary;
 window.selectEiken3Choice = selectEiken3Choice;
 window.skipEiken3Typing = skipEiken3Typing;
 window.startMissedWordsQuiz = startMissedWordsQuiz;
