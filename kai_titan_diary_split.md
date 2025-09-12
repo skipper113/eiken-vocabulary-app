@@ -1,9 +1,6 @@
-# Kai's Training Corps Diary - Attack on Titan
-### An Eiken 3 Learning Adventure
+# Kai's Attack on Titan Adventure - Eiken 3 Journey
 
----
-
-## Day 1 - Joining the 104th Training Corps
+## Day 1 - Joining the 104th Training Corps (Part 1)
 
 Dear Diary,
 
@@ -17,11 +14,9 @@ Training is **expensive** for the military, so they **plan** to make us strong f
 
 But tonight, I'm **sick** from running all day. **by** tomorrow, I hope to feel better!
 
-P.S. - Jean (everyone calls him "horse face") keeps arguing with Eren. It's funny but also scary when they fight!
-
 ---
 
-## Day 2 - The ODM Gear Disaster
+## Day 2 - The ODM Gear Disaster (Part 1)
 
 Dear Diary,
 
@@ -35,11 +30,9 @@ Mikasa helped me in the **garden** where we **grow** food. She's quiet but kind.
 
 I **met** Sasha stealing bread again! She had to **look for** hiding spots. We'll help her tomorrow.
 
-P.S. - Secret: Eren's gear was broken! That's why he failed! Keith knew but wanted to test Eren's determination. When Eren got working gear, he balanced perfectly! Amazing!
-
 ---
 
-## Day 3 - Sasha's Potato Incident
+## Day 3 - Sasha's Potato Incident (Part 1)
 
 Dear Diary,
 
@@ -51,11 +44,9 @@ Today a **bright** light came from the forest - Captain Levi's squad will **arri
 
 Connie **signed** up to be my training partner. He's funny and keeps us **healthy** with jokes. **how often** do we get to laugh here? Not much! But when Sasha ran past us still eating that potato, even Keith almost smiled!
 
-P.S. - Reiner and Bertholdt are so nice! They help everyone. Reiner is like a big brother. Nobody knows they're from the same hometown as Annie. They seem sad when people talk about the wall being broken...
-
 ---
 
-## Day 4 - Cooking Duty and Lake Fun
+## Day 4 - Cooking Duty and Lake Fun (Part 1)
 
 Dear Diary,
 
@@ -71,7 +62,7 @@ P.S. - Eren and Jean had a food fight! Potatoes everywhere! Levi's squad was vis
 
 ---
 
-## Day 5 - Armin's Secret Mission
+## Day 5 - Armin's Secret Mission (Part 1)
 
 Dear Diary,
 
@@ -85,6 +76,10 @@ We worked **through** the night. Armin would stop and listen for guards, then **
 
 **after** two hours, we **heard** footsteps. "**quick**, hide!" Armin whispered. We ran into the forest. It was Reiner! But he just smiled and walked **away**. Does he **know** what we're doing? I **wonder**...
 
+---
+
+## Day 5 - Armin's Secret Mission (Part 2)
+
 Armin said tomorrow he'll give the map to Commander Erwin (who's **visit**ing us). This could change everything! But we must act **carefully** - if the **wrong** person finds out, it could be bad for **everyone**. I'm **proud of** Armin! He's going to **become** a great strategist!
 
 I must go now - morning training starts **soon**!
@@ -93,7 +88,7 @@ P.S. - Before we left, Armin said something **strange**: "The walls have eyes an
 
 ---
 
-## Day 6 - Becoming Armin's Partner  
+## Day 6 - Becoming Armin's Partner   (Part 1)
 
 Dear Diary,
 
@@ -107,6 +102,10 @@ He showed me three more **dangerous** spots he **found** **yesterday**. "We must
 
 **then** something **terrible** happened! While we were **practicing** near the **garden**, we **heard** voices. It was Reiner and Bertholdt, talking in **quiet** tones. "**soon**," Reiner said. "Everything will change." They looked **around** **carefully**, but we **stayed** silent **behind** a wall.
 
+---
+
+## Day 6 - Becoming Armin's Partner   (Part 2)
+
 Armin's **face** went pale. **after** they left, he **told** me: "I **think** they **know** something. We must **watch** them closely. Can you follow Reiner without him **noticing**?" This is a **heavy** responsibility, but I **promised** to do my best.
 
 Later, Armin gave me a small **dictionary** with secret words. "Study these," he said. "From now on, we communicate in **secret**." I'm so **excited** but also **nervous**! **in the future**, I'll be Armin's real sidekick!
@@ -115,7 +114,7 @@ P.S. - Armin **believes** the **answer** to **save** humanity is **information**
 
 ---
 
-## Day 7 - The First Mission
+## Day 7 - The First Mission (Part 1)
 
 Dear Diary,
 
@@ -131,13 +130,17 @@ I **stayed** **until** they **finished** talking. **when** Reiner left, I **trie
 
 He gave me a new task: "Tomorrow, **during** training, **try to** **get** close to Bertholdt. **See** if he acts **nervous**. But don't let him **notice** you're watching." I **promised** to do my best.
 
+---
+
+## Day 7 - The First Mission (Part 2)
+
 Before bed, I **practice**d the **secret** **sign**s Armin taught me. If I see danger, I **put** my hand on my **shoulder**. If I need help, I touch my ear. These small things could **save** our lives **one day**.
 
 P.S. - **Sometimes** I **feel** scared. What if Reiner **finds** out I'm watching him? But I **believe** in Armin. **Together**, we'll **protect** **everyone**!
 
 ---
 
-## Day 8 - A Close Call
+## Day 8 - A Close Call (Part 1)
 
 Dear Diary,
 
@@ -152,6 +155,10 @@ I needed to get closer to hear more. But when I moved, I knocked over a **piece*
 I ran toward the **zoo** area where they keep horses. My **grandmother** used to say, "When in trouble, find animals - they'll **protect** you." I hid behind wall and **brush**ed my uniform clean. My heart was beating so hard!
 
 Then I saw Bertholdt with torch, searching. "I **wish** I had my gear," I heard him say. He looked **angry** and **hungry** for answers. I stayed perfectly still, not even breathing.
+
+---
+
+## Day 8 - A Close Call (Part 2)
 
 After what felt like hours, he gave up. "Must have been cat," he said. As he left, he dropped something - a **picture**! I grabbed it after he was gone. It showed **city hall** I didn't recognize, with strange **art** on the buildings.
 
@@ -181,6 +188,8 @@ I didn't **understand** at first. "Are you **sick**?" I asked. But then he showe
 
 "This is my **second** time living through everything," Armin **continued**. "I don't know **why** or **how**, but I **remember** it all. And this time, I want to **save** everyone. But I need to be **careful** - if I **change** too much too **fast**, people might **notice** something's **wrong**."
 
+---
+
 ## Day 9 - Armin's Second Chance (Part 2)
 
 "The **problem** is," Armin said, "some things are **already** different. In my first time, you weren't here, Kai. You're **new**. That means this timeline can **definitely** change, but I don't know what will **happen** if I **push** too hard."
@@ -195,6 +204,8 @@ Armin shook his head. "Not yet. If we **move** too **early**, we might make thin
 
 He then **taught** me a **secret** signal - if he **touches** his **ear** twice during **meetings**, it means danger is **coming** and I should be **ready**. "**Trust** me," he said. "Together we can **fix** this **broken** world."
 
+---
+
 ## Day 9 - Armin's Second Chance (Part 3)
 
 Before we **returned** to the **group**, Armin **shared** one more **terrible** truth. "In three **months**, there will be an **attack**. Many **soldiers** will be **hurt**. We need to **collect** medical **supplies** now, but **slowly** so nobody gets **suspicious**."
@@ -208,3 +219,6 @@ At **dinner**, I **watched** everyone differently now. Knowing some are **enemie
 Tonight, I'm **writing** this by **candle** light, thinking about Armin's **burden**. Knowing the **future** but being **unable** to **simply** tell everyone must be **lonely**. I'm **glad** he **chose** to **trust** me with his **secret**.
 
 P.S. - If Armin is **correct**, tomorrow Annie will **beat** Eren in **combat** training. I'll **watch** to see if his **prediction** comes **true**.
+
+---
+

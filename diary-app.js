@@ -140,32 +140,46 @@ async function loadDiary() {
     try {
         let diaryFile;
         if (currentLevel === 'eiken3') {
-            diaryFile = 'kai_titan_diary.md';
+            diaryFile = 'kai_titan_diary_split.md';  // Use the split version
         } else if (currentLevel === 'eikenpre1') {
-            diaryFile = 'ayaka_ib_diary.md';
+            diaryFile = 'ayaka_ib_diary_split.md';  // Use the split version
         } else if (currentLevel === 'eiken1') {
-            diaryFile = 'reiko_anomaly_diary.md';
+            diaryFile = 'reiko_anomaly_diary_split.md';  // Use the split version
         } else {
-            diaryFile = 'mina_kpop_diary.md';
+            diaryFile = 'mina_kpop_diary_split.md';  // Use the split version
         }
+        console.log(`Loading diary file: ${diaryFile}`);
         // Add cache busting to ensure fresh content
         const response = await fetch(diaryFile + '?t=' + Date.now());
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const text = await response.text();
+        console.log(`Loaded ${text.length} characters from ${diaryFile}`);
         
         // Parse the diary entries - only English content
-        const dayPattern = /## Day (\d+) - ([^\n]+)\n\n([\s\S]*?)(?=\n---\n|\n## Day \d+|$)/g;
+        // Updated pattern to handle parts (e.g., "Day 8 - Title (Part 1)")
+        // Allow for optional extra newlines after header
+        const dayPattern = /## Day (\d+) - ([^\n]+)\n+([^#][\s\S]*?)(?=\n---\n|\n## Day \d+|$)/g;
         let match;
+        diaryData = []; // Reset as array
         
         while ((match = dayPattern.exec(text)) !== null) {
             const dayNum = parseInt(match[1]);
             const title = match[2].trim();
             const content = match[3].trim();
             
-            diaryData[dayNum - 1] = {
+            // Check if title contains a part number
+            const partMatch = title.match(/\(Part (\d+)\)$/);
+            const partNum = partMatch ? parseInt(partMatch[1]) : null;
+            
+            // Store each part as a separate entry
+            diaryData.push({
                 day: dayNum,
+                part: partNum,
                 title: title,
                 english: content
-            };
+            });
         }
         
         console.log(`Loaded ${diaryData.length} diary entries`);
@@ -180,14 +194,26 @@ async function loadDiary() {
         
         // Initialize with saved day or first day
         if (diaryData.length > 0) {
-            // Get saved day from localStorage (level-specific), default to 1
+            // Clear old saved day if we're loading the split version for the first time
             const savedDay = parseInt(localStorage.getItem('currentDiaryDay_' + currentLevel)) || 1;
-            const dayToLoad = savedDay <= diaryData.length ? savedDay : 1;
             
-            console.log(`Initializing with Day ${dayToLoad} (saved: ${savedDay})`);
+            // If saved day is greater than 30, it's from the old structure, reset to 1
+            let dayToLoad = 1;
+            if (savedDay <= 30 && currentLevel === 'eiken2') {
+                // Old structure - try to find corresponding part in new structure
+                const matchingEntry = diaryData.findIndex(entry => entry.day === savedDay && entry.part === 1);
+                dayToLoad = matchingEntry >= 0 ? matchingEntry + 1 : 1;
+                // Clear the old saved value
+                localStorage.removeItem('currentDiaryDay_' + currentLevel);
+            } else if (savedDay <= diaryData.length) {
+                dayToLoad = savedDay;
+            }
+            
+            console.log(`Initializing with entry ${dayToLoad} (saved: ${savedDay}, total entries: ${diaryData.length})`);
             // Make sure diaryData is properly formed
             for (let i = 0; i < Math.min(10, diaryData.length); i++) {
-                console.log(`Day ${i+1}:`, diaryData[i] ? 'exists' : 'missing');
+                const entry = diaryData[i];
+                console.log(`Entry ${i+1}: Day ${entry?.day} ${entry?.part ? `Part ${entry.part}` : ''}`);
             }
             displayDay(dayToLoad);
         } else {
@@ -195,7 +221,57 @@ async function loadDiary() {
         }
     } catch (error) {
         console.error('Error loading diary:', error);
-        document.getElementById('diary-entry').innerHTML = '<div class="loading">Error loading diary content. Please make sure all files are in the same directory.</div>';
+        console.error('Error details:', error.message, error.stack);
+        // Try fallback to original file
+        console.log(`Trying fallback to original diary file for ${currentLevel}`);
+        let fallbackFile;
+        if (currentLevel === 'eiken3') {
+            fallbackFile = 'kai_titan_diary.md';
+        } else if (currentLevel === 'eikenpre1') {
+            fallbackFile = 'ayaka_ib_diary.md';
+        } else if (currentLevel === 'eiken1') {
+            fallbackFile = 'reiko_anomaly_diary.md';
+        } else {
+            fallbackFile = 'mina_kpop_diary.md';
+        }
+        
+        if (fallbackFile) {
+            try {
+                const response = await fetch(fallbackFile + '?t=' + Date.now());
+                if (response.ok) {
+                    console.log('Fallback successful, using original diary file');
+                    const text = await response.text();
+                    // Continue with parsing...
+                    const dayPattern = /## Day (\d+) - ([^\n]+)\n+([^#][\s\S]*?)(?=\n---\n|\n## Day \d+|$)/g;
+                    let match;
+                    diaryData = [];
+                    while ((match = dayPattern.exec(text)) !== null) {
+                        const dayNum = parseInt(match[1]);
+                        const title = match[2].trim();
+                        const content = match[3].trim();
+                        const partMatch = title.match(/\(Part (\d+)\)$/);
+                        const partNum = partMatch ? parseInt(partMatch[1]) : null;
+                        diaryData.push({
+                            day: dayNum,
+                            part: partNum,
+                            title: title,
+                            english: content
+                        });
+                    }
+                    console.log(`Loaded ${diaryData.length} diary entries from fallback`);
+                    buildAllVocabularyWords();
+                    if (diaryData.length > 0) {
+                        const savedDay = parseInt(localStorage.getItem('currentDiaryDay_' + currentLevel)) || 1;
+                        const dayToLoad = savedDay <= diaryData.length ? savedDay : 1;
+                        displayDay(dayToLoad);
+                        return;
+                    }
+                }
+            } catch (fallbackError) {
+                console.error('Fallback also failed:', fallbackError);
+            }
+        }
+        document.getElementById('diary-entry').innerHTML = `<div class="loading">Error loading diary content: ${error.message}<br>Please make sure all files are in the same directory.</div>`;
     }
 }
 
@@ -553,33 +629,38 @@ function findTranslation(word) {
     return null;
 }
 
-// Display diary entry for a specific day
-function displayDay(day) {
-    console.log(`Attempting to display day ${day}, diaryData.length = ${diaryData.length}`);
-    if (day < 1 || day > diaryData.length) {
-        console.error(`Day ${day} is out of range (1-${diaryData.length})`);
+// Display diary entry for a specific day/part
+function displayDay(index) {
+    console.log(`Attempting to display entry ${index}, diaryData.length = ${diaryData.length}`);
+    if (!diaryData || diaryData.length === 0) {
+        console.error('No diary data loaded');
+        document.getElementById('diary-entry').innerHTML = '<div class="loading">No diary data available. Please refresh the page.</div>';
         return;
     }
+    if (index < 1 || index > diaryData.length || isNaN(index)) {
+        console.error(`Entry ${index} is out of range (1-${diaryData.length}), resetting to 1`);
+        index = 1; // Reset to first entry instead of returning
+    }
     
-    currentDay = day;
-    const entry = diaryData[day - 1];
+    currentDay = index;  // This now represents the entry index, not the day number
+    const entry = diaryData[index - 1];
     
-    // Save current day to localStorage (level-specific)
-    localStorage.setItem('currentDiaryDay_' + currentLevel, day);
+    // Save current entry index to localStorage (level-specific)
+    localStorage.setItem('currentDiaryDay_' + currentLevel, index);
     
     if (!entry) {
-        console.error(`No entry found for day ${day}`);
-        document.getElementById('diary-entry').innerHTML = `<div class="loading">Error: Day ${day} not found</div>`;
+        console.error(`No entry found at index ${index}`);
+        document.getElementById('diary-entry').innerHTML = `<div class="loading">Error: Entry ${index} not found</div>`;
         return;
     }
     
     // Update diary content based on mode
     if (currentMode === 'quiz') {
-        displayQuizMode(entry, day);
+        displayQuizMode(entry, index);
     } else if (currentMode === 'type') {
-        displayTypeMode(entry, day);
+        displayTypeMode(entry, index);
     } else {
-        displayReadingMode(entry, day);
+        displayReadingMode(entry, index);
     }
     
     // Update vocabulary list
@@ -590,9 +671,9 @@ function displayDay(day) {
     updateVocabularyStats(words);
     
     // Update navigation
-    updateDaySelector(day);
-    document.getElementById('prev-btn').disabled = day === 1;
-    document.getElementById('next-btn').disabled = day === diaryData.length;
+    updateDaySelector(index);
+    document.getElementById('prev-btn').disabled = index === 1;
+    document.getElementById('next-btn').disabled = index === diaryData.length;
     
     // Scroll diary content to top when changing days
     const diaryContent = document.getElementById('diary-entry');
@@ -619,12 +700,12 @@ function displayDay(day) {
 }
 
 // Display reading mode
-function displayReadingMode(entry, day) {
+function displayReadingMode(entry, index) {
     const englishContent = formatDiaryText(entry.english || '');
     
     const diaryHtml = `
         <div class="content-wrapper">
-            <h2 class="day-title">Day ${day} - ${getTitle(day)}</h2>
+            <h2 class="day-title">${entry.title ? `Day ${entry.day} - ${entry.title}` : `Day ${entry.day}`}</h2>
             <div class="diary-text">${englishContent}</div>
         </div>
     `;
@@ -632,11 +713,11 @@ function displayReadingMode(entry, day) {
 }
 
 // Display quiz mode
-function displayQuizMode(entry, day) {
+function displayQuizMode(entry, index) {
     const quizText = formatQuizText(entry.english);
     const diaryHtml = `
         <div class="content-wrapper">
-            <h2 class="day-title">Day ${day} - ${getTitle(day)} [Quiz Mode]</h2>
+            <h2 class="day-title">${entry.title ? `Day ${entry.day} - ${entry.title}` : `Day ${entry.day}`} [Quiz Mode]</h2>
             <div class="diary-text" id="quiz-text">${quizText}</div>
         </div>
     `;
@@ -1194,6 +1275,10 @@ function checkQuizCompletion() {
             japaneseDiv.style.filter = 'none';
             japaneseDiv.parentElement.style.opacity = '1';
         }
+        
+        // Save last tested day for this level
+        localStorage.setItem(`lastTestedDay_${currentLevel}`, currentDay.toString());
+        localStorage.setItem(`lastTestedDate_${currentLevel}`, new Date().toISOString());
     }
 }
 
@@ -1706,7 +1791,7 @@ function speakWordWithTranslation(english, japanese, element) {
 }
 
 // Display Type Game
-function displayTypeMode(entry, day) {
+function displayTypeMode(entry, index) {
     const words = extractVocabularyWords(entry.english);
     typeMode.currentEntry = entry.english; // Store the full text
     
@@ -1738,7 +1823,7 @@ function displayTypeMode(entry, day) {
     
     const html = `
         <div class="content-wrapper">
-            <h2 class="day-title">Day ${day} - Type Game</h2>
+            <h2 class="day-title">${entry.title ? `Day ${entry.day} - ${entry.title}` : `Day ${entry.day}`} - Type Game</h2>
             <div class="type-mode-container">
                 <div id="type-status" class="type-status">
                     <div class="type-stats">
@@ -2222,6 +2307,10 @@ function completeTypeMode() {
     // Save daily stats
     saveDailyStats(typeMode.gameMode || 'typing', totalWords, typeMode.correctCount, totalTime);
     
+    // Save last tested day for this level
+    localStorage.setItem(`lastTestedDay_${currentLevel}`, currentDay.toString());
+    localStorage.setItem(`lastTestedDate_${currentLevel}`, new Date().toISOString());
+    
     document.getElementById('type-game').style.display = 'none';
     document.getElementById('type-complete').style.display = 'block';
     
@@ -2555,6 +2644,15 @@ function goToDay(day) {
 // Update day selector dropdown
 function updateDaySelector(currentDayNum) {
     const selector = document.getElementById('day-selector');
+    if (!selector) {
+        console.error('Day selector element not found');
+        return;
+    }
+    
+    if (!diaryData || diaryData.length === 0) {
+        console.error('No diary data available for selector');
+        return;
+    }
     
     // Only populate if empty or length changed
     if (selector.options.length !== diaryData.length) {
@@ -2562,14 +2660,17 @@ function updateDaySelector(currentDayNum) {
         for (let i = 0; i < diaryData.length; i++) {
             const option = document.createElement('option');
             option.value = i + 1;
-            const title = getTitle(i + 1);
-            option.textContent = `Day ${i + 1}: ${title}`;
+            const entry = diaryData[i];
+            // Show the actual title which includes part info if present
+            option.textContent = entry && entry.title ? `Day ${entry.day}: ${entry.title}` : `Day ${i + 1}`;
             selector.appendChild(option);
         }
     }
     
     // Set current selection
-    selector.value = currentDayNum;
+    if (currentDayNum && currentDayNum <= selector.options.length) {
+        selector.value = currentDayNum;
+    }
 }
 
 // Keyboard navigation

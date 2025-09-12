@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import re
+import sys
 
 def count_bold_words(text):
     """Count bold words in text"""
@@ -134,7 +135,7 @@ def split_into_parts(day_content, day_num, day_title, target_words=15, max_words
     
     return formatted_parts
 
-def process_diary(input_file, output_file):
+def process_diary(input_file, output_file, diary_title):
     """Process the entire diary file"""
     with open(input_file, 'r') as f:
         content = f.read()
@@ -143,7 +144,7 @@ def process_diary(input_file, output_file):
     days = re.split(r'^## Day ', content, flags=re.MULTILINE)[1:]
     
     new_content = []
-    new_content.append("# Mina's K-pop Training Diary - A 30-Day Journey\n\n")
+    new_content.append(f"# {diary_title}\n\n")
     
     total_parts = 0
     day_parts_counter = {}  # Track part numbers for each day
@@ -236,5 +237,27 @@ def process_diary(input_file, output_file):
     print(f"Output written to: {output_file}")
 
 if __name__ == "__main__":
-    process_diary('/Users/yohei/eiken2/mina_kpop_diary.md', 
-                  '/Users/yohei/eiken2/mina_kpop_diary_split.md')
+    # Process all diary files
+    diaries = [
+        {
+            'input': '/Users/yohei/eiken2/kai_titan_diary.md',
+            'output': '/Users/yohei/eiken2/kai_titan_diary_split.md',
+            'title': "Kai's Attack on Titan Adventure - Eiken 3 Journey"
+        },
+        {
+            'input': '/Users/yohei/eiken2/ayaka_ib_diary.md',
+            'output': '/Users/yohei/eiken2/ayaka_ib_diary_split.md',
+            'title': "Ayaka's IB School Journey - Eiken Pre-1 Adventure"
+        },
+        {
+            'input': '/Users/yohei/eiken2/reiko_anomaly_diary.md',
+            'output': '/Users/yohei/eiken2/reiko_anomaly_diary_split.md',
+            'title': "Reiko's Anomaly Investigation - Eiken 1 Mystery"
+        }
+    ]
+    
+    for diary in diaries:
+        print(f"\n{'='*60}")
+        print(f"Processing: {diary['input']}")
+        print('='*60)
+        process_diary(diary['input'], diary['output'], diary['title'])

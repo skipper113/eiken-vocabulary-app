@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Diary Parsing</title>
+</head>
+<body>
+    <h1>Test Diary Parsing</h1>
+    <div id="results"></div>
+    
+    <script>
+        async function testParsing() {
+            const response = await fetch('mina_kpop_diary_split.md');
+            const text = await response.text();
+            
+            // Same pattern as in diary-app.js
+            const dayPattern = /## Day (\d+) - ([^\n]+)\n+([^#][\s\S]*?)(?=\n---\n|\n## Day \d+|$)/g;
+            let match;
+            const diaryData = [];
+            
+            while ((match = dayPattern.exec(text)) !== null) {
+                const dayNum = parseInt(match[1]);
+                const title = match[2].trim();
+                const content = match[3].trim();
+                
+                // Check if title contains a part number
+                const partMatch = title.match(/\(Part (\d+)\)$/);
+                const partNum = partMatch ? parseInt(partMatch[1]) : null;
+                
+                // Store each part as a separate entry
+                diaryData.push({
+                    day: dayNum,
+                    part: partNum,
+                    title: title,
+                    english: content.substring(0, 100) + '...' // Just show preview
+                });
+            }
+            
+            // Display results
+            const results = document.getElementById('results');
+            results.innerHTML = `<p>Total entries parsed: ${diaryData.length}</p>`;
+            
+            // Show Day 8 entries
+            const day8Entries = diaryData.filter(e => e.day === 8);
+            results.innerHTML += `<h2>Day 8 Entries (${day8Entries.length} found):</h2>`;
+            day8Entries.forEach((entry, i) => {
+                results.innerHTML += `
+                    <div style="border: 1px solid #ccc; padding: 10px; margin: 10px 0;">
+                        <h3>Entry ${i + 1}</h3>
+                        <p><strong>Day:</strong> ${entry.day}</p>
+                        <p><strong>Part:</strong> ${entry.part}</p>
+                        <p><strong>Title:</strong> ${entry.title}</p>
+                        <p><strong>Content:</strong> ${entry.english}</p>
+                    </div>
+                `;
+            });
+            
+            // Show all entries summary
+            results.innerHTML += `<h2>All Entries Summary:</h2>`;
+            const daySummary = {};
+            diaryData.forEach(entry => {
+                if (!daySummary[entry.day]) {
+                    daySummary[entry.day] = [];
+                }
+                daySummary[entry.day].push(entry.part || 'no part');
+            });
+            
+            Object.keys(daySummary).sort((a, b) => parseInt(a) - parseInt(b)).forEach(day => {
+                results.innerHTML += `<p>Day ${day}: ${daySummary[day].length} parts (${daySummary[day].join(', ')})</p>`;
+            });
+        }
+        
+        testParsing();
+    </script>
+</body>
+</html>

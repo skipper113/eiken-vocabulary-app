@@ -2,7 +2,6 @@
 
 ## Day 1 - Everything Changes (Part 1)
 
-
 Dear Diary,
 
 You know those moments that completely change your life? I **discovered** mine today during lunch break. I was scrolling through Instagram when I **suddenly** stumbled upon this reel of TWICE performing "Feel Special" at their Tokyo Dome concert. Their choreography was insane – perfectly synchronized, every movement sharp yet flowing. I must have replayed that video twenty times.
@@ -11,17 +10,25 @@ It reminded me of when Mom took me to see TWICE live last year. Standing in that
 
 **However**, when I showed Mom my latest Instagram discovery after dinner (a dance cover of "Set Me Free" that already has 2 million views), her reaction wasn't what I expected. "You want to be a K-pop idol?" she asked, raising an eyebrow. She thinks I need to **improve** my basic dance skills first before even dreaming about K-pop. Classic Mom – always practical. She **recommended** this dance academy **nearby** called Dream Arts Studio. Apparently, they **recently** got **several** new **customers** after one of their students made it to JYP Entertainment – the same company as TWICE! **In particular**, they have this instructor from Korea who trained backup dancers for actual K-pop groups.
 
+---
+
+## Day 1 - Everything Changes (Part 2)
+
 Here's the thing though – I don't want to **disturb** my regular life too much. I still have school, piano lessons (ugh), and math tutoring. **Moreover**, it's **not only** dancing **but also** singing, Korean language, and even facial expressions that I'd need to master. There are **a number of** skills that seem impossible to learn all at once. I've been watching Nayeon's Instagram lives, and she mentioned training 14 hours a day as a trainee. Fourteen hours!
 
 ---
 
-## Day 1 - Everything Changes (Part 2)
+## Day 1 - Everything Changes (Part 3)
 
 Mom says I'm likely to face more challenges than I realize. The **benefit** is that she's not completely against it – she just wants me to be realistic. "We'll **deal with** problems as they come," she said, which is her way of saying yes without actually saying yes. Finding a **solution** to balance everything won't be easy. She'll **inform** the academy about a trial class tomorrow.
 
 I'm literally **unable** to **focus** on my homework right now. **Therefore**, I'm writing to you instead. I keep refreshing TWICE's Instagram, hoping for new practice videos or behind-the-scenes content. Did you know Dahyun posts these adorable selfies with motivational quotes? And Chaeyoung shares her artwork! They're not just idols – they're real people who worked incredibly hard to achieve their dreams.
 
 **Unfortunately**, Dad's been sick with some **disease** (just a bad cold, but he's being dramatic about it). **According to** the **government** health website Mom keeps checking, there's been increased **pollution** levels affecting people with weak immune systems. **Meanwhile**, Dad's sprawled on the couch, surrounded by tissues, watching the news about **modern** technology and climate change. The reporter mentioned **millions** of people are affected by air quality issues.
+
+---
+
+## Day 1 - Everything Changes (Part 4)
 
 But honestly? I don't care about any of that right now. My mind keeps drifting back to TWICE's "I Can't Stop Me" choreography. The way they hit every beat, their synchronization, those iconic hand movements – I've been practicing in front of my mirror for months. I won't **quit** before I even start. **Scientists** say it takes 10,000 hours to master something – well, I better start counting. Mina from TWICE (yes, we share the same name!) trained for years before debuting. If she could do it, maybe I can too.
 
@@ -30,7 +37,6 @@ P.S. - I practiced the "Talk That Talk" chorus choreography in my room for an ho
 ---
 
 ## Day 2 - First Dance Class Reality Check (Part 1)
-
 
 Dear Diary,
 
@@ -46,6 +52,10 @@ She was already warming up, and honestly? She looked like she could debut tomorr
 
 Ms. Kim, our instructor, entered the room with the kind of **presence** that demanded attention. "Today we **focus** on fundamentals," she announced. "If you can't execute basics, you'll never **survive** an audition."
 
+---
+
+## Day 2 - First Dance Class Reality Check (Part 2)
+
 The warm-up alone nearly killed me. We had to **maintain** specific positions that made my muscles scream. Sarah, **naturally**, didn't even break a sweat. When Ms. Kim asked us to freestyle to TWICE's "More & More," I tried to copy the choreo I'd learned from Instagram tutorials. Big mistake.
 
 "Stop imitating," Ms. Kim said sharply. "JYP doesn't want TWICE copies. They want original artists who can **contribute** something new." She turned to Sarah. "Show her."
@@ -58,11 +68,9 @@ During water break, I pulled up Jihyo's latest Instagram post - a motivational q
 
 The **comparison** hit hard. Here I was, exhausted after one class, while Jihyo endured a decade of this. Sarah must have noticed my expression. "But she also said enjoying the **process** matters more than the result. I heard her say it at a fan meet."
 
-"You've been to a fan meet too?!" I practically screamed.
-
 ---
 
-## Day 2 - First Dance Class Reality Check (Part 2)
+## Day 2 - First Dance Class Reality Check (Part 3)
 
 Sarah shrugged. "My cousin won tickets. But watching them up close... they're not superhuman. They're just people who **refused** to give up." She paused. "Though Momo's dancing is pretty superhuman. Her **muscle** control is insane."
 
@@ -76,6 +84,10 @@ At dinner, I couldn't stop watching TWICE videos on my phone. Dad complained abo
 
 Not yet. But I will. I've decided - I'm going to **attend** every class, watch every Instagram tutorial, study every performance. If Jihyo trained for 10 years, if Momo practices until 4 AM (according to her vlogs), then I can **handle** this.
 
+---
+
+## Day 2 - First Dance Class Reality Check (Part 4)
+
 Sarah texted me tonight (how did she get my number?): "Your Instagram obsession might actually help. Tomorrow, bring notes on TWICE's formations. Real analysis, not just 'OMG QUEEN' comments."
 
 Challenge accepted.
@@ -84,7 +96,7 @@ P.S. - I just realized Sarah never said if she actually MET TWICE at that fan me
 
 ---
 
-## Day 3 - Finding My Rhythm (Part 1)
+## Day 3 - Finding My Rhythm
 
 
 Dear Diary,
@@ -96,6 +108,7 @@ I'm starting to understand how dance **affects** everything - my mood, my postur
 The **quality** of instruction here is actually **incredible**. Ms. Kim **allows** extra practice time for serious students, and she can **immediately** spot the ones who mean business. There's **construction** next door (they're building a Starbucks - basic, I know), and we're literally **developing** flexibility while jackhammers provide the beat. Very punk rock K-pop fusion.
 
 I need special **permission** to stay after 6 PM, and the form requires parental signatures **in detail**. My locker's already a complete **mess** - dance clothes mixed with Korean flashcards and protein bars. We're learning to **convert** Western pop songs into K-pop choreography. **For instance**, today we turned Taylor Swift into BLACKPINK style - the transformation was wild!
+
 
 ---
 
@@ -111,9 +124,10 @@ After practice, I need to **restore** my energy with Mom's cooking. She's resear
 
 P.S. - Sarah's starting to open up more. Today she mentioned she might audition for JYP's monthly evaluation. Should I be worried or inspired?
 
+
 ---
 
-## Day 4 - Partnership or Rivalry? (Part 1)
+## Day 4 - Partnership or Rivalry?
 
 
 Dear Diary,
@@ -123,6 +137,7 @@ My **brain** is absolutely fried! Sarah and I practiced together for three hours
 Every **muscle** has **pain** from yesterday's class - **in response to** the soreness, I've been stretching like my life depends on it. Caught myself **staring at** ITZY's practice videos for the millionth time. Their **flexibility** is insane! I need to **obtain** that level somehow. This journey **involves** way more science than I expected. Ms. Kim showed us **preserved** footage from the 90s - the evolution of K-pop is wild! Our academy is **known as** the best in the region, which explains why Sarah transferred here **on account of** the reputation.
 
 We **analyzed** **a variety of** styles today - hip-hop foundations, contemporary flow, even some Latin influences. Ms. Kim is **accurate** to the millimeter with her corrections. When I fell during a spin (embarrassing!), everyone showed **sympathy** except Sarah. She just said, "You need to **approach** balance systematically. Watch." Then she executed the move perfectly. Three times.
+
 
 ---
 
@@ -136,9 +151,10 @@ I can **manage** the basic choreography now, though I'd **rather than** admit it
 
 P.S. - Sarah's Instagram has 50K followers. Of course it does.
 
+
 ---
 
-## Day 5 - Kimchi and Competition (Part 1)
+## Day 5 - Kimchi and Competition
 
 
 Dear Diary,
@@ -150,6 +166,7 @@ I'm trying to **adopt** their eating habits to **raise** my energy and **avoid**
 The **annual** showcase is in three months, and to **participate in** it, we need to **achieve** certain benchmarks. Sarah and I are both aiming for the same solo spot (because of course we are). I can **tolerate** the strict training, but learning to **get along** with someone who's basically my competition? That's the real challenge.
 
 A sports **psychologist** visited today to discuss performance anxiety. Plot twist: Sarah was taking notes faster than anyone. Maybe Little Miss Perfect isn't so perfect after all? My parents said they'll **invest in** proper training - Dad even mentioned selling some company **stock** (Mom shut that down **immediately**). The **demand** for skilled dancers is high, but the **production** of actual stars? That's rare.
+
 
 ---
 
@@ -165,9 +182,10 @@ Tomorrow we're learning a routine **such as** those performed by actual trainees
 
 P.S. - Sarah asked if I wanted to practice together after class. I said yes before my brain could stop me. Help.
 
+
 ---
 
-## Day 6 - History Lessons with Sarah (Part 1)
+## Day 6 - History Lessons with Sarah
 
 
 Dear Diary,
@@ -177,6 +195,7 @@ I **previously** had no idea how deep K-pop history goes! Sarah and I actually s
 "There's no **excuse** for ignorance," Sarah said, not meanly but matter-of-factly. We **rely on** understanding the industry, not just **muscle** memory. The **theory** behind the music, the **gravity**-defying choreography, even the **chemical** reactions in our bodies during practice - it all connects.
 
 Sarah offered to **translate** Korean interviews for me. Her **recommendation**: follow **particular** Korean channels that upload **frequent** practice videos. She even helped me **locate** online teachers and **politely** corrected my form without making me feel stupid. I **accidentally** knocked over her water bottle (of course), but she just laughed!
+
 
 ---
 
@@ -192,9 +211,10 @@ We stay **in touch** through KakaoTalk now. My energy doesn't **decrease** when 
 
 P.S. - Sarah said I have potential today. Coming from her, that's basically a Grammy.
 
+
 ---
 
-## Day 7 - The Scout (Part 1)
+## Day 7 - The Scout
 
 
 Dear Diary,
@@ -206,6 +226,7 @@ Let me back up. A famous **composer** visited our academy - someone who's worked
 I don't play any **instrument**, just dance, but apparently my musicality impressed them. Sarah was **incredible** too, obviously. We had to **arrange** a mini performance on the spot - talk about learning to **cope with** stress! The scout said we're both "**certainly** improving at a remarkable rate" and that our partnership (partnership!) showed promise.
 
 "This is **temporary**," Sarah whispered during break. "We'll either debut together or as rivals. Either way, we'll be famous." The fact that she includes me in her future plans feels **urgent** and real.
+
 
 ---
 
@@ -225,10 +246,10 @@ The scout wants to see us again in two weeks. TWO WEEKS.
 
 P.S. - Sarah and I are officially a duo. We're calling ourselves "Parallel" - because we started as parallels, never meant to meet, but here we are.
 
+
 ---
 
 ## Day 8 - Sarah's Challenge (Part 1)
-
 
 Dear Diary,
 
@@ -240,6 +261,10 @@ During our first partner practice, Sarah didn't hold back. "You need to **extend
 
 She pulled up an Instagram reel on her phone – a side-by-side **comparison** of TWICE's practice video and our attempt. The difference was painful. "See how Sana uses her eyes? How Jihyo commands attention even in the back row?" Each correction felt like a tiny needle pricking my confidence. But here's the weird part – she was right about everything.
 
+---
+
+## Day 8 - Sarah's Challenge (Part 2)
+
 **In comparison** to her fluid movements, mine looked stiff and mechanical. She moved like **liquid** while I looked like I was fighting against my own body. "Loosen up," she kept saying. "Dance isn't just about hitting the moves **exactly** – it's about feeling the rhythm in your soul. That's what makes TWICE special. They're not just synchronized; they're connected."
 
 When we took a water break, I noticed something unexpected. Sarah was massaging her ankle, her face **tight** with pain. "Old **injury**," she said quickly when she caught me looking. "From when I was training in Seoul. JYP summer intensive program." My jaw dropped. "You trained at JYP?!"
@@ -250,7 +275,7 @@ She was quiet for a moment. "Three summers ago. I made it to the final evaluatio
 
 ---
 
-## Day 8 - Sarah's Challenge (Part 2)
+## Day 8 - Sarah's Challenge (Part 3)
 
 The rest of practice felt different. When she corrected my posture, it felt less like criticism and more like... teaching? "You have **raw** talent," she said as we worked on synchronized spins. "You remind me of Chaeyoung before she debuted – unpolished but full of potential. You just need to **trust** yourself more. Stop thinking so much and let your body **flow**."
 
@@ -260,17 +285,25 @@ After practice, Mom picked me up and **immediately** sensed something was differ
 
 At dinner, Dad was finally feeling better and back to his usual self, making jokes about becoming my **manager**. "I'll **handle** all your contracts," he said with a wink. "My **fee**? Only 90% of your earnings. That's less than most K-pop companies!" Mom threw a cushion at him, and we all laughed. These normal family moments feel more **precious** now that my life is getting complicated.
 
+---
+
+## Day 8 - Sarah's Challenge (Part 4)
+
 Tonight, I'm lying in bed scrolling through Sarah's old Instagram. I found videos from her JYP days – she's even in the background of some official TWICE practice videos! She showed me this **technique** for improving flexibility using a resistance **band**, the same one they use at JYP. She even lent me one to practice with at home. Is this what having a rival who's also a partner feels like? It's **confusing**.
 
 The showcase is in three weeks. We need to design our routine, choose costumes, and **somehow** find a way to match each other's energy. Sarah suggested we meet tomorrow at the library to research TWICE's duet performances. "We should study their 'Switch to Me' collab stage with Rain and how they adapt to different partners," she said. Study? For dance? Everything with her is so serious.
 
 But maybe that's what I need. Maybe being **comfortable** watching Instagram videos isn't enough anymore. Sarah doesn't let me **hide** behind excuses. When I said I couldn't do a particular **sequence** from "Perfect World," she just raised an eyebrow. "Can't? Or won't? Mina from TWICE had no dance background and look at her now." Then she broke it down into smaller parts until I got it.
 
+---
+
+## Day 8 - Sarah's Challenge (Part 5)
+
 I'm starting to **realize** something: Sarah isn't just naturally talented. She works harder than anyone. After everyone left, I saw her still practicing, going over the same routine again and again until every **angle** was perfect. Her dedication is almost scary. But it makes sense now – she's trying to prove she deserves what she almost had.
 
 ---
 
-## Day 8 - Sarah's Challenge (Part 3)
+## Day 8 - Sarah's Challenge (Part 6)
 
 Tomorrow, we're supposed to **present** our duet concept to Ms. Kim. Sarah already has a **whole** presentation prepared with **references** to famous collaborations. She even found **statistics** about what makes performances memorable from JYP's own training materials. Who does **research** for a dance routine? Someone who trained at JYP, apparently.
 
@@ -278,10 +311,10 @@ But watching her **explain** her ideas with such passion, I felt something shift
 
 P.S. - I practiced with the resistance band for an hour after dinner while watching TWICE's "FANCY" dance practice. Don't tell Sarah, but her **method** actually works. My **flexibility** is already improving. Maybe this partnership won't be a **disaster** after all. Also, I just realized – if Sarah almost debuted, she probably knows idols personally. I NEED to ask her about this tomorrow!
 
+
 ---
 
 ## Day 9 - The Library Session (Part 1)
-
 
 Dear Diary,
 
@@ -293,6 +326,10 @@ I **attempted** to take notes, but honestly, I was more fascinated watching Sara
 
 "How do you even **measure** that?" I asked, feeling **overwhelmed**. She grinned – the first real smile I'd seen from her that wasn't competitive. "My older sister works at a entertainment data analytics company. She taught me how to track performance metrics. Numbers don't lie. That's how JYP evaluates trainees too."
 
+---
+
+## Day 9 - The Library Session (Part 2)
+
 A group of our classmates walked by and spotted us through the glass study room. I heard one **whisper**, "Why is Sarah **wasting** time with her?" The comment stung, but Sarah didn't even flinch. "**Ignore** them," she said, not looking up from her notes. "Jealousy makes people say **stupid** things. They're just mad I didn't pick them."
 
 We took a break to get snacks from the vending machine. "Can I ask you something personal?" I said, surprising myself again. She shrugged. "Why do you push yourself so hard? You already trained at JYP. You're already amazing."
@@ -303,7 +340,7 @@ I almost laughed. "Yeah, right. Like what?"
 
 ---
 
-## Day 9 - The Library Session (Part 2)
+## Day 9 - The Library Session (Part 3)
 
 "**Joy**," she said simply. "When you dance, even when you're **struggling**, there's this... light in your eyes. Like when you watch TWICE videos – you don't just see choreography, you see magic. I lost that somewhere between Seoul and here. Everything became about being perfect, about **proving** I deserved to be there." She paused. "I actually met Momo once, during evaluations. She told me **technique** without passion is just exercise."
 
@@ -315,6 +352,10 @@ We went back to work, but something had shifted between us. When she **corrected
 
 She pulled up Mina's fancam from "Feel Special." "Your name twin is a former ballet dancer. See how she uses that training even in hip-hop moves?" It was **incredible** to watch – every gesture deliberate yet natural.
 
+---
+
+## Day 9 - The Library Session (Part 4)
+
 Around 4 PM, we finally had our **concept**: a story about rivals becoming **allies**, told entirely through movement and music. "Like TWICE themselves," Sarah said. "They were all competing in SIXTEEN, but look at them now. The competition made them stronger together."
 
 Mom picked me up and **immediately** noticed Sarah. "You must be the famous Sarah," she said warmly. To my shock, Sarah actually looked **nervous**. "Nice to meet you, Mrs. Tanaka," she said, suddenly **formal** and **polite**. Mom invited her for dinner, but Sarah said her parents were **strict** about family dinners.
@@ -325,7 +366,7 @@ At dinner, Dad asked about the library session. "Did you learn anything?"
 
 ---
 
-## Day 9 - The Library Session (Part 3)
+## Day 9 - The Library Session (Part 5)
 
 "Yeah," I said, thinking about everything Sarah had shared. "Sometimes the people who seem the strongest are actually the most **fragile**. And that Momo personally helped Sarah with choreography!"
 
@@ -343,6 +384,10 @@ WHAT?! She still knows current JYP trainees?! This partnership just got even mor
 
 Maybe this is what growing up feels like – learning that people are more **complicated** than they **appear**, that strength and vulnerability can exist in the same person, that sometimes your biggest **competitor** can become your greatest teacher.
 
+---
+
+## Day 9 - The Library Session (Part 6)
+
 Tomorrow is Sunday, our only day off, but Sarah suggested we meet at the park to practice. "The fresh air helps with **breathing** control," she said. "Plus, I want to teach you this exercise Momo showed us for stamina." Of course she would find a way to make even a park visit about **improvement**. But if it's something Momo taught... I'm definitely going!
 
 P.S. - I watched the first video she sent. It's TWICE's 2019 TWICELIGHTS concert in Seoul. The formations are insane – they create shapes and pictures with their positioning. In two weeks, that needs to be us. No pressure, right? Also, I've been stalking JYP trainee Instagram accounts trying to figure out which ones Sarah knows. This is better than any K-drama!
@@ -350,7 +395,6 @@ P.S. - I watched the first video she sent. It's TWICE's 2019 TWICELIGHTS concert
 ---
 
 ## Day 10 - Sunday in the Park (Part 1)
-
 
 Dear Diary,
 
@@ -361,6 +405,10 @@ She was already there when I arrived, **stretching** against a tree in the early
 "Today we work on **breathing** and stamina," she announced, leading me to an open field. "This is the routine Momo taught during JYP intensive. Most people think dance is just about the body, but it's really about **oxygen** management. TWICE performs for 3 hours straight during concerts." She had me run **laps** while maintaining specific breathing patterns. "In through your nose for four counts, hold for four, out through your mouth for four," she **instructed** while jogging backwards facing me, not even winded.
 
 After the cardio torture, we found a quiet spot under a huge oak tree. "Now we practice **emotional** **expression**," she said, pulling out her phone. "I recorded this at TWICE's soundcheck in Seoul. Jihyo practicing 'Cry For Me.' Watch how she feels every word even without the audience."
+
+---
+
+## Day 10 - Sunday in the Park (Part 2)
 
 The video was **raw** and **intimate** – Jihyo alone on a massive stage, **pouring** her soul out. "My aunt sent me this," Sarah explained. "She manages stage logistics at Music Bank. That's how I got into so many rehearsals."
 
@@ -374,13 +422,17 @@ Something clicked. I stopped **worrying** about looking stupid and just let the 
 
 "You met Sana too?!" I practically screamed.
 
+---
+
+## Day 10 - Sunday in the Park (Part 3)
+
 "Brief encounter. She was visiting trainees, giving advice. Said the secret is making every movement a conversation with the audience." Sarah pulled up another video. "Watch this fancam of Sana from their LA concert. See how she **connects** with people even in the nosebleed seats?"
 
 We spent the rest of the morning alternating between technical drills and **creative** exploration. She taught me the exact **isolation** exercises TWICE uses, how to **create** levels like Momo, how to use space like Dahyun. "Each member has their specialty," she explained. "Chaeyoung is underrated – her freestyle during concert endings is pure art."
 
 ---
 
-## Day 10 - Sunday in the Park (Part 2)
+## Day 10 - Sunday in the Park (Part 4)
 
 Around noon, we **collapsed** on the grass, exhausted but exhilarated. "I'm **starving**," I said, and Sarah actually laughed. "There's a Korean café nearby," she offered. "The owner is a ONCE. Has TWICE memorabilia everywhere."
 
@@ -395,6 +447,10 @@ The girls exchanged shocked looks and left. Sarah stared at me. "You didn't have
 She pulled it out – MORE & MORE, signed by all nine members. "Jihyo wrote 'Fighting!' on it," she said softly. "After my injury, when I thought everything was over."
 
 "What will you do now?" I asked. "With your parents wanting you to quit?"
+
+---
+
+## Day 10 - Sunday in the Park (Part 5)
 
 "**Prove** them wrong," she said **firmly**. "This showcase, the summer auditions... JYP isn't the only company. HYBE is holding global auditions. So is SM. I have to **succeed**." She looked at me. "That's why I need you. You remind me that this isn't just about making it – it's about loving it. When you watch those fancams with such pure joy, when you dance like Mina is your personal hero... I **remember** why I started."
 
@@ -412,6 +468,10 @@ Sarah smiled – a real, unguarded smile that **transformed** her whole face. "O
 
 "YOU BROUGHT FOOD TO TWICE?!"
 
+---
+
+## Day 10 - Sunday in the Park (Part 6)
+
 She laughed at my reaction. "Trainee duty. We prepared snacks for senior artists. Momo ate half the box and said they were better than her mom's. Then asked for the recipe!"
 
 Walking home, I **realized** something had shifted. We weren't just partners anymore. We were becoming real friends, bonded by our shared dream and her **incredible** stories. Tomorrow we **present** our routine concept to Ms. Kim. Sarah prepared a whole presentation with music samples from various TWICE songs, showing how we can blend their styles.
@@ -424,7 +484,6 @@ P.S. - Mom was thrilled when I told her about Sunday brunch. "That girl needs so
 
 ## Day 11 - The New Variable (Part 1)
 
-
 Dear Diary,
 
 My entire system just crashed. Not my phone – my brain. There's a new guy at the studio, and both Sarah and I noticed him at the **exact** same time. His name is Leo, he's half-Korean, speaks fluent Japanese, and dances like he was born doing it. When Ms. Kim introduced him as a **former** JYP trainee who'd help with our showcase, Sarah actually dropped her water bottle. I've never seen her lose composure like that.
@@ -435,6 +494,10 @@ Leo offered to **assist** with our duet choreography, and when he adjusted my ar
 
 The **scientific** part of my brain tried to **analyze** why my heart rate increased 40% when he smiled at me. The non-scientific part just melted. But here's the plot twist – when he worked with Sarah, they moved together like they'd been partners for years. Their connection was **obvious** to everyone watching.
 
+---
+
+## Day 11 - The New Variable (Part 2)
+
 "You two have **history**," I said to Sarah during break, trying to sound casual. She was **examining** her water bottle like it held the secrets of the universe. "We trained together for six months," she finally admitted. "Before my injury. He was... is... **talented** beyond belief. JYP wanted to **invest** heavily in his training."
 
 Ms. Kim had us practice a three-person formation, and the tension was so thick you could cut it with Tzuyu's sharp moves. Leo kept trying to **maintain** equal attention between us, but I could sense something unspoken between him and Sarah. When he caught me almost falling during a spin, Sarah's expression went **completely** unreadable.
@@ -443,7 +506,7 @@ After class, Leo **approached** us. "Want to grab coffee? I know this place that
 
 ---
 
-## Day 11 - The New Variable (Part 2)
+## Day 11 - The New Variable (Part 3)
 
 At the café, the **conversation** flowed surprisingly well. Leo told us about meeting TWICE during his trainee days. "Momo-sunbaenim gave me advice about **preserving** my passion even when the pressure gets **intense**," he said. "She said the **moment** you stop loving it, you should **quit**." Sarah and I exchanged glances – we'd both been thinking about those exact words lately.
 
@@ -455,13 +518,9 @@ On the way home, Sarah was quiet. Finally, she spoke: "I forgot how much it hurt
 
 Mom noticed my mood at dinner. "Boy trouble?" she asked. I almost choked on my rice. "It's more **complicated** than that," I said. She smiled knowingly. "It always is at your age. Just **remember** – the right person will make you better, not **bitter**."
 
-Tonight, I got a text from Leo: "You and Sarah both have **incredible** **potential**. Tomorrow, I want to teach you the choreography TWICE used in their final trainee evaluation. Are you ready to level up?"
-
-Sarah texted me thirty seconds later: "We need to talk. This changes everything."
-
 ---
 
-## Day 11 - The New Variable (Part 3)
+## Day 11 - The New Variable (Part 4)
 
 My simple dream of becoming a K-pop idol just became a K-drama. The showcase is in two weeks, we have a **possible** ticket to JYPE, and I'm caught in what feels like a weird triangle of **ambition**, friendship, and whatever these feelings are. The **articles** I've read about idol life never mentioned this part.
 
@@ -469,10 +528,10 @@ But you know what? Even with all this drama, I still believe we can make it. All
 
 P.S. - Leo's Instagram has a video of him doing TWICE's "Scientist" choreography with the actual members in the background. Sarah has watched it seventeen times. I counted.
 
+
 ---
 
 ## Day 12 - Everything Falls Apart (Part 1)
-
 
 Dear Diary,
 
@@ -486,6 +545,10 @@ Leo rode with her to the hospital. I wanted to go too, but Ms. Kim said family o
 
 At home, I couldn't eat. Mom found me in my room, staring at videos of our duet practice. "Life isn't fair sometimes," she said, sitting beside me. "But how we **respond** to unfairness defines who we are." She was right, but it didn't make it hurt less.
 
+---
+
+## Day 12 - Everything Falls Apart (Part 2)
+
 Leo texted me from the hospital: "Ligament damage. Same as before. Doctor says minimum 8 weeks **recovery**if she's careful. She's **devastated**." Then another text: "She keeps saying she's **ruined** everything for you. Can you come?"
 
 I **convinced** Mom to drive me there. Sarah was in a hospital bed, her ankle wrapped and elevated. Her parents were there – the first time I'd met them. They looked exhausted, **disappointed**, and somehow unsurprised, like they'd been **expecting** this to happen again.
@@ -498,7 +561,7 @@ I **convinced** Mom to drive me there. Sarah was in a hospital bed, her ankle wr
 
 ---
 
-## Day 12 - Everything Falls Apart (Part 2)
+## Day 12 - Everything Falls Apart (Part 3)
 
 Leo cleared his throat. "Actually, there might be a way." We all looked at him. "Mina could do a solo for the showcase, **incorporating** elements from your duet. And Sarah..." he paused, "you could choreograph from your wheelchair. JYPE values **creative** minds as much as dancers. Some of their best choreographers are **former** dancers who got injured."
 
@@ -516,6 +579,10 @@ I thought about what Momo said – about quitting when you stop loving it. "Do y
 
 We spent the next hour planning. She would choreograph a solo for me that told our story – rivalry to friendship, dreams and setbacks, but ultimately, resilience. "Make them cry," she said, already sketching formations on paper. "Show them that K-pop isn't just about perfect synchronization. It's about heart."
 
+---
+
+## Day 12 - Everything Falls Apart (Part 4)
+
 Leo returned with **permission** to film everything for JYPE. "They want to see how you **handle** adversity," he said. "This might actually help your case. They love an underdog story."
 
 Before I left, Sarah grabbed my hand. "Win this for both of us," she said. "And Mina? Thank you for not giving up on me."
@@ -530,7 +597,7 @@ P.S. - Sarah's hospital room already looks like a studio. She has her laptop, no
 
 ---
 
-## Day 13 - The Wheelchair Choreographer (Part 1)
+## Day 13 - The Wheelchair Choreographer
 
 
 Dear Diary,
@@ -543,6 +610,7 @@ Leo had **transformed** a corner of the studio into Sarah's command center – *
 
 She had me start with movements from our original duet, then **suddenly** stop – **representing** her injury. "Now **express** the emptiness," she directed. "Dance like you're searching for your missing half." It was **emotionally** **exhausting**, but powerful.
 
+
 ---
 
 ## Day 13 - The Wheelchair Choreographer (Part 2)
@@ -552,6 +620,7 @@ Ms. Kim watched from the doorway, **observing** Sarah's transformation from danc
 During lunch, Leo sat with us. "JYPE called," he said quietly. "They want to **evaluate** both of you, but differently. Mina for performance, Sarah for **creative** direction. They're interested in your **collaboration**." Sarah and I exchanged shocked looks. This wasn't what we **expected**.
 
 "But my parents..." Sarah started. Leo **interrupted** gently. "I spoke with them. They're **willing** to reconsider if you can **prove** this is **sustainable** – that you can **contribute** without **destroying** your body."
+
 
 ---
 
@@ -564,6 +633,7 @@ A group of younger students **gathered** to watch, amazed at Sarah directing fro
 We worked on the climax – a sequence where I **literally** dance for two people, mirroring invisible movements as if Sarah's spirit is still there. "Make them cry," Sarah said. "But then make them cheer. Show them that setbacks don't define us – how we **respond** does."
 
 Leo filmed everything, **capturing** not just the choreography but our **process** – Sarah's passionate directions, my frustrated attempts, our **arguments** over **details**, and the breakthrough moments when everything clicked. "This is what JYPE needs to see," he said. "The reality behind the performance."
+
 
 ---
 
@@ -579,6 +649,7 @@ Tonight, Sarah sent me **dozens** of videos with **detailed** notes. "Study thes
 
 Us. Not me, not her. Us.
 
+
 ---
 
 ## Day 13 - The Wheelchair Choreographer (Part 5)
@@ -591,9 +662,10 @@ And I'm dancing with her, every step of the way.
 
 P.S. - Leo told me something today: "You two **remind** me of Momo and Mina from TWICE – different styles, different strengths, but unstoppable when **united**." Coming from someone who trained with them, that's the highest **compliment** imaginable.
 
+
 ---
 
-## Day 14 - The Solo Takes Shape (Part 1)
+## Day 14 - The Solo Takes Shape
 
 
 Dear Diary,
@@ -605,6 +677,7 @@ Every **muscle** in my body screams, but my spirit soars. Today, Sarah's solo ch
 Leo brought news that changed everything: "JYPE wants to send someone to **evaluate** the showcase. Not just any scout – Park Jin-young himself might come." THE J.Y. PARK. The **founder**. The **legend**. Sarah and I just stared at each other, **temporarily** frozen.
 
 "No pressure," Leo added with a smile. "But this is unprecedented. He hasn't personally scouted in Japan for two years." Sarah **immediately** went into overdrive, **modifying** every **aspect** of the choreography. "We need to show innovation," she said. "Something that **identifies** us as **unique** artists, not just TWICE imitators."
+
 
 ---
 
@@ -619,8 +692,6 @@ During lunch, Sarah's parents came to watch. Her father, who I'd never seen at t
 Sarah **burst** into tears. I'd never seen her so **vulnerable**. Her dad hugged her carefully, **mindful** of her injury. "Your body may have limits," he said, "but your mind and creativity are limitless."
 
 The afternoon brought a surprise visitor – a **former** TWICE backup dancer who Leo knew. "I heard about your situation," she said. "Jihyo went through something **similar** during trainee days – not an injury, but **doubts** about her **role**. She learned that being a leader isn't just about being in front. It's about lifting others up."
-
-She worked with us for two hours, **adding** professional touches that elevated everything. "This movement here," she said, **adjusting** my arms, "this is pure Momo energy. And this **transition**? That's Mina's elegance. You're channeling all of them while being yourself."
 
 ---
 
@@ -638,11 +709,15 @@ I couldn't answer. The thought of **achieving** this dream without her felt **wr
 
 Tonight, Sarah sent me a video – it's her, in her bedroom, choreographing with just her hands and facial expressions, **creating** tomorrow's new section. "The show must go on," her message said. "And it will be spectacular."
 
+---
+
+## Day 14 - The Solo Takes Shape (Part 4)
+
 Nine days until the showcase. Nine days to **prove** that our **partnership** transcends **physical** limitations. Nine days to show J.Y. Park that we're not just dancers or choreographers – we're artists who found a way to **transform** **tragedy** into triumph.
 
 ---
 
-## Day 14 - The Solo Takes Shape (Part 4)
+## Day 14 - The Solo Takes Shape (Part 5)
 
 The pressure is **enormous**, but so is our determination. Sarah **creates** from her wheelchair. I dance for both of us. Leo **documents** our **journey**. And somewhere in Seoul, the man who built TWICE might be preparing to watch us perform.
 
@@ -650,10 +725,10 @@ No pressure, right?
 
 P.S. - Mom made Sarah's favorite Korean dessert and brought it to the studio. "You're family now," she told her. Sarah cried again. I'm starting to think we're all going to be dehydrated from tears before this is over.
 
+
 ---
 
 ## Day 15 - The Universe Tests Us Again (Part 1)
-
 
 Dear Diary,
 
@@ -671,8 +746,6 @@ She spent the next hour frantically **revising** the choreography, **adapting** 
 
 Leo was **initially** skeptical. "JYP wants to see excellence—"
 
-"This IS excellence," Sarah **interrupted**. "Excellence isn't perfection. It's perseverance. It's showing that even when everything goes **wrong**, the performance continues. That's what being an idol really means."
-
 ---
 
 ## Day 15 - The Universe Tests Us Again (Part 2)
@@ -686,6 +759,7 @@ During a break, Leo pulled me aside. "I need to be honest," he said. "JYP might 
 We worked until midnight, both of us exhausted – me from dancing with a sprained wrist, Sarah from the **mental** effort of **constant** adaptation. But we **created** something **unique**: a dance that **acknowledges** **injury** but **refuses** to be defined by it.
 
 "You know what's funny?" Sarah said as her mom helped her into the car. "We're both broken now. But together, we make one **whole** dancer." It should have been **depressing**, but we both laughed. Sometimes **laughter** is the only response to absurdity.
+
 
 ---
 
@@ -705,13 +779,17 @@ Seven days until the showcase. Seven days to **prove** that two injured girls ca
 
 We're not the dancers we planned to be. We're something else now – survivors, fighters, artists who found beauty in breakdown. Maybe that's what we were meant to become all along.
 
+---
+
+## Day 15 - The Universe Tests Us Again (Part 4)
+
 The show must go on. And it will – sprains, wheelchairs, and all.
 
 P.S. - Leo filmed us today, both injured, still working. He said it's the most **inspiring** thing he's ever **documented**. "If JYP doesn't see your value," he said, "then they're blind." Coming from their own scout, that gives me hope.
 
 ---
 
-## Day 16 - The Power of Adaptation (Part 1)
+## Day 16 - The Power of Adaptation
 
 
 Dear Diary,
@@ -723,6 +801,7 @@ Leo brought his camera to **document** our **progress**. "JYP wants to see the *
 We spent the morning refining our **adapted** choreography. Every limitation became a **creative** **opportunity**. Sarah directed from her chair with laser **focus**, using her hands to **demonstrate** intricate **details** I'd never noticed before. "When you can't use your legs," she **explained**, "you **discover** how expressive hands can be."
 
 My injured wrist forced me to **explore** asymmetrical movements. "Use the imbalance," Sarah coached. "Let the **audience** see the **struggle**. Make them feel the effort it takes to keep going." We weren't hiding our **injuries** anymore – we were showcasing them as part of our narrative.
+
 
 ---
 
@@ -738,13 +817,17 @@ The afternoon brought an **unexpected** visitor – Chaeyoung from TWICE. Leo ha
 
 She spent an hour with us, **sharing** stories about TWICE's own **struggles**. "Mina dealt with **anxiety**. Jeongyeon with **injury**. We all have our battles. But we learned that vulnerability makes us stronger, not weaker." She **adjusted** one of our **formations**, showing how to maximize **impact** despite our limitations.
 
+---
+
+## Day 16 - The Power of Adaptation (Part 3)
+
 "J.Y. Park values authenticity above everything," Chaeyoung **revealed**. "He can teach **technique**, but he can't teach heart. You two have more heart than most professionals I know." Before leaving, she hugged us both. "I'll be at the showcase," she promised. "And I won't be alone."
 
 After she left, Sarah and I sat in stunned silence. "Did that really happen?" I finally asked. "Chaeyoung from TWICE just... coached us?" Sarah laughed, a **genuine**, joyful sound I hadn't heard since before her **injury**. "She said we have heart," she repeated in wonder.
 
 ---
 
-## Day 16 - The Power of Adaptation (Part 3)
+## Day 16 - The Power of Adaptation (Part 4)
 
 Leo **captured** everything, but then put his camera down. "Can I be honest?" he asked. "When I first saw you two, I thought you were just another **talented** pair. But now... you're showing me what it really means to be an artist. To **create** something meaningful from adversity."
 
@@ -754,17 +837,19 @@ Sarah's dad picked her up, and I saw him **whisper** something to her that made 
 
 My own parents were **equally** supportive. "You're learning lessons most people take a lifetime to understand," Mom said. "That **success** isn't about **avoiding** **obstacles** – it's about dancing through them."
 
+
 ---
 
-## Day 16 - The Power of Adaptation (Part 4)
+## Day 16 - The Power of Adaptation (Part 5)
 
 Tomorrow we'll **continue** refining our piece. Six days until the showcase. Six days to **prove** that two injured girls can **create** something **extraordinary**. Not despite our **injuries**, but because of how we've chosen to **respond** to them.
 
 P.S. – Chaeyoung left her number. "Text me if you need anything," she said. "TWICE supports artists who support each other." I still can't believe this is real. A TWICE member believes in us. Maybe our broken wings can still help us fly.
 
+
 ---
 
-## Day 17 - Finding Our Voice (Part 1)
+## Day 17 - Finding Our Voice
 
 
 Dear Diary,
@@ -779,6 +864,7 @@ Ms. Kim **gathered** us for a serious talk. "This attention changes things," she
 
 I felt my stomach tighten. Sarah gripped her wheelchair armrests. Then she lifted her chin. "We're already dancing through **pain**," she said. "What's a little more pressure?" Her bravery made me braver.
 
+
 ---
 
 ## Day 17 - Finding Our Voice (Part 2)
@@ -786,6 +872,7 @@ I felt my stomach tighten. Sarah gripped her wheelchair armrests. Then she lifte
 We decided to **embrace** the attention rather than **fear** it. "Let's give them something worth watching," I said. We spent the morning **adding** **subtle** touches that **acknowledged** our growing **audience** – a **moment** where I help Sarah stand, a **sequence** where she **guides** me through **complex** footwork I can't see because I'm **protecting** my wrist.
 
 Leo filmed everything, but today he also **participated**. "Try this," he **suggested**, **demonstrating** a **transition** that **highlighted** our **partnership**. "Make them see that you're stronger together than apart." His experience as a former trainee showed – he understood performance from the inside.
+
 
 ---
 
@@ -799,6 +886,7 @@ The afternoon brought another surprise – Dahyun and Tzuyu from TWICE arrived. 
 
 "Your **chemistry** is **incredible**," Tzuyu **observed**. "Most professional groups take years to **develop** this kind of connection." Dahyun nodded. "The way you anticipate each other's needs, compensate for each other's limitations... it's like watching telepathy."
 
+
 ---
 
 ## Day 17 - Finding Our Voice (Part 4)
@@ -810,6 +898,7 @@ They taught us about stage **presence**. "Don't just dance," Dahyun advised. "Co
 Sarah sensed my panic. "Hey," she said **firmly**. "We've **survived** **injuries**, **doubt**, and **impossible** **odds**. We can **survive** J.Y. Park's judgment." She was right. We'd already **overcome** so much.
 
 We practiced until our bodies begged for rest. But something had shifted. We weren't just executing choreography anymore – we were inhabiting it. Every movement had **purpose**, **meaning**, story.
+
 
 ---
 
@@ -827,9 +916,10 @@ Five days left. Five days to **prove** that our voices – **expressed** through
 
 P.S. – Sarah texted: "Three TWICE members have now seen us. If we **collect** all nine, do we get a wish?" I **replied**: "Our wish is already coming true. We're dancing, despite everything." She sent back a heart. Sometimes the simplest gestures carry the most **meaning**.
 
+
 ---
 
-## Day 18 - The Storm Before the Calm (Part 1)
+## Day 18 - The Storm Before the Calm
 
 
 Dear Diary,
@@ -844,6 +934,7 @@ Sarah was already at the studio when I arrived, **staring** at her phone. "Look 
 
 I knelt beside her wheelchair. "Remember what you told me when I got hurt?" I said. "We're not **hiding** our weakness. We're dancing through it." She gripped my hand so **tight** it hurt – but it was the good kind of pain, the kind that **reminds** you you're not alone.
 
+
 ---
 
 ## Day 18 - The Storm Before the Calm (Part 2)
@@ -855,6 +946,7 @@ Leo **burst** through the door, **laptop** in hand. "**Emergency** meeting," he 
 What followed was the most **intense** four hours of my life. Momo drilled us on projection – making every gesture **visible** from **distance**. Jihyo worked on our energy – **maintaining** intensity without **exhausting** ourselves. Nayeon **focused** on **confidence** – "Fake it until it's real," she said. "The **audience** will believe what you show them."
 
 "Your story is powerful," Chaeyoung **reminded** us during a water break. "But power needs control. Don't let **emotion** **overwhelm** **technique**." She demonstrated a **sequence**, showing how to balance feeling with precision.
+
 
 ---
 
@@ -870,6 +962,7 @@ They **modified** our routine again, building in **moments** of stillness that l
 
 As the sun set, the TWICE members prepared to leave. But first, Nayeon **gathered** everyone. "What you're doing is bigger than a showcase," she said. "You're **proving** that **talent** isn't about perfection. It's about heart, determination, and the refusal to let **circumstances** define your limits."
 
+
 ---
 
 ## Day 18 - The Storm Before the Calm (Part 4)
@@ -884,6 +977,7 @@ Leo drove us both home, quiet but supportive. "Whatever happens," he said, "you'
 
 At home, I found my **entire** family waiting. Dad had printed **articles** about us. My brother had made a banner: "UNBREAKABLE DUO." Mom had prepared my **favorite** **meal**. "We're so **proud**," they said together.
 
+
 ---
 
 ## Day 18 - The Storm Before the Calm (Part 5)
@@ -892,9 +986,10 @@ Four days until we **face** 2,000 people. Four days until J.Y. Park **judges** o
 
 P.S. – Sarah sent a voice message at midnight: "We're really doing this, aren't we? Two broken girls about to dance for the **founder** of JYP in front of thousands." I **replied**: "Not broken. Rebuilt. Stronger at the broken places." She sent back: "Partners forever?" I answered: "Forever."
 
+
 ---
 
-## Day 19 - Three Days to Destiny (Part 1)
+## Day 19 - Three Days to Destiny
 
 
 Dear Diary,
@@ -911,6 +1006,7 @@ The relief was **immediate**, but Sarah looked conflicted. "We're becoming a **p
 
 "No," I said firmly. "We're showing people that dreams don't follow a script. Between the perfect idols and the ones who never make it, there's us – **completely** imperfect but **absolutely** determined."
 
+
 ---
 
 ## Day 19 - Three Days to Destiny (Part 2)
@@ -922,6 +1018,7 @@ During a break, we sat **inside** the studio while storm clouds gathered outside
 "The feeling is **mutual**," I replied. "Without you, I'd still be the girl who **reacts** without thinking. You taught me to **observe**, to understand the **exact** movements needed, not just throw myself at them."
 
 Ms. Kim had us **warm** up with meditation. "**Poison** thoughts with peace," she instructed. "Doubt is **poison** to performance. Replace every negative thought with gratitude." It sounded simple, but it was harder than any physical exercise. My mind kept racing: What if we **fail**? What if we're not ready? What if my wrist gives out **completely**?
+
 
 ---
 
@@ -941,6 +1038,10 @@ As evening fell, we did one final run-through. My wrist **protested** with every
 
 "Me too," I admitted. "But we're terrified together."
 
+---
+
+## Day 19 - Three Days to Destiny (Part 4)
+
 Tonight, looking at our **reflection** in the studio mirrors, I don't see two broken dancers. I see two girls who refused to let circumstances dictate their worth. The showcase isn't just about proving ourselves to J.Y. Park anymore. It's about proving that dreams can **survive** anything – **economic** hardship, physical injury, and the **complete** shattering of our original plans.
 
 The storm outside has passed, leaving the air clean and fresh. Tomorrow we'll practice again, building towards a moment that will **determine** everything. But whatever happens, we've already won something that can't be taken away: the knowledge that we didn't give up.
@@ -951,10 +1052,9 @@ And in three days, we'll show the world what that looks like.
 
 P.S. – Mom found an old photo of me from before all this started. "You look different now," she said. "Stronger." She's right. Every challenge has carved something new into us. We're not the dancers we planned to be – we're the ones we needed to become.
 
-
 ---
 
-## Day 20 - The Final Rehearsal (Part 1)
+## Day 20 - The Final Rehearsal
 
 
 Dear Diary,
@@ -966,6 +1066,7 @@ Two days left, and today we faced our final rehearsal in front of an audience th
 The run-through was brutal. Every movement required **delicate** precision despite our injuries. We had to **persuade** our bodies to go beyond their limits, to **examine** each gesture for both artistic merit and physical possibility. Sarah's directions from her wheelchair had become second nature – she'd **developed** a system of hand signals that let her **instruct** us without interrupting the flow.
 
 "Take a **leisurely** moment here," she called out during a transition. "The audience needs to breathe with you." Her understanding of pacing had become **remarkable**. She knew **exactly** when to push and when to **peel** back the intensity.
+
 
 ---
 
@@ -979,11 +1080,15 @@ We were **getting used to** the attention, but it still felt surreal. My old rou
 
 Leo had been monitoring everything with increasing concern. "Success is **within reach** now," he said, "but that makes these last days the most dangerous. **On average**, this is when performers injure themselves – pushing too hard right before the big moment."
 
+---
+
+## Day 20 - The Final Rehearsal (Part 3)
+
 He was right to worry. My wrist had swollen again, and Sarah had been hiding severe back pain from sitting in her wheelchair for so many hours **in a row**. The **welfare** of our bodies was becoming a serious concern. But we couldn't stop now. The showcase would happen with or without us, and we **refused** to let it happen without us.
 
 ---
 
-## Day 20 - The Final Rehearsal (Part 3)
+## Day 20 - The Final Rehearsal (Part 4)
 
 "Let's discuss the **border** between ambition and self-destruction," Ms. Kim said, making us sit down. "This has become a **habit** – you both pushing past healthy limits. I won't **interrupt** your dreams, but I won't let you **destroy** yourselves either."
 
@@ -1001,9 +1106,10 @@ They'd **created** a banner for the showcase: "UNBREAKABLE SPIRITS." The gesture
 
 Tonight, I'm thinking about how much has changed. The showcase that once seemed like a **distant** dream is now terrifyingly close. Every **cell** in my body is both exhausted and **electric** with anticipation. We're standing at the **edge** of everything we've worked for.
 
+
 ---
 
-## Day 20 - The Final Rehearsal (Part 4)
+## Day 20 - The Final Rehearsal (Part 5)
 
 The venue is booked. The costumes are ready. The choreography is polished to the best of our **ability**. J.Y. Park has **confirmed** his attendance. The cameras will be **rolling**. The world will be watching.
 
@@ -1016,9 +1122,10 @@ Two more days until we dance our truth.
 P.S. – Sarah's mom gave us matching bracelets tonight. They say "Stronger at the Broken Places" in Korean. She had them specially made. "Whatever happens at the showcase," she said, "you've already **inspired** more people than you know." The **weight** of that **responsibility** is heavy, but it's also lifting us up, carrying us toward something bigger than we ever imagined.
 
 
+
 ---
 
-## Day 21 - The Eve of Everything (Part 1)
+## Day 21 - The Eve of Everything
 
 
 Dear Diary,
@@ -1029,6 +1136,7 @@ The day started with a **strict** **warning** from the doctor. "Your wrist needs
 
 "Let's be **practical**," Sarah said as we prepared for our final practice. "We **modify** everything one last time. Every movement that causes **severe** pain gets **replaced**. We're not being weak – we're being **smart**."
 
+
 ---
 
 ## Day 21 - The Eve of Everything (Part 2)
@@ -1036,6 +1144,7 @@ The day started with a **strict** **warning** from the doctor. "Your wrist needs
 The studio felt different today – **charged** with **electricity**. Everyone **avoided** talking about tomorrow, but it hung in the air like **humidity** before a storm. Even our **reliable** Ms. Kim seemed **nervous**, **constantly** checking and rechecking details.
 
 "Your **reputation** – the studio's **reputation** – none of that **matters**," she told us. "What matters is that you **represent** every young person who's been told they're not enough. You **bear** that **responsibility** with **grace**."
+
 
 ---
 
@@ -1049,6 +1158,7 @@ Leo had **terrible** news: "More media is coming than **expected**. **Internatio
 
 The political **aspects** of the showcase had become **complicated**. The rivalry between **entertainment** companies meant that having J.Y. Park **attend** was **causing** tension. Other agencies were sending scouts too, turning our personal triumph into an **industry** event.
 
+
 ---
 
 ## Day 21 - The Eve of Everything (Part 4)
@@ -1058,6 +1168,7 @@ During our final run-through, something magical happened. For the first time sin
 "That was **brilliant**," Leo said, and I could see he meant it. "You've **created** something **entirely** new – a **vocabulary** of resilience."
 
 Sarah's parents arrived with a surprise – they'd **hired** a professional film **crew** to **document** everything. "Your story **deserves** to be **preserved**," her father said. "Future **generations** of dancers should know that limitation doesn't mean **defeat**."
+
 
 ---
 
@@ -1076,6 +1187,7 @@ Sarah called at midnight. "I'm **scared**," she said simply.
 "But also... excited?"
 
 "Yes. Terrified and thrilled in **equal** **measure**."
+
 
 ---
 
@@ -1096,9 +1208,10 @@ Tomorrow, we show the world what "unbreakable" really means.
 P.S. – I just realized something. This whole journey started because I wanted to be like TWICE. Tomorrow, I won't be dancing to become like them. I'll be dancing to become myself – scarred, **adapted**, imperfect, but **absolutely** authentic. And maybe that's the greatest victory of all.
 
 
+
 ---
 
-## Day 22 - The Moment of Truth (Part 1)
+## Day 22 - The Moment of Truth
 
 
 Dear Diary,
@@ -1110,6 +1223,7 @@ The morning started with **disaster**. I woke up and couldn't **bend** my wrist 
 But then something **incredible** happened. Leo **appeared** at my door with a **medical** team – specialists he'd contacted through JYPE. They worked on us for two hours, using **techniques** I'd never seen. "You'll have about four hours of mobility," the doctor **warned**. "After that, you'll need **immediate** **treatment**. This is **temporary** **relief**, not a **cure**."
 
 Four hours. The showcase was only thirty minutes. We could do this.
+
 
 ---
 
@@ -1129,6 +1243,7 @@ The music started – not the original TWICE song we'd planned, but something Sa
 
 I danced. Not the choreography we'd originally learned, but the story we'd lived. Every movement showed our **journey** – the excitement of beginning, the shock of **injury**, the despair of limitation, and then... the **rise**. The adaptation. The refusal to **quit**.
 
+
 ---
 
 ## Day 22 - The Moment of Truth (Part 3)
@@ -1145,6 +1260,7 @@ Then thunder – the **audience** erupted. People were crying, cheering, standin
 
 But all I could **focus** on was one person – J.Y. Park, sitting in the front row. His **expression** was unreadable. He stood, walked toward the stage, and everyone went quiet.
 
+
 ---
 
 ## Day 22 - The Moment of Truth (Part 4)
@@ -1152,6 +1268,7 @@ But all I could **focus** on was one person – J.Y. Park, sitting in the front 
 "I've been in this **industry** for decades," he said into the microphone someone handed him. "I've seen perfect **technique**, flawless execution, **ideal** visuals. But I've rarely seen **truth**." He paused. "What you've shown today isn't just a performance. It's a testament to what makes a real artist."
 
 He turned to the **audience**. "JYPE has **strict** standards for trainees. Physical **ability**, visual **appeal**, **market** **potential**." Another pause. "But we also value something harder to find – artists who can touch hearts, who can make people believe in **possibility**."
+
 
 ---
 
@@ -1166,6 +1283,7 @@ I couldn't breathe. Sarah grabbed my hand so **tight** I thought it might break.
 The rest is a blur. TWICE **surrounding** us with hugs. Our parents crying and laughing simultaneously. Leo lifting Sarah in a careful **embrace**, then turning to me with the biggest smile I've ever seen.
 
 "You did it," he said. "You **actually** did it."
+
 
 ---
 
@@ -1189,6 +1307,7 @@ We **proved** that broken doesn't mean worthless.
 
 We **proved** that different can be powerful.
 
+
 ---
 
 ## Day 22 - The Moment of Truth (Part 7)
@@ -1198,9 +1317,10 @@ We **proved** that two girls who **refuse** to **quit** can change an entire ind
 P.S. – Momo pulled me aside after everything. "You know what you've done?" she said. "You've **given** **permission** to every trainee who's **hiding** an **injury**, every dancer who thinks they're not perfect enough, every artist who doesn't fit the mold. You've shown them they **belong**." If nothing else had happened today, that would have been enough. But everything happened. Everything.
 
 
+
 ---
 
-## Day 23 - The New Reality (Part 1)
+## Day 23 - The New Reality
 
 
 Dear Diary,
@@ -1215,6 +1335,7 @@ Mom brought my phone, and the notifications are endless. The showcase video has 
 
 But the most meaningful messages come from other injured dancers, disabled artists, kids who feel different. "You showed me I don't have to **quit**," one girl wrote. "You **proved** that broken can still be beautiful," wrote another.
 
+
 ---
 
 ## Day 23 - The New Reality (Part 2)
@@ -1227,6 +1348,7 @@ He paused, then **added** something **unexpected**: "TWICE specifically requeste
 
 The **weight** of **responsibility** is **massive**, but so is the **opportunity**. We're not just joining the K-pop **industry** – we're helping to reshape it.
 
+
 ---
 
 ## Day 23 - The New Reality (Part 3)
@@ -1238,6 +1360,7 @@ The cosmetics campaign is moving **forward**, but with changes we requested. Ins
 Dr. Kim (not related to Ms. Kim) **explained** our **recovery** plan: "Six weeks **minimum** before any dancing. **Physical** **therapy** three times a week. **Surgery** for your wrist next month, Mina. **Intensive** back **treatment** for Sarah. But with **proper** care, you can have long, successful careers."
 
 "Successful careers," I repeated, amazed. Yesterday that seemed **impossible**. Today it's being planned by professionals.
+
 
 ---
 
@@ -1252,6 +1375,7 @@ Leo spent the evening with us, helping plan our future. "You'll need a team," he
 "You mean you?" Sarah asked **directly**.
 
 He smiled. "If you'll have me. I've already submitted my **application** to be your official JYPE liaison."
+
 
 ---
 
@@ -1268,9 +1392,10 @@ And this is just the beginning.
 P.S. – Tzuyu sent a message that made me cry: "You **reminded** us why we became idols – not for perfection, but for connection. To touch hearts, to **inspire** hope, to show that dreams are for everyone. Welcome to the family. The **industry** will never be the same, and that's **exactly** what we needed."
 
 
+
 ---
 
-## Day 24 - Signing Our Future (Part 1)
+## Day 24 - Signing Our Future
 
 
 Dear Diary,
@@ -1280,6 +1405,7 @@ Today, with bandaged wrist and Sarah in her wheelchair, we **signed** the **cont
 The **signing** ceremony was **intimate** but **profound**. Our families, Ms. Kim, Leo, and surprisingly, all nine members of TWICE were there. "We wanted to be here," Jihyo said simply. "You're not just joining a company. You're joining a family."
 
 J.Y. Park **explained** our **unique** **contracts** in **detail**: "You'll **undergo** six months of rehabilitation and **modified** training. Sarah will study advanced choreography and **creative** **direction** while **managing** her **recovery**. Mina will **develop** her adaptive performance **techniques** while healing. You'll mentor other injured artists and help us **develop** more inclusive training programs."
+
 
 ---
 
@@ -1291,6 +1417,7 @@ The **financial** **terms** were **generous** – full **medical** coverage, mon
 
 TWICE **presented** us with **custom** jackets – like theirs, but **modified**. Mine has **extra** wrist support built in. Sarah's is designed to be **comfortable** in her chair. "Welcome to the sisterhood," Sana said, helping me put it on.
 
+
 ---
 
 ## Day 24 - Signing Our Future (Part 3)
@@ -1300,6 +1427,7 @@ The media response was **immediate** and **overwhelming**. #JYPERevolution trend
 Sarah's neurologist visited with **encouraging** news: "With **proper** **treatment**, you could regain **significant** mobility. Not enough to dance as you did before, but enough to stand, to walk, to move with **assistance**. Your choreography career isn't limited to sitting."
 
 My surgeon was **equally** **optimistic**: "The **surgery** will **restore** about 80% function. You'll need to be careful, **modify** **certain** movements, but you can **absolutely** **continue** performing."
+
 
 ---
 
@@ -1316,6 +1444,7 @@ We had our first **creative** meeting via video call from our hospital beds. The
 The room went quiet, then erupted in **approval**.
 
 Chaeyoung **proposed** a **collaboration**: "TWICE and the Unbreakable Duo. A song about different kinds of strength. We'll show that **established** artists and emerging ones, **traditional** and adaptive, can **create** magic together."
+
 
 ---
 
@@ -1339,6 +1468,7 @@ She's right. Today we **signed** papers, but we also **signed** up for something
 
 The pressure is immense, but so is the support. We're not alone anymore. We have a company that believes in us, **seniors** who **guide** us, and a **purpose** that transcends personal **success**.
 
+
 ---
 
 ## Day 24 - Signing Our Future (Part 6)
@@ -1348,17 +1478,16 @@ Tomorrow, we start our new training. It won't look like **traditional** K-pop **
 P.S. – Before leaving the hospital, I **found** a note from a young dancer who's **currently** paralyzed from a training accident. She wrote: "You showed me that my dream isn't over, just different. Thank you for **proving** that different can still be beautiful." If we never **achieve** anything else, this letter alone makes everything **worth** it.
 
 
+
 ---
 
-## Day 25 - Movement and Migration
-
+## Day 25 - Movement and Migration (Part 1)
 
 Many dancers **migrate** for opportunities. **Logical** thinking helps with choreography. We won't **get away with** laziness. Teachers **interpret** every movement. **Accuracy** in dance is crucial. Our **contribution** to art matters. We **climb** towards our dreams. We **stand up** for each other. The academy **preserves** dance traditions. We do **laundry** after practice. We **deal** with challenges together. Some **complain of** sore muscles. Training is **intensive** but rewarding. We **look through** dance videos. Our **budget** is limited. Ancient **mummies** danced too - historically! **Dizziness** happens **occasionally**. The **audience** loves our energy. Water and air are **liquids** and gases. We **combine** different styles. Our mission **implies** dedication. The **applause** motivates us! Some ideas seem **ridiculous** at first. We don't **ignore** good advice. Humans are dancing **mammals**! Success is coming **indeed**! We accept **blame for** our mistakes. Dance **fossils** exist in art history. It's **obvious** we're improving. **Precise** movements are essential. Trainers see new students in regularly. Arguments **happen** rarely.
 
-
 ---
 
-## Day 26 - The First Recording (Part 1)
+## Day 26 - The First Recording
 
 
 Dear Diary,
@@ -1370,6 +1499,7 @@ Today we recorded our first official track – not dancing, but narrating our st
 The song, titled "Different Beautiful," **combines** spoken word, singing, and sound **effects** from our **journey** – the **crack** of Sarah's **ankle**, the thud of my fall, but also the **applause**, the **tears**, the triumph.
 
 TWICE recorded **harmonies** to support our voices. "We're not overshadowing," Nayeon **explained**. "We're lifting you up."
+
 
 ---
 
@@ -1389,6 +1519,7 @@ The recording took all day, but when we heard the final mix, Sarah and I cried. 
 
 "This will help people," the **producer** said quietly. "This will change lives."
 
+
 ---
 
 ## Day 26 - The First Recording (Part 3)
@@ -1398,6 +1529,7 @@ Tomorrow we film the music video. Not in a glamorous **location**, but in the ho
 "We're telling the **whole** story," the **director** **explained**. "The **ugly** parts and the beautiful ones."
 
 That's what we are now – storytellers. Not through **traditional** dance, but through lived experience. Through proof that dreams shape-shift but never **die**.
+
 
 
 ---
@@ -1419,6 +1551,7 @@ The interview went viral. #DifferentlyAbled is trending. Dance schools are **cre
 But the best **moment** came privately. A young dancer who'd **quit** after **losing** her leg messaged us: "I'm going back to the studio tomorrow. You showed me there's still a place for me."
 
 We're changing things. Really changing things.
+
 
 
 ---
@@ -1444,6 +1577,7 @@ Sarah watched from across the room, smiling **widely**. She was **surrounded** b
 We're not just **surviving** anymore. We're thriving.
 
 
+
 ---
 
 ## Day 29 - The Announcement
@@ -1465,9 +1599,10 @@ Sarah and I spent the evening planning. She'll choreograph and direct. I'll perf
 "We already have," I **reminded** her. "But this is just the beginning."
 
 
+
 ---
 
-## Day 30 - The Journey Continues (Part 1)
+## Day 30 - The Journey Continues
 
 
 Dear Diary,
@@ -1491,6 +1626,7 @@ After class, Leo drove us to our **favorite** café. "Three months until debut,"
 "Ready," we said together.
 
 And we are. Ready for **surgery** and **recovery**. Ready for training and **preparation**. Ready to show the world that there's no single way to be an artist.
+
 
 ---
 
@@ -1516,11 +1652,13 @@ The Unbreakable Duo
 JYPE Artists
 Revolutionaries
 
+
 ---
 
 ## Day 30 - The Journey Continues (Part 3)
 
 P.S. – TWICE sent us a message today: "You're not our juniors. You're our **equals**. Different **paths**, same **destination**: touching hearts and changing lives. Welcome to the family. The **industry** will never be the same, and that's **exactly** what we all needed." If teenage me could see this, she wouldn't believe it. But she'd be **proud**. So **proud**.
+
 
 
 ---

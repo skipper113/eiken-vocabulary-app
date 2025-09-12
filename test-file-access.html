@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test File Access</title>
+</head>
+<body>
+    <h1>Test File Access</h1>
+    <div id="results"></div>
+    
+    <script>
+        async function testFiles() {
+            const results = document.getElementById('results');
+            const files = [
+                'mina_kpop_diary_split.md',
+                'mina_kpop_diary.md',
+                'diary-app.js',
+                'eiken2.csv'
+            ];
+            
+            for (const file of files) {
+                try {
+                    console.log(`Trying to fetch: ${file}`);
+                    const response = await fetch(file);
+                    if (response.ok) {
+                        const text = await response.text();
+                        results.innerHTML += `<p style="color: green;">✓ ${file}: Loaded ${text.length} characters</p>`;
+                    } else {
+                        results.innerHTML += `<p style="color: red;">✗ ${file}: HTTP ${response.status}</p>`;
+                    }
+                } catch (error) {
+                    results.innerHTML += `<p style="color: red;">✗ ${file}: ${error.message}</p>`;
+                    console.error(`Error loading ${file}:`, error);
+                }
+            }
+        }
+        
+        // Test on load
+        testFiles();
+    </script>
+</body>
+</html>

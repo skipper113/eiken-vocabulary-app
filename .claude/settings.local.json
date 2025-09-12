@@ -21,7 +21,9 @@
       "Bash(done)",
       "Bash(shuf:*)",
       "Bash(for word in \"all\" \"decided\" \"got\" \"had\" \"interested\" \"met\" \"near\" \"practice\" \"showed\" \"signed\")",
-      "Bash(do grep -q \"^$word,\" /Users/yohei/eiken2/eiken3.csv)"
+      "Bash(do grep -q \"^$word,\" /Users/yohei/eiken2/eiken3.csv)",
+      "Bash(for file in kai_titan_diary_split.md ayaka_ib_diary_split.md reiko_anomaly_diary_split.md)",
+      "Bash(do)"
     ],
     "deny": [],
     "ask": []
