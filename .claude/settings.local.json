@@ -26,7 +26,9 @@
       "Bash(do)",
       "Bash(for func in navigateDay selectDay changeLevel exportStats)",
       "Bash(do echo -n \"$func: \")",
-      "Bash(open app.html)"
+      "Bash(open app.html)",
+      "Bash(open test-load.html)",
+      "Bash(for func in toggleTheme toggleReadingGuide logout switchLevel previousDay goToDay nextDay resetStats)"
     ],
     "deny": [],
     "ask": []

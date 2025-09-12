@@ -3561,8 +3561,16 @@ window.exitMissedWordsQuiz = exitMissedWordsQuiz;
 window.showStatsModal = showStatsModal;
 window.closeStatsModal = closeStatsModal;
 window.clearStats = clearStats;
-window.toggleReadingGuide = toggleReadingGuide;
 window.highlightWordInPassage = highlightWordInPassage;
+
+// Expose core functions that app.html needs
+window.init = init;
+window.switchLevel = switchLevel;
+window.previousDay = previousDay;
+window.nextDay = nextDay;
+window.goToDay = goToDay;
+window.resetStats = resetStats;
+window.displayDay = displayDay;
 
 // Start the app when page loads
 document.addEventListener('DOMContentLoaded', init);

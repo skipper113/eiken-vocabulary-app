@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Load</title>
+</head>
+<body>
+    <h1>Testing Diary App Loading</h1>
+    <div id="status">Loading...</div>
+    <div id="errors" style="color: red;"></div>
+    
+    <script>
+        // Capture any errors
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            document.getElementById('errors').innerHTML += '<p>Error: ' + msg + ' at line ' + lineNo + '</p>';
+            return false;
+        };
+        
+        document.getElementById('status').innerHTML = 'Loading diary-app.js...';
+    </script>
+    <script src="diary-app.js"></script>
+    <script>
+        document.getElementById('status').innerHTML = 'diary-app.js loaded successfully!';
+        
+        // Check if key functions exist
+        const functionsToCheck = ['init', 'loadDiary', 'loadVocabulary', 'displayDay'];
+        let missingFunctions = [];
+        
+        functionsToCheck.forEach(func => {
+            if (typeof window[func] === 'undefined') {
+                missingFunctions.push(func);
+            }
+        });
+        
+        if (missingFunctions.length > 0) {
+            document.getElementById('errors').innerHTML += '<p>Missing functions: ' + missingFunctions.join(', ') + '</p>';
+        } else {
+            document.getElementById('status').innerHTML += '<br>All key functions found!';
+        }
+    </script>
+</body>
+</html>
