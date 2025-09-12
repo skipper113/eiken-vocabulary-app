@@ -3537,5 +3537,36 @@ function handleEiken3Keyboard(event) {
     }
 }
 
+// Make functions globally accessible for inline event handlers
+window.showTooltip = showTooltip;
+window.hideTooltip = hideTooltip;
+window.speakWord = speakWord;
+window.speakWordWithTranslation = speakWordWithTranslation;
+window.handleBlankClick = handleBlankClick;
+window.startTypeMode = startTypeMode;
+window.resetTypeMode = resetTypeMode;
+window.giveUpWord = giveUpWord;
+window.checkTypeAnswer = checkTypeAnswer;
+window.saveRankingWithNickname = saveRankingWithNickname;
+window.setMode = setMode;
+window.switchTab = switchTab;
+window.toggleStudyPanel = toggleStudyPanel;
+window.searchVocabulary = searchVocabulary;
+window.selectEiken3Choice = selectEiken3Choice;
+window.skipEiken3Typing = skipEiken3Typing;
+window.startMissedWordsQuiz = startMissedWordsQuiz;
+window.checkMissedQuizAnswer = checkMissedQuizAnswer;
+window.skipMissedWord = skipMissedWord;
+window.exitMissedWordsQuiz = exitMissedWordsQuiz;
+window.showStatsModal = showStatsModal;
+window.closeStatsModal = closeStatsModal;
+window.clearStats = clearStats;
+window.toggleReadingGuide = toggleReadingGuide;
+window.navigateDay = navigateDay;
+window.selectDay = selectDay;
+window.changeLevel = changeLevel;
+window.exportStats = exportStats;
+window.highlightWordInPassage = highlightWordInPassage;
+
 // Start the app when page loads
 document.addEventListener('DOMContentLoaded', init);
