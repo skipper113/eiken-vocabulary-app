@@ -3557,9 +3557,6 @@ window.startMissedWordsQuiz = startMissedWordsQuiz;
 window.checkMissedQuizAnswer = checkMissedQuizAnswer;
 window.skipMissedWord = skipMissedWord;
 window.exitMissedWordsQuiz = exitMissedWordsQuiz;
-window.showStatsModal = showStatsModal;
-window.closeStatsModal = closeStatsModal;
-window.clearStats = clearStats;
 window.highlightWordInPassage = highlightWordInPassage;
 
 // Expose core functions that app.html needs
